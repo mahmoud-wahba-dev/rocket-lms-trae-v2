@@ -497,6 +497,8 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::group(['prefix' => 'landings'], function () {
         Route::get('/{landing_url}', 'LandingController@index');
     });
+
+    Route::view('/landing-v1', 'landing_v1.pages.home')->name('landing.v1.index');
 });
 
 // Purchase Code Routes
