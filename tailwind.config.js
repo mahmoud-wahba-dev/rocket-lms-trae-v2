@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const { addDynamicIconSelectors } = require('@iconify/tailwind');
+
 module.exports = {
     content: [
         "./resources/views/landing_v1/**/*.blade.php",
@@ -13,5 +15,9 @@ module.exports = {
             },
         },
     },
-    plugins: [require('flyonui'), require('flyonui/plugin')],
+    plugins: [
+        require('flyonui'),
+        require('flyonui/plugin'),
+        addDynamicIconSelectors({ prefix: 'icon' }),
+    ],
 };
