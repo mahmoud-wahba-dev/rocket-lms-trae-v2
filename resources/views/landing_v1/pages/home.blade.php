@@ -407,104 +407,152 @@
     <section class="section-gap bg-blue py-28 pb-36"
         style="background-image: url('{{ $landingImg }}/home/bg-slide1.webp'); background-size: cover; background-repeat: no-repeat; background-position: bottom;">
         <div class="container">
-            <!-- <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-                <div class="lg:col-span-8 text-white">
-                    <div class="lg:w-[80%]">
-                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
-
-                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
-                        </p>
-                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
-
-                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
-                        </h3>
-                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
-                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني في كبرى الشركات،
-                            حيث
-                            نأخذك في رحلة تطبيقية شاملة
-                        </p>
-                        <div>
-                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="lg:col-span-4 ">
-
-                    <x-landing_v1::course-card title="استشارات نسخ"
-                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                        teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
-
-                </div>
-            </div> -->
-
-
-
-            <div id="auto-play" data-carousel='{ "loadingClasses": "opacity-0", "isAutoPlay": true, "speed": 1000 }'
+            <div id="featured-courses"
+                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "lg": 1 }, "isRTL": true, "isInfiniteLoop": true, "dotsItemClasses": "carousel-dot", "isAutoPlay": true, "speed": 3500 }'
                 class="relative w-full">
-                <div class="carousel h-80">
-                    <div class="carousel-body opacity-0 h-full">
-                        <!-- Slide 1 -->
+                <div class="carousel">
+                    <div class="carousel-body opacity-0">
                         <div class="carousel-slide">
-                            <div class=" flex h-full justify-center p-6">
-                                <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-                                    <div class="lg:col-span-8 text-white">
-                                        <div class="lg:w-[80%]">
-                                            <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
-
-                                                <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                                <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                                ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
-                                            </p>
-                                            <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
-
-                                                الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
-                                            </h3>
-                                            <p class="font-normal text-20px mb-8 lg:w-[70%]">
-                                                دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق
-                                                الميداني في كبرى الشركات،
-                                                حيث
-                                                نأخذك في رحلة تطبيقية شاملة
-                                            </p>
-                                            <div>
-                                                <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك
-                                                    الان </a>
-                                            </div>
+                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                                <div class="lg:col-span-8 text-white">
+                                    <div class="lg:w-[80%]">
+                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
+                                        </p>
+                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
+                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
+                                        </h3>
+                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
+                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني في كبرى الشركات،
+                                            حيث
+                                            نأخذك في رحلة تطبيقية شاملة
+                                        </p>
+                                        <div>
+                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان </a>
                                         </div>
                                     </div>
-                                    <div class="lg:col-span-4 ">
-
-                                        <x-landing_v1::course-card title="استشارات نسخ"
-                                            description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                                            teacher-name="اسم المعلم" price="1.10ر.س"
-                                            image="{{ $landingImg }}/home/course.webp" />
-
-                                    </div>
+                                </div>
+                                <div class="lg:col-span-4">
+                                    <x-landing_v1::course-card title="استشارات نسخ"
+                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
+                                        teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
                                 </div>
                             </div>
                         </div>
 
+                              <div class="carousel-slide">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                                <div class="lg:col-span-8 text-white">
+                                    <div class="lg:w-[80%]">
+                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
+                                        </p>
+                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
+                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
+                                        </h3>
+                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
+                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني في كبرى الشركات،
+                                            حيث
+                                            نأخذك في رحلة تطبيقية شاملة
+                                        </p>
+                                        <div>
+                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-4">
+                                    <x-landing_v1::course-card title="استشارات نسخ"
+                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
+                                        teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
+                                </div>
+                            </div>
+                        </div>
+
+                              <div class="carousel-slide">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                                <div class="lg:col-span-8 text-white">
+                                    <div class="lg:w-[80%]">
+                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
+                                        </p>
+                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
+                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
+                                        </h3>
+                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
+                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني في كبرى الشركات،
+                                            حيث
+                                            نأخذك في رحلة تطبيقية شاملة
+                                        </p>
+                                        <div>
+                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-4">
+                                    <x-landing_v1::course-card title="استشارات نسخ"
+                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
+                                        teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
+                                </div>
+                            </div>
+                        </div>
+
+                              <div class="carousel-slide">
+                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                                <div class="lg:col-span-8 text-white">
+                                    <div class="lg:w-[80%]">
+                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
+                                        </p>
+                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
+                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
+                                        </h3>
+                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
+                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني في كبرى الشركات،
+                                            حيث
+                                            نأخذك في رحلة تطبيقية شاملة
+                                        </p>
+                                        <div>
+                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="lg:col-span-4">
+                                    <x-landing_v1::course-card title="استشارات نسخ"
+                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
+                                        teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Duplicate .carousel-slide blocks for additional slides. -->
                     </div>
                 </div>
-                <!-- Previous Slide -->
-                <button type="button" class="carousel-prev">
-                    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                        <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
-                    </span>
-                    <span class="sr-only">Previous</span>
-                </button>
-                <!-- Next Slide -->
-                <button type="button" class="carousel-next">
-                    <span class="sr-only">Next</span>
-                    <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
-                        <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
-                    </span>
-                </button>
+                <div class="mt-6 flex flex-col items-center gap-3">
+                    <div class="carousel-pagination flex justify-center gap-3"></div>
+                    <div class="flex items-center gap-3">
+                        <button type="button" class="carousel-prev">
+                            <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                            </span>
+                            <span class="sr-only">Previous</span>
+                        </button>
+                        <button type="button" class="carousel-next">
+                            <span class="sr-only">Next</span>
+                            <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
+                                <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
-
-
     </section>
     </main>
 
