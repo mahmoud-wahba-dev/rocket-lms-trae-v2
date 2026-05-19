@@ -22,5 +22,6 @@
            @yield('content')
         @include('landing_v1.layouts.footer')
     </div>
+    @stack('scripts')
 </body>
 </html>
