@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Web\PurchaseCodeController;
+use App\Http\Controllers\Web\LandingV1Controller;
 
 
 use App\Http\Controllers\webhook\WebhookController;
@@ -498,7 +499,7 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
         Route::get('/{landing_url}', 'LandingController@index');
     });
 
-    Route::view('/landing-v1', 'landing_v1.pages.home')->name('landing.v1.index');
+    Route::get('/landing-v1', [LandingV1Controller::class, 'index'])->name('landing.v1.index');
     Route::view('/landing-v1/about', 'landing_v1.pages.about')->name('landing.v1.about');
     Route::view('/landing-v1/contact', 'landing_v1.pages.contact')->name('landing.v1.contact');
     Route::view('/landing-v1/login', 'landing_v1.pages.login')->name('landing.v1.login');
