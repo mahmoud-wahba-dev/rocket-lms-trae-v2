@@ -37,15 +37,15 @@ The landing-v1 work must remain stand-alone and should not inherit Bootstrap or 
   - `flyonui`
   - `flyonui/plugin`
   - `addDynamicIconSelectors({ prefix: 'icon' })`
+- Theme extensions here define the landing utility classes used in Blade, such as custom colors and sizes like `text-57px`, `text-20px`, `bg-d3`, and `bg-gold`.
 
 ### `resources/css/landing_v1.css`
 - `@import "flyonui/dist/full.css";` is at the top.
 - Tailwind directives follow it.
-- Shared tokens live here:
-  - brand colors
-  - font family
-  - typography scale
-  - radius scale
+- Shared runtime tokens live here:
+  - brand CSS variables
+  - font family variable
+  - typography and radius variables for raw CSS use
   - a few layout helper utilities
 - `@layer base` handles global landing-only defaults.
 
@@ -77,6 +77,7 @@ The landing-v1 work must remain stand-alone and should not inherit Bootstrap or 
 ## Troubleshooting Notes
 - If icons fail, check `@iconify/tailwind` and `icon-[tabler--...]` support.
 - If dropdown/modal/drawer fail, verify FlyonUI markup and `autoInit()`.
+- If a custom utility is missing, add it in `tailwind.config.js` for Tailwind v3.
 - If CSS import errors appear, ensure `@import` is above Tailwind rules.
 - If Vite output looks stale, hard refresh the browser.
 

@@ -16,9 +16,10 @@ Read this first for any future landing-v1 task.
 - `tailwind.config.js`
   - Content scans landing Blade + landing JS + FlyonUI JS files.
   - Plugins: `flyonui`, `flyonui/plugin`, `addDynamicIconSelectors({ prefix: 'icon' })`.
+  - Custom landing utilities and design tokens for Tailwind v3 live here, including classes like `text-57px`, `text-20px`, `bg-d3`, and `bg-gold`.
 - `resources/css/landing_v1.css`
   - Imports `flyonui/dist/full.css` first.
-  - Contains Tailwind directives and shared landing tokens.
+  - Contains Tailwind directives, runtime CSS variables, and simple reusable helpers.
 - `resources/js/landing_v1.js`
   - Imports `flyonui/flyonui`.
 - `resources/views/landing_v1/layouts/app.blade.php`
@@ -44,3 +45,4 @@ Read this first for any future landing-v1 task.
 - Dropdown, modal, drawer, accordion should rely on FlyonUI markup plus `flyonui/flyonui` JS.
 - Icon classes need the Iconify Tailwind plugin; otherwise `icon-[tabler--...]` will not render.
 - The landing CSS build currently passes.
+- If a class does not autocomplete or generate, first check `tailwind.config.js` before touching Blade.

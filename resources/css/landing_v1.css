@@ -6,179 +6,81 @@
 
 /* Landing pages only. Keep global tokens here and page-specific layout in Blade. */
 :root {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 
-  /* Brand tokens used by components and Figma conversions. */
-  --gold: #b9a685;
-  --color-gold: #b9a685;
-  --primary: #ed2d48;
-  --secondary: #d2ffe3;
-  --error: #ff4444;
-  --color-primary: #ed2d48;
-  --color-secondary: #d2ffe3;
-  --color-gray: #6d6d6d;
+    /* Brand tokens used by components and Figma conversions. */
+    --color-primary: #3d455d;
+    --color-secondary: #b9a685;
+    --color-gold: #b9a685;
+    --color-black: #000000;
+    --color-blue: #3d455d;
+    --color-77: #777777;
+    --color-card-text: #255977;
 
-  --color-gold-soft: #efe6d6;
-  --color-gold-dark: #8f7d64;
-  /* Typography scale for landing screens. */
-  --font-ibm:
-    "IBM Plex Sans Arabic", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, Segoe UI, Roboto;
-  --text-8px: 0.5rem;
-  --text-9px: 0.5625rem;
+    /* --secondary: #b9a685; */
 
-/* Reusable gold button utility for landing CTA buttons. */
-.btn-gold {
-  background-color: var(--gold);
-  color: white;
-}
-  --text-10px: 0.625rem;
-  --text-11px: 0.6875rem;
-  --text-12px: 0.75rem;
-  --text-13px: 0.8125rem;
-  --text-14px: 0.875rem;
-  --text-15px: 0.9375rem;
-  --text-16px: 1rem;
-  --text-17px: 1.0625rem;
-  --text-18px: 1.125rem;
-  --text-19px: 1.1875rem;
-  --text-20px: 1.25rem;
-  --text-21px: 1.3125rem;
-  --text-22px: 1.375rem;
-  --text-24px: 1.5rem;
-  --text-25px: 1.5625rem;
-  --text-28px: 1.75rem;
-  --text-30px: 1.875rem;
-  --text-32px: 2rem;
-  --text-33px: 2rem;
-  --text-34px: 2.125rem;
-  --text-35px: 2.1875rem;
-  --text-36px: 2.25rem;
-  --text-40px: 2.5rem;
-  --text-42px: 2.625rem;
-  --text-45px: 2.8125rem;
-  --text-48px: 3rem;
-  --text-52px: 3.25rem;
-  --text-60px: 3.75rem;
-  --text-64px: 4rem;
-  --text-65px: 4.0625rem;
-  --text-72px: 4.5rem;
-  --text-74px: 4.625rem;
-  --text-76px: 4.75rem;
-
-  /* Border-radius scale for repeated UI patterns. */
-  --radius-4px: 0.25rem;
-  --radius-5px: 0.3125rem;
-  --radius-6px: 0.375rem;
-  --radius-8px: 0.5rem;
-  --radius-9px: 0.5625rem;
-  --radius-10px: 0.625rem;
-  --radius-11px: 0.6875rem;
-  --radius-12px: 0.75rem;
-  --radius-13px: 0.8125rem;
-  --radius-14px: 0.875rem;
-  --radius-15px: 0.9375rem;
-  --radius-16px: 1rem;
-  --radius-17px: 1.0625rem;
-  --radius-18px: 1.125rem;
-  --radius-19px: 1.1875rem;
-  --radius-20px: 1.25rem;
-  --radius-21px: 1.3125rem;
-  --radius-22px: 1.375rem;
-  --radius-24px: 1.5rem;
-  --radius-28px: 1.75rem;
-  --radius-30px: 1.875rem;
-  --radius-32px: 2rem;
-  --radius-40px: 2.5rem;
-  --radius-44px: 2.75rem;
-  --radius-45px: 2.8125rem;
-  --radius-53px: 3.3125rem;
-  --radius-55px: 3.4375rem;
-  --radius-58px: 3.625rem;
-  --radius-60px: 4rem;
-  --radius-65px: 4.0625rem;
-  --radius-66px: 4.125rem;
-  --radius-67px: 4.1875rem;
-  --radius-80px: 5rem;
-  --radius-100px: 6.25rem;
-
-  /* Optional landing palette aliases. */
-  --color-nav-bg: #000000;
-  --color-nav-text: #ffffff;
-  --color-green: #0a381c;
-  --color-success: #00cf3e;
-  --color--black: black;
-  --color-d3: #d3d3d3;
-  --color-f1: #f1f1f1;
-  --color-f6: #f6f6f6;
-  --color-69: #696969;
-  --color-dd: #dddddd;
-  --color-40: #404040;
-  --color-f8: #f8f8f8;
-  --color-f4: #f4f4f4;
-  --color-f9: #f9f9f9;
-  --color-d9: #d9d9d9;
-  --color-7e: #7e7e7e;
-  --color-77: #777777;
-}
-
-@theme {
-  /* Tailwind v4-style theme variables are available here even in a v3 project. */
-  --font-ibm:
-    "IBM Plex Sans Arabic", ui-sans-serif, system-ui, -apple-system,
-    BlinkMacSystemFont, Segoe UI, Roboto;
-  --color-primary: #ed2d48;
-  --color-secondary: #d2ffe3;
-  --color-green: #0a381c;
-  --color-error: #ff3c3f;
-  --color-success: #00cf3e;
-  --color--black: black;
-  --color-gray: #6d6d6d;
-  --color-nav-bg: #000000;
-  --color-nav-text: #ffffff;
-  --color-d3: #d3d3d3;
-  --color-f1: #f1f1f1;
-  --color-f6: #f6f6f6;
-  --color-69: #696969;
-  --color-dd: #dddddd;
-  --color-40: #404040;
-  --color-f8: #f8f8f8;
-  --color-f4: #f4f4f4;
-  --color-f9: #f9f9f9;
-  --color-d9: #d9d9d9;
-  --color-7e: #7e7e7e;
-  --color-77: #777777;
+    /* Typography scale for landing screens. */
+    --font-ibm:
+        "IBM Plex Sans Arabic", ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, Segoe UI, Roboto;
 }
 
 @layer base {
-  html {
-    font-size: clamp(12px, 1vw + 0.5rem, 16px);
-    font-family: var(--font-ibm);
-    scroll-behavior: smooth;
-    background-color: white;
-  }
+    html {
+        font-size: clamp(12px, 1vw + 0.5rem, 16px) !important;
+        scroll-behavior: smooth;
+        font-family: var(--font-ibm);
+    }
 
-  body {
-    background-color: white;
-    color: black;
-  }
+    body {
+        font-family: var(--font-ibm);
+    }
 }
 
 @layer utilities {
-  /* Shared layout helpers for landing screens. */
-  .container {
-    @apply w-full mx-auto max-w-full sm:px-10 px-3.5;
-  }
+    /* Shared layout helpers for landing screens. */
+    .container {
+        @apply w-full mx-auto max-w-full sm:px-15 px-3.5;
+    }
 
-  .center_flex,
-  .center,
-  .centered {
-    @apply flex items-center justify-center;
-  }
+    .section-gap {
+        margin-block: 8.125rem;
+    }
+
+    .center_flex,
+    .center,
+    .centered {
+        @apply flex items-center justify-center;
+    }
+    .btn {
+        @apply border-none;
+    }
 }
 
 /* Simple reusable utility for dark buttons. */
 .btn-black {
-  background-color: var(--color--black);
-  color: white;
+    background-color: var(--color-black);
+    color: white;
+}
+
+/* Reusable gold button utility for landing CTA buttons. */
+.btn-gold,
+.btn-secondary {
+    background-color: var(--color-gold);
+    color: white;
+    border-radius: 6px;
+}
+
+/* FlyonUI button tokens expect theme variables, so remap the landing buttons here. */
+.btn.btn-primary {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus-visible {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+    color: #ffffff;
 }
