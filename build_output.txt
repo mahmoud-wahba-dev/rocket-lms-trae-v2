@@ -1,0 +1,2441 @@
+
+> landing:build
+> vite build
+
+[36mvite v4.4.4 [32mbuilding for production...[36m[39m
+transforming...
+
+🚀   [35mflyonui[39m [2m1.3.0[22m
+├─ [32m✔︎[39m 2 themes added[2m		https://flyonui.com/docs/customization/themes/[22m
+╰─ [32m★[39m [0mStar FlyonUI on GitHub[0m	[2m	https://github.com/themeselection/flyonui[22m
+
+[32m✓[39m 5 modules transformed.
+rendering chunks...
+[33mwarnings when minifying css:
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2725:24:
+      2725 │ .advance-select-tag:has(> .is-valid),
+           ╵                         ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2726:21:
+      2726 │ .validate select:has(~ * > .selected) + .advance-select-toggle {
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2731:26:
+      2731 │   .advance-select-tag:has(> .is-valid):focus,
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2732:26:
+      2732 │   .advance-select-tag:has(> .is-valid):focus-within,
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2733:23:
+      2733 │   .validate select:has(~ * > .selected) + .advance-select-toggle...
+           ╵                        ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2734:23:
+      2734 │   .validate select:has(~ * > .selected) + .advance-select-toggle...
+           ╵                        ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2748:24:
+      2748 │ .advance-select-tag:has(> .is-invalid),
+           ╵                         ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2749:26:
+      2749 │ .validate select:not(:has(~ * > .selected)) + .advance-select-to...
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2754:26:
+      2754 │   .advance-select-tag:has(> .is-invalid):focus,
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2755:26:
+      2755 │   .advance-select-tag:has(> .is-invalid):focus-within,
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2756:28:
+      2756 │   .validate select:not(:has(~ * > .selected)) + .advance-select-...
+           ╵                             ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2757:28:
+      2757 │   .validate select:not(:has(~ * > .selected)) + .advance-select-...
+           ╵                             ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2770:21:
+      2770 │ .validate .label:has(~ .advance-select > select:valid) > *,
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2771:26:
+      2771 │ .validate .label-text:has(~ .advance-select > select:valid),
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2773:30:
+      2773 │ .validate .advance-select:has(> select:valid) ~ .label,
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2774:30:
+      2774 │ .validate .advance-select:has(> select:valid) ~ .label-text,
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2775:30:
+      2775 │ .validate .advance-select:has(> select:valid) ~ .label .label-te...
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2778:21:
+      2778 │ .validate .label:has(~ * > select:invalid) > *,
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2779:26:
+      2779 │ .validate .label-text:has(~ * > select:invalid),
+           ╵                           ^
+
+
+▲ [WARNING] Unexpected whitespace [css-syntax-error]
+
+    <stdin>:2781:30:
+      2781 │ .validate .advance-select:has( > select:invalid) ~ .label,
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2782:30:
+      2782 │ .validate .advance-select:has(> select:invalid) ~ .label-text,
+           ╵                               ^
+
+
+▲ [WARNING] Unexpected whitespace [css-syntax-error]
+
+    <stdin>:2783:30:
+      2783 │ .validate .advance-select:has( > select:invalid) ~ .label .label...
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2786:25:
+      2786 │ .validate .label ~ *:has(> select:valid) ~ * > .success-message,
+           ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2787:30:
+      2787 │ .validate .advance-select:has(> select:valid) ~ * > .success-mes...
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2788:30:
+      2788 │ .validate .advance-select:has(> select:valid) ~ .success-message {
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2790:25:
+      2790 │ .validate .label ~ *:has(> select:invalid) ~ * > .error-message,
+           ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2791:30:
+      2791 │ .validate .advance-select:has(> select:invalid) ~ * > .error-mes...
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:2792:30:
+      2792 │ .validate .advance-select:has(> select:invalid) ~ .error-message {
+           ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3775:21:
+      3775 │ .validate .label:has(+ * .checkbox:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3776:26:
+      3776 │ .validate .label-text:has(+ * .checkbox:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3777:26:
+      3777 │ .validate .label-text:has(~ .checkbox:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3778:21:
+      3778 │ .validate .label:has(~ .checkbox:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3788:21:
+      3788 │ .validate .label:has(+ * .checkbox:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3789:26:
+      3789 │ .validate .label-text:has(+ * .checkbox:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3790:26:
+      3790 │ .validate .label-text:has(~ .checkbox:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3791:21:
+      3791 │ .validate .label:has(~ .checkbox:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3801:16:
+      3801 │ .validate *:has(> .checkbox:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3802:16:
+      3802 │ .validate *:has(> .checkbox:valid) > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3807:16:
+      3807 │ .validate *:has(> .checkbox:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:3808:16:
+      3808 │ .validate *:has(> .checkbox:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4372:11:
+      4372 │ .label:has(+ * .is-valid) > *, 
+           ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4373:16:
+      4373 │ .label-text:has(+ * .is-valid), 
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4374:16:
+      4374 │ .label-text:has(~ .is-valid), 
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4375:11:
+      4375 │ .label:has(~ .is-valid) > *, 
+           ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4387:21:
+      4387 │ .validate .label:has(+ * .input:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4388:26:
+      4388 │ .validate .label-text:has(+ * .input:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4389:26:
+      4389 │ .validate .label-text:has(~ .input:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4390:21:
+      4390 │ .validate .label:has(~ .input:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4447:11:
+      4447 │ .label:has(+ * .is-invalid) > *, 
+           ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4448:16:
+      4448 │ .label-text:has(+ * .is-invalid), 
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4449:16:
+      4449 │ .label-text:has(~ .is-invalid), 
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4450:11:
+      4450 │ .label:has(~ .is-invalid) > *, 
+           ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4462:21:
+      4462 │ .validate .label:has(+ * .input:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4463:26:
+      4463 │ .validate .label-text:has(+ * .input:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4464:26:
+      4464 │ .validate .label-text:has(~ .input:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4465:21:
+      4465 │ .validate .label:has(~ .input:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4486:16:
+      4486 │ .validate *:has(> .input:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4487:16:
+      4487 │ .validate *:has(> .input:valid)  > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4498:16:
+      4498 │ .validate *:has(> .input:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:4499:16:
+      4499 │ .validate *:has(> .input:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5429:21:
+      5429 │ .validate .label:has(+ * .radio:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5430:26:
+      5430 │ .validate .label-text:has(+ * .radio:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5431:26:
+      5431 │ .validate .label-text:has(~ .radio:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5432:21:
+      5432 │ .validate .label:has(~ .radio:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5442:21:
+      5442 │ .validate .label:has(+ * .radio:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5443:26:
+      5443 │ .validate .label-text:has(+ * .radio:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5444:26:
+      5444 │ .validate .label-text:has(~ .radio:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5445:21:
+      5445 │ .validate .label:has(~ .radio:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5455:16:
+      5455 │ .validate *:has(> .radio:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5456:16:
+      5456 │ .validate *:has(> .radio:valid) > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5461:16:
+      5461 │ .validate *:has(> .radio:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5462:16:
+      5462 │ .validate *:has(> .radio:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5497:21:
+      5497 │ .validate .label:has(+ * .radio-inset:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5498:21:
+      5498 │ .validate .label:has(+ * .radio-inset:valid).label-text, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5499:21:
+      5499 │ .validate .label:has(~ .radio-inset:valid).label-text, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5500:21:
+      5500 │ .validate .label:has(~ .radio-inset:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5510:21:
+      5510 │ .validate .label:has(+ * .radio-inset:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5511:26:
+      5511 │ .validate .label-text:has(+ * .radio-inset:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5512:26:
+      5512 │ .validate .label-text:has(~ .radio-inset:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5513:21:
+      5513 │ .validate .label:has(~ .radio-inset:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5523:16:
+      5523 │ .validate *:has(> .radio-inset:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5524:16:
+      5524 │ .validate *:has(> .radio-inset:valid) > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5529:16:
+      5529 │ .validate *:has(> .radio-inset:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5530:16:
+      5530 │ .validate *:has(> .radio-inset:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5862:21:
+      5862 │ .validate .label:has(+ * .select:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5863:26:
+      5863 │ .validate .label-text:has(+ * .select:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5864:26:
+      5864 │ .validate .label-text:has(~ .select:valid).label-text, 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5865:21:
+      5865 │ .validate .label:has(~ .select:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5875:21:
+      5875 │ .validate .label:has(+ * .select:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5876:26:
+      5876 │ .validate .label-text:has(+ * .select:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5877:26:
+      5877 │ .validate .label-text:has(~ .select:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5878:21:
+      5878 │ .validate .label:has(~ .select:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5888:16:
+      5888 │ .validate *:has(> .select:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5889:16:
+      5889 │ .validate *:has(> .select:valid) > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5894:16:
+      5894 │ .validate *:has(> .select:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:5895:16:
+      5895 │ .validate *:has(> .select:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6170:21:
+      6170 │ .validate .label:has(+ * .switch:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6171:26:
+      6171 │ .validate .label-text:has(+ * .switch:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6172:26:
+      6172 │ .validate .label-text:has(~ .switch:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6173:21:
+      6173 │ .validate .label:has(~ .switch:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6184:21:
+      6184 │ .validate .label:has(+ * .switch:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6185:26:
+      6185 │ .validate .label-text:has(+ * .switch:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6186:26:
+      6186 │ .validate .label-text:has(~ .switch:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6187:21:
+      6187 │ .validate .label:has(~ .switch:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6197:16:
+      6197 │ .validate *:has(> .switch:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6198:16:
+      6198 │ .validate *:has(> .switch:valid) > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6203:16:
+      6203 │ .validate *:has(> .switch:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6204:16:
+      6204 │ .validate *:has(> .switch:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6245:21:
+      6245 │ .validate .label:has(+ * .switch-outline:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6246:26:
+      6246 │ .validate .label-text:has(+ * .switch-outline:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6247:26:
+      6247 │ .validate .label-text:has(~ .switch-outline:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6248:21:
+      6248 │ .validate .label:has(~ .switch-outline:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6259:21:
+      6259 │ .validate .label:has(+ * .switch-outline:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6260:26:
+      6260 │ .validate .label-text:has(+ * .switch-outline:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6261:26:
+      6261 │ .validate .label-text:has(~ .switch-outline:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6262:21:
+      6262 │ .validate .label:has(~ .switch-outline:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6272:16:
+      6272 │ .validate *:has(> .switch-outline:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6273:16:
+      6273 │ .validate *:has(> .switch-outline:valid) > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6278:16:
+      6278 │ .validate *:has(> .switch-outline:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6279:16:
+      6279 │ .validate *:has(> .switch-outline:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6740:21:
+      6740 │ .validate .label:has(+ * .textarea:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6741:26:
+      6741 │ .validate .label-text:has(+ * .textarea:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6742:26:
+      6742 │ .validate .label-text:has(~ .textarea:valid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6743:21:
+      6743 │ .validate .label:has(~ .textarea:valid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6753:21:
+      6753 │ .validate .label:has(+ * .textarea:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6754:26:
+      6754 │ .validate .label-text:has(+ * .textarea:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6755:26:
+      6755 │ .validate .label-text:has(~ .textarea:invalid), 
+           ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6756:21:
+      6756 │ .validate .label:has(~ .textarea:invalid) > *, 
+           ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6766:16:
+      6766 │ .validate *:has(> .textarea:valid) ~ .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6767:16:
+      6767 │ .validate *:has(> .textarea:valid) > * > .success-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6772:16:
+      6772 │ .validate *:has(> .textarea:invalid) ~ .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6773:16:
+      6773 │ .validate *:has(> .textarea:invalid) > * > .error-message,
+           ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:6990:51:
+      6990 │ ...toggler-and-button-wrapper:has(> .ce-inline-toolbar__dropdown) {
+           ╵                                   ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:7453:50:
+      7453 │ ....flatpickr-innerContainer:has(> .flatpickr-weekwrapper) > .fl...
+           ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:7454:52:
+      7454 │ ....flatpickr-innerContainer:has(> .flatpickr-weekwrapper) > .fl...
+           ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:7777:34:
+      7777 │ .notyf__toast .notyf__wrapper:has(> .notyf__dismiss) {
+           ╵                                   ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16322:25:
+      16322 │ :where(.card-compact:has(>.card-header)) > .card-body {
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16324:25:
+      16324 │ :where(.card-compact:has(>.card-body)) > .card-footer {
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16685:25:
+      16685 │ .validate .label ~ *:has(> select:valid) ~ * > .hover\:success-...
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16686:30:
+      16686 │ .validate .advance-select:has(> select:valid) ~ * > .hover\:suc...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16687:30:
+      16687 │ .validate .advance-select:has(> select:valid) ~ .hover\:success...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16689:25:
+      16689 │ .validate .label ~ *:has(> select:invalid) ~ * > .hover\:error-...
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16690:30:
+      16690 │ .validate .advance-select:has(> select:invalid) ~ * > .hover\:e...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:16691:30:
+      16691 │ .validate .advance-select:has(> select:invalid) ~ .hover\:error...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17040:16:
+      17040 │ .validate *:has(> .checkbox:valid) ~ .hover\:success-message:ho...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17041:16:
+      17041 │ .validate *:has(> .checkbox:valid) > * > .hover\:success-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17046:16:
+      17046 │ .validate *:has(> .checkbox:invalid) ~ .hover\:error-message:ho...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17047:16:
+      17047 │ .validate *:has(> .checkbox:invalid) > * > .hover\:error-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17090:16:
+      17090 │ .validate *:has(> .input:valid) ~ .hover\:success-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17091:16:
+      17091 │ .validate *:has(> .input:valid)  > * > .hover\:success-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17102:16:
+      17102 │ .validate *:has(> .input:invalid) ~ .hover\:error-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17103:16:
+      17103 │ .validate *:has(> .input:invalid) > * > .hover\:error-message:h...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17202:16:
+      17202 │ .validate *:has(> .radio:valid) ~ .hover\:success-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17203:16:
+      17203 │ .validate *:has(> .radio:valid) > * > .hover\:success-message:h...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17208:16:
+      17208 │ .validate *:has(> .radio:invalid) ~ .hover\:error-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17209:16:
+      17209 │ .validate *:has(> .radio:invalid) > * > .hover\:error-message:h...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17214:16:
+      17214 │ .validate *:has(> .radio-inset:valid) ~ .hover\:success-message...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17215:16:
+      17215 │ .validate *:has(> .radio-inset:valid) > * > .hover\:success-mes...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17220:16:
+      17220 │ .validate *:has(> .radio-inset:invalid) ~ .hover\:error-message...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17221:16:
+      17221 │ .validate *:has(> .radio-inset:invalid) > * > .hover\:error-mes...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17234:16:
+      17234 │ .validate *:has(> .select:valid) ~ .hover\:success-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17235:16:
+      17235 │ .validate *:has(> .select:valid) > * > .hover\:success-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17240:16:
+      17240 │ .validate *:has(> .select:invalid) ~ .hover\:error-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17241:16:
+      17241 │ .validate *:has(> .select:invalid) > * > .hover\:error-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17302:16:
+      17302 │ .validate *:has(> .switch:valid) ~ .hover\:success-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17303:16:
+      17303 │ .validate *:has(> .switch:valid) > * > .hover\:success-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17308:16:
+      17308 │ .validate *:has(> .switch:invalid) ~ .hover\:error-message:hover,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17309:16:
+      17309 │ .validate *:has(> .switch:invalid) > * > .hover\:error-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17314:16:
+      17314 │ .validate *:has(> .switch-outline:valid) ~ .hover\:success-mess...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17315:16:
+      17315 │ .validate *:has(> .switch-outline:valid) > * > .hover\:success-...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17320:16:
+      17320 │ .validate *:has(> .switch-outline:invalid) ~ .hover\:error-mess...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17321:16:
+      17321 │ .validate *:has(> .switch-outline:invalid) > * > .hover\:error-...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17326:16:
+      17326 │ .validate *:has(> .textarea:valid) ~ .hover\:success-message:ho...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17327:16:
+      17327 │ .validate *:has(> .textarea:valid) > * > .hover\:success-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17332:16:
+      17332 │ .validate *:has(> .textarea:invalid) ~ .hover\:error-message:ho...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17333:16:
+      17333 │ .validate *:has(> .textarea:invalid) > * > .hover\:error-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17436:25:
+      17436 │ .validate .label ~ *:has(> select:valid) ~ * > .focus\:success-...
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17437:30:
+      17437 │ .validate .advance-select:has(> select:valid) ~ * > .focus\:suc...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17438:30:
+      17438 │ .validate .advance-select:has(> select:valid) ~ .focus\:success...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17440:25:
+      17440 │ .validate .label ~ *:has(> select:invalid) ~ * > .focus\:error-...
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17441:30:
+      17441 │ .validate .advance-select:has(> select:invalid) ~ * > .focus\:e...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17442:30:
+      17442 │ .validate .advance-select:has(> select:invalid) ~ .focus\:error...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17791:16:
+      17791 │ .validate *:has(> .checkbox:valid) ~ .focus\:success-message:fo...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17792:16:
+      17792 │ .validate *:has(> .checkbox:valid) > * > .focus\:success-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17797:16:
+      17797 │ .validate *:has(> .checkbox:invalid) ~ .focus\:error-message:fo...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17798:16:
+      17798 │ .validate *:has(> .checkbox:invalid) > * > .focus\:error-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17841:16:
+      17841 │ .validate *:has(> .input:valid) ~ .focus\:success-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17842:16:
+      17842 │ .validate *:has(> .input:valid)  > * > .focus\:success-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17853:16:
+      17853 │ .validate *:has(> .input:invalid) ~ .focus\:error-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17854:16:
+      17854 │ .validate *:has(> .input:invalid) > * > .focus\:error-message:f...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17953:16:
+      17953 │ .validate *:has(> .radio:valid) ~ .focus\:success-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17954:16:
+      17954 │ .validate *:has(> .radio:valid) > * > .focus\:success-message:f...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17959:16:
+      17959 │ .validate *:has(> .radio:invalid) ~ .focus\:error-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17960:16:
+      17960 │ .validate *:has(> .radio:invalid) > * > .focus\:error-message:f...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17965:16:
+      17965 │ .validate *:has(> .radio-inset:valid) ~ .focus\:success-message...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17966:16:
+      17966 │ .validate *:has(> .radio-inset:valid) > * > .focus\:success-mes...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17971:16:
+      17971 │ .validate *:has(> .radio-inset:invalid) ~ .focus\:error-message...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17972:16:
+      17972 │ .validate *:has(> .radio-inset:invalid) > * > .focus\:error-mes...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17985:16:
+      17985 │ .validate *:has(> .select:valid) ~ .focus\:success-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17986:16:
+      17986 │ .validate *:has(> .select:valid) > * > .focus\:success-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17991:16:
+      17991 │ .validate *:has(> .select:invalid) ~ .focus\:error-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:17992:16:
+      17992 │ .validate *:has(> .select:invalid) > * > .focus\:error-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18053:16:
+      18053 │ .validate *:has(> .switch:valid) ~ .focus\:success-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18054:16:
+      18054 │ .validate *:has(> .switch:valid) > * > .focus\:success-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18059:16:
+      18059 │ .validate *:has(> .switch:invalid) ~ .focus\:error-message:focus,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18060:16:
+      18060 │ .validate *:has(> .switch:invalid) > * > .focus\:error-message:...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18065:16:
+      18065 │ .validate *:has(> .switch-outline:valid) ~ .focus\:success-mess...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18066:16:
+      18066 │ .validate *:has(> .switch-outline:valid) > * > .focus\:success-...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18071:16:
+      18071 │ .validate *:has(> .switch-outline:invalid) ~ .focus\:error-mess...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18072:16:
+      18072 │ .validate *:has(> .switch-outline:invalid) > * > .focus\:error-...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18077:16:
+      18077 │ .validate *:has(> .textarea:valid) ~ .focus\:success-message:fo...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18078:16:
+      18078 │ .validate *:has(> .textarea:valid) > * > .focus\:success-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18083:16:
+      18083 │ .validate *:has(> .textarea:invalid) ~ .focus\:error-message:fo...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18084:16:
+      18084 │ .validate *:has(> .textarea:invalid) > * > .focus\:error-messag...
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18314:38:
+      18314 │     .notyf__toast .notyf__wrapper:has(> .sm\:notyf__dismiss) {
+            ╵                                       ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18448:38:
+      18448 │     .notyf__toast .notyf__wrapper:has(> .md\:notyf__dismiss) {
+            ╵                                       ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18582:38:
+      18582 │     .notyf__toast .notyf__wrapper:has(> .lg\:notyf__dismiss) {
+            ╵                                       ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:18716:38:
+      18716 │     .notyf__toast .notyf__wrapper:has(> .xl\:notyf__dismiss) {
+            ╵                                       ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:29277:33:
+      29277 │     :where(.sm\:card-compact:has(>.card-header)) > .card-body {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:29279:33:
+      29279 │     :where(.sm\:card-compact:has(>.card-body)) > .card-footer {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:29647:33:
+      29647 │     :where(.md\:card-compact:has(>.card-header)) > .card-body {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:29649:33:
+      29649 │     :where(.md\:card-compact:has(>.card-body)) > .card-footer {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:30017:33:
+      30017 │     :where(.lg\:card-compact:has(>.card-header)) > .card-body {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:30019:33:
+      30019 │     :where(.lg\:card-compact:has(>.card-body)) > .card-footer {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:30387:33:
+      30387 │     :where(.xl\:card-compact:has(>.card-header)) > .card-body {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:30389:33:
+      30389 │     :where(.xl\:card-compact:has(>.card-body)) > .card-footer {
+            ╵                                  ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31770:24:
+      31770 │ .advance-select-tag:has(> .is-valid),
+            ╵                         ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31771:21:
+      31771 │ .validate select:has(~ * > .selected) + .advance-select-toggle {
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31776:26:
+      31776 │   .advance-select-tag:has(> .is-valid):focus,
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31777:26:
+      31777 │   .advance-select-tag:has(> .is-valid):focus-within,
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31778:23:
+      31778 │   .validate select:has(~ * > .selected) + .advance-select-toggl...
+            ╵                        ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31779:23:
+      31779 │   .validate select:has(~ * > .selected) + .advance-select-toggl...
+            ╵                        ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31793:24:
+      31793 │ .advance-select-tag:has(> .is-invalid),
+            ╵                         ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31794:26:
+      31794 │ .validate select:not(:has(~ * > .selected)) + .advance-select-t...
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31799:26:
+      31799 │   .advance-select-tag:has(> .is-invalid):focus,
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31800:26:
+      31800 │   .advance-select-tag:has(> .is-invalid):focus-within,
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31801:28:
+      31801 │   .validate select:not(:has(~ * > .selected)) + .advance-select...
+            ╵                             ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31802:28:
+      31802 │   .validate select:not(:has(~ * > .selected)) + .advance-select...
+            ╵                             ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31815:21:
+      31815 │ .validate .label:has(~ .advance-select > select:valid) > *,
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31816:26:
+      31816 │ .validate .label-text:has(~ .advance-select > select:valid),
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31818:30:
+      31818 │ .validate .advance-select:has(> select:valid) ~ .label,
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31819:30:
+      31819 │ .validate .advance-select:has(> select:valid) ~ .label-text,
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31820:30:
+      31820 │ .validate .advance-select:has(> select:valid) ~ .label .label-t...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31823:21:
+      31823 │ .validate .label:has(~ * > select:invalid) > *,
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31824:26:
+      31824 │ .validate .label-text:has(~ * > select:invalid),
+            ╵                           ^
+
+
+▲ [WARNING] Unexpected whitespace [css-syntax-error]
+
+    <stdin>:31826:30:
+      31826 │ .validate .advance-select:has( > select:invalid) ~ .label,
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31827:30:
+      31827 │ .validate .advance-select:has(> select:invalid) ~ .label-text,
+            ╵                               ^
+
+
+▲ [WARNING] Unexpected whitespace [css-syntax-error]
+
+    <stdin>:31828:30:
+      31828 │ .validate .advance-select:has( > select:invalid) ~ .label .labe...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31831:25:
+      31831 │ .validate .label ~ *:has(> select:valid) ~ * > .success-message,
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31832:30:
+      31832 │ .validate .advance-select:has(> select:valid) ~ * > .success-me...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31833:30:
+      31833 │ .validate .advance-select:has(> select:valid) ~ .success-message {
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31835:25:
+      31835 │ .validate .label ~ *:has(> select:invalid) ~ * > .error-message,
+            ╵                          ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31836:30:
+      31836 │ .validate .advance-select:has(> select:invalid) ~ * > .error-me...
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:31837:30:
+      31837 │ .validate .advance-select:has(> select:invalid) ~ .error-message {
+            ╵                               ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32292:21:
+      32292 │ .validate .label:has(+ * .checkbox:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32293:26:
+      32293 │ .validate .label-text:has(+ * .checkbox:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32294:26:
+      32294 │ .validate .label-text:has(~ .checkbox:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32295:21:
+      32295 │ .validate .label:has(~ .checkbox:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32305:21:
+      32305 │ .validate .label:has(+ * .checkbox:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32306:26:
+      32306 │ .validate .label-text:has(+ * .checkbox:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32307:26:
+      32307 │ .validate .label-text:has(~ .checkbox:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32308:21:
+      32308 │ .validate .label:has(~ .checkbox:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32318:16:
+      32318 │ .validate *:has(> .checkbox:valid) ~ .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32319:16:
+      32319 │ .validate *:has(> .checkbox:valid) > * > .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32324:16:
+      32324 │ .validate *:has(> .checkbox:invalid) ~ .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32325:16:
+      32325 │ .validate *:has(> .checkbox:invalid) > * > .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32523:11:
+      32523 │ .label:has(+ * .is-valid) > *, 
+            ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32524:16:
+      32524 │ .label-text:has(+ * .is-valid), 
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32525:16:
+      32525 │ .label-text:has(~ .is-valid), 
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32526:11:
+      32526 │ .label:has(~ .is-valid) > *, 
+            ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32538:21:
+      32538 │ .validate .label:has(+ * .input:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32539:26:
+      32539 │ .validate .label-text:has(+ * .input:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32540:26:
+      32540 │ .validate .label-text:has(~ .input:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32541:21:
+      32541 │ .validate .label:has(~ .input:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32598:11:
+      32598 │ .label:has(+ * .is-invalid) > *, 
+            ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32599:16:
+      32599 │ .label-text:has(+ * .is-invalid), 
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32600:16:
+      32600 │ .label-text:has(~ .is-invalid), 
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32601:11:
+      32601 │ .label:has(~ .is-invalid) > *, 
+            ╵            ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32613:21:
+      32613 │ .validate .label:has(+ * .input:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32614:26:
+      32614 │ .validate .label-text:has(+ * .input:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32615:26:
+      32615 │ .validate .label-text:has(~ .input:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32616:21:
+      32616 │ .validate .label:has(~ .input:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32631:16:
+      32631 │ .validate *:has(> .input:valid) ~ .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32632:16:
+      32632 │ .validate *:has(> .input:valid)  > * > .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32637:16:
+      32637 │ .validate *:has(> .input:invalid) ~ .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:32638:16:
+      32638 │ .validate *:has(> .input:invalid) > * > .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33059:21:
+      33059 │ .validate .label:has(+ * .radio:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33060:26:
+      33060 │ .validate .label-text:has(+ * .radio:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33061:26:
+      33061 │ .validate .label-text:has(~ .radio:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33062:21:
+      33062 │ .validate .label:has(~ .radio:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33072:21:
+      33072 │ .validate .label:has(+ * .radio:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33073:26:
+      33073 │ .validate .label-text:has(+ * .radio:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33074:26:
+      33074 │ .validate .label-text:has(~ .radio:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33075:21:
+      33075 │ .validate .label:has(~ .radio:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33115:21:
+      33115 │ .validate .label:has(+ * .radio-inset:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33116:21:
+      33116 │ .validate .label:has(+ * .radio-inset:valid).label-text, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33117:21:
+      33117 │ .validate .label:has(~ .radio-inset:valid).label-text, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33118:21:
+      33118 │ .validate .label:has(~ .radio-inset:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33128:21:
+      33128 │ .validate .label:has(+ * .radio-inset:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33129:26:
+      33129 │ .validate .label-text:has(+ * .radio-inset:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33130:26:
+      33130 │ .validate .label-text:has(~ .radio-inset:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33131:21:
+      33131 │ .validate .label:has(~ .radio-inset:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33349:21:
+      33349 │ .validate .label:has(+ * .select:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33350:26:
+      33350 │ .validate .label-text:has(+ * .select:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33351:26:
+      33351 │ .validate .label-text:has(~ .select:valid).label-text, 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33352:21:
+      33352 │ .validate .label:has(~ .select:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33362:21:
+      33362 │ .validate .label:has(+ * .select:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33363:26:
+      33363 │ .validate .label-text:has(+ * .select:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33364:26:
+      33364 │ .validate .label-text:has(~ .select:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33365:21:
+      33365 │ .validate .label:has(~ .select:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33375:16:
+      33375 │ .validate *:has(> .select:valid) ~ .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33376:16:
+      33376 │ .validate *:has(> .select:valid) > * > .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33381:16:
+      33381 │ .validate *:has(> .select:invalid) ~ .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33382:16:
+      33382 │ .validate *:has(> .select:invalid) > * > .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33457:21:
+      33457 │ .validate .label:has(+ * .switch:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33458:26:
+      33458 │ .validate .label-text:has(+ * .switch:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33459:26:
+      33459 │ .validate .label-text:has(~ .switch:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33460:21:
+      33460 │ .validate .label:has(~ .switch:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33471:21:
+      33471 │ .validate .label:has(+ * .switch:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33472:26:
+      33472 │ .validate .label-text:has(+ * .switch:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33473:26:
+      33473 │ .validate .label-text:has(~ .switch:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33474:21:
+      33474 │ .validate .label:has(~ .switch:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33484:16:
+      33484 │ .validate *:has(> .switch:valid) ~ .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33485:16:
+      33485 │ .validate *:has(> .switch:valid) > * > .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33490:16:
+      33490 │ .validate *:has(> .switch:invalid) ~ .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33491:16:
+      33491 │ .validate *:has(> .switch:invalid) > * > .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33532:21:
+      33532 │ .validate .label:has(+ * .switch-outline:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33533:26:
+      33533 │ .validate .label-text:has(+ * .switch-outline:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33534:26:
+      33534 │ .validate .label-text:has(~ .switch-outline:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33535:21:
+      33535 │ .validate .label:has(~ .switch-outline:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33546:21:
+      33546 │ .validate .label:has(+ * .switch-outline:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33547:26:
+      33547 │ .validate .label-text:has(+ * .switch-outline:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33548:26:
+      33548 │ .validate .label-text:has(~ .switch-outline:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33549:21:
+      33549 │ .validate .label:has(~ .switch-outline:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33841:21:
+      33841 │ .validate .label:has(+ * .textarea:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33842:26:
+      33842 │ .validate .label-text:has(+ * .textarea:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33843:26:
+      33843 │ .validate .label-text:has(~ .textarea:valid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33844:21:
+      33844 │ .validate .label:has(~ .textarea:valid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33854:21:
+      33854 │ .validate .label:has(+ * .textarea:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33855:26:
+      33855 │ .validate .label-text:has(+ * .textarea:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33856:26:
+      33856 │ .validate .label-text:has(~ .textarea:invalid), 
+            ╵                           ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33857:21:
+      33857 │ .validate .label:has(~ .textarea:invalid) > *, 
+            ╵                      ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33867:16:
+      33867 │ .validate *:has(> .textarea:valid) ~ .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33868:16:
+      33868 │ .validate *:has(> .textarea:valid) > * > .success-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33873:16:
+      33873 │ .validate *:has(> .textarea:invalid) ~ .error-message,
+            ╵                 ^
+
+
+▲ [WARNING] CSS nesting syntax is not supported in the configured target environment ("chrome87", "edge88", "es2020", "firefox78", "safari14") [unsupported-css-nesting]
+
+    <stdin>:33874:16:
+      33874 │ .validate *:has(> .textarea:invalid) > * > .error-message,
+            ╵                 ^
+
+[39m
+computing gzip size...
+[2mpublic/build/[22m[32mmanifest.json                   [39m[1m[2m    0.30 kB[22m[1m[22m[2m │ gzip:   0.15 kB[22m
+[2mpublic/build/[22m[35massets/landing_v1-7dbcf707.css  [39m[1m[2m1,373.00 kB[22m[1m[22m[2m │ gzip: 115.45 kB[22m
+[2mpublic/build/[22m[36massets/landing_v1-513eae54.js   [39m[1m[2m  282.51 kB[22m[1m[22m[2m │ gzip:  62.33 kB[22m
+[32m✓ built in 5.04s[39m
