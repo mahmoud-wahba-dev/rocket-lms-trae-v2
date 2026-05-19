@@ -501,6 +501,15 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
 
     Route::get('/landing-v1', [LandingV1Controller::class, 'index'])->name('landing.v1.index');
     Route::view('/landing-v1/about', 'landing_v1.pages.about')->name('landing.v1.about');
+    Route::view('/landing-v1/contact', 'landing_v1.pages.contact')->name('landing.v1.contact');
+    Route::view('/landing-v1/login', 'landing_v1.pages.login')->name('landing.v1.login');
+    Route::view('/landing-v1/register', 'landing_v1.pages.register')->name('landing.v1.register');
+    Route::view('/landing-v1/instructors', 'landing_v1.pages.instructors')->name('landing.v1.instructors');
+    Route::view('/landing-v1/courses', 'landing_v1.pages.courses')->name('landing.v1.courses');
+    Route::view('/landing-v1/course-details', 'landing_v1.pages.course-details')->name('landing.v1.course-details');
+
+
+
     });
 
 // Purchase Code Routes

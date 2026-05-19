@@ -37,7 +37,7 @@ module.exports = {
                 blue: 'var(--color-blue)',
                 black: 'var(--color-black)',
                 '77': 'var(--color-77)',
-                'e3': 'var(--color-e3)',
+                'f7': 'var(--color-f7)',
                 'card-text': 'var(--color-card-text)',
             },
             borderRadius: {
