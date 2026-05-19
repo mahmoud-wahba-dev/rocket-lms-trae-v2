@@ -23,6 +23,7 @@
         "fideloper/proxy": "^4.4",
         "fruitcake/laravel-cors": "^3.0",
         "gizemsever/laravel-paytr": "^2.1",
+        "guysolamour/laravel-cinetpay": "^2.0",
         "guzzlehttp/guzzle": "^7.2",
         "haggag/laravel-tap-payment": "^1.0",
         "hiqdev/omnipay-robokassa": "^3.3",
@@ -141,10 +142,6 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true,
             "php-http/discovery": true
-        },
-        "audit": {
-            "abandoned": "ignore",
-            "block-insecure": false
         }
     },
     "minimum-stability": "stable",
