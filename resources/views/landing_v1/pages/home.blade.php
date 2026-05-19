@@ -302,15 +302,16 @@
             </div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <x-landing_v1::course-card title="استشارات نسخ"
-                description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
-            <x-landing_v1::course-card title="استشارات نسخ"
-                description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
-            <x-landing_v1::course-card title="استشارات نسخ"
-                description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
+            @forelse ($courses ?? [] as $course)
+                <x-landing_v1::course-card
+                    :title="$course->title"
+                    :description="\Illuminate\Support\Str::limit(strip_tags($course->description ?? ''), 120)"
+                    :teacher-name="optional($course->teacher)->full_name ?? ''"
+                    :price="$course->price > 0 ? handlePrice($course->price) : trans('public.free')"
+                    :image="$course->getImage() ?? $landingImg . '/home/course.webp'" />
+            @empty
+                <p class="col-span-3 text-center text-primary">{{ trans('public.no_results_found') }}</p>
+            @endforelse
         </div>
     </div>
 </section>
@@ -482,56 +483,29 @@
     <div class="container">
         <h2 class="font-semibold text-36px text-primary mb-14">حلول تعليمية مخصصة لكل احتياج</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-            <div class="border border-[#00000029] rounded-8px">
-                <div class="mb-4 bg-e3">
-                    <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
+            @forelse ($trainers ?? [] as $trainer)
+                <div class="border border-[#00000029] rounded-8px">
+                    <div class="mb-4 bg-e3">
+                        <img src="{{ $trainer->getAvatar() ?? $landingImg . '/home/instructor.webp' }}"
+                             alt="{{ $trainer->full_name }}">
+                    </div>
+                    <div class="px-5 py-2">
+                        <h6 class="font-semibold text-24px text-primary mb-1">{{ $trainer->full_name }}</h6>
+                        <p class="font-normal text-base text-primary leading-6">
+                            {{ $trainer->headline ?? $trainer->bio ?? '' }}
+                        </p>
+                    </div>
                 </div>
-                <div class="px-5 py-2">
-                    <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
-                    <p class="font-normal text-base text-primary leading-6">
-                        في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                        الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
-                    </p>
+            @empty
+                <div class="border border-[#00000029] rounded-8px">
+                    <div class="mb-4 bg-e3">
+                        <img src="{{ $landingImg }}/home/instructor.webp" alt="instructor">
+                    </div>
+                    <div class="px-5 py-2">
+                        <h6 class="font-semibold text-24px text-primary mb-1">{{ trans('public.no_results_found') }}</h6>
+                    </div>
                 </div>
-            </div>
-
-            <div class="border border-[#00000029] rounded-8px">
-                <div class="mb-4 bg-e3">
-                    <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
-                </div>
-                <div class="px-5 py-2">
-                    <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
-                    <p class="font-normal text-base text-primary leading-6">
-                        في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                        الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
-                    </p>
-                </div>
-            </div>
-
-            <div class="border border-[#00000029] rounded-8px">
-                <div class="mb-4 bg-e3">
-                    <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
-                </div>
-                <div class="px-5 py-2">
-                    <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
-                    <p class="font-normal text-base text-primary leading-6">
-                        في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                        الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
-                    </p>
-                </div>
-            </div>
-            <div class="border border-[#00000029] rounded-8px">
-                <div class="mb-4 bg-e3">
-                    <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
-                </div>
-                <div class="px-5 py-2">
-                    <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
-                    <p class="font-normal text-base text-primary leading-6">
-                        في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                        الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
-                    </p>
-                </div>
-            </div>
+            @endforelse
         </div>
     </div>
 </section>
