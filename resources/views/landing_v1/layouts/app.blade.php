@@ -19,9 +19,7 @@
     <div id="landing-v1-app" class="min-h-screen">
         @php($landingImg = asset('assets/landing_v1/img'))
         @include('landing_v1.layouts.navbar')
-       <main class="mt-20 min-h-screen">
            @yield('content')
-        </main>
         @include('landing_v1.layouts.footer')
     </div>
 </body>

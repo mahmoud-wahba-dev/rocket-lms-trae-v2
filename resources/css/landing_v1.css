@@ -96,3 +96,7 @@
 .carousel-dot.active {
     background-color: var(--color-gold) !important;
 }
+
+main {
+    min-height: 100vh;
+}
