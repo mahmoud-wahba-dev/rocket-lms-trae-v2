@@ -502,8 +502,8 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::get('/landing-v1', [LandingV1Controller::class, 'index'])->name('landing.v1.index');
     Route::view('/landing-v1/about', 'landing_v1.pages.about')->name('landing.v1.about');
     Route::view('/landing-v1/contact', 'landing_v1.pages.contact')->name('landing.v1.contact');
-    Route::view('/landing-v1/login', 'landing_v1.pages.login')->name('landing.v1.login');
-    Route::view('/landing-v1/register', 'landing_v1.pages.register')->name('landing.v1.register');
+    Route::view('/landing-v1/login', 'landing_v1.pages.auth.login')->name('landing.v1.login');
+    Route::view('/landing-v1/register', 'landing_v1.pages.auth.register')->name('landing.v1.register');
     Route::get('/landing-v1/instructors', [LandingV1Controller::class, 'instructors'])->name('landing.v1.instructors');
     Route::get('/landing-v1/courses', [LandingV1Controller::class, 'courses'])->name('landing.v1.courses');
     Route::get('/landing-v1/course-details/{slug?}', [LandingV1Controller::class, 'courseDetails'])->name('landing.v1.course-details');

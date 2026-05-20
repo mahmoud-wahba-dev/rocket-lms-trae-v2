@@ -5,7 +5,9 @@ use Illuminate\Http\Request;
 
 define('LARAVEL_START', microtime(true));
 
-@require_once __DIR__ . '/../storage/framework/cache/cache-bootstrap.php';
+if (file_exists(__DIR__ . '/../storage/framework/cache/cache-bootstrap.php')) {
+    @require_once __DIR__ . '/../storage/framework/cache/cache-bootstrap.php';
+}
 
 /*
 |--------------------------------------------------------------------------
