@@ -16,7 +16,7 @@ class LandingV1Controller extends Controller
             ->where('role_name', Role::$teacher)
             ->where('status', 'active')
             ->orderByDesc('id')
-            ->limit(4)
+            ->limit(5)
             ->get();
 
         $courses = Webinar::where('status', 'active')
@@ -29,6 +29,7 @@ class LandingV1Controller extends Controller
         $data = [
             'pageTitle' => trans('home.home_title'),
             'trainers' => $trainers,
+            'instructors' => $trainers,
             'courses' => $courses,
         ];
 

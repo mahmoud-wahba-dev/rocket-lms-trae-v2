@@ -14,18 +14,18 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-10 lg:gap-y-13 ">
 
 
-                <div class="border border-[#00000029] rounded-8px">
+                <div class="border border-[#CFCFCF] rounded-9px">
                     <div class="mb-4 bg-e3">
                         <img src="/assets/landing_v1/img/home/instructor.webp" alt="م. خالد السديري">
                     </div>
                     <div class="p-5 mb-6">
-                        <h6 class="font-semibold text-24px text-primary mb-1">م. أحمد بن صالح آل سعود</h6>
-                        <p class="font-normal text-base text-primary leading-6">
+                        <h6 class="font-semibold text-24px text-primary mb-2">م. أحمد بن صالح آل سعود</h6>
+                        <p class="font-normal text-base text-primary leading-6 mb-6">
                             خبير استراتيجيات التحول الرقمي ومستشار تطوير الأعمال.
                         </p>
 
                         <div class="flex justify-between items-center lg:gap-4 xl:gap-9 flex-wrap mb-7">
-                            <div>
+                            <div class="flex items-center gap-2">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -33,7 +33,57 @@
                                         fill="#A6AAB5" />
                                 </svg>
 
-                                <div>
+                                <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
+                                    <span>عضو منذ</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.0625 2.5C3.31658 2.5 2.60121 2.79632 2.07376 3.32376C1.54632 3.85121 1.25 4.56658 1.25 5.3125V14.6875C1.25 15.4334 1.54632 16.1488 2.07376 16.6762C2.60121 17.2037 3.31658 17.5 4.0625 17.5H15.9375C16.6834 17.5 17.3988 17.2037 17.9262 16.6762C18.4537 16.1488 18.75 15.4334 18.75 14.6875V5.3125C18.75 4.56658 18.4537 3.85121 17.9262 3.32376C17.3988 2.79632 16.6834 2.5 15.9375 2.5H4.0625ZM2.5 5.3125C2.5 4.8981 2.66462 4.50067 2.95765 4.20765C3.25067 3.91462 3.6481 3.75 4.0625 3.75H15.9375C16.3519 3.75 16.7493 3.91462 17.0424 4.20765C17.3354 4.50067 17.5 4.8981 17.5 5.3125V14.6875C17.5 15.1019 17.3354 15.4993 17.0424 15.7924C16.7493 16.0854 16.3519 16.25 15.9375 16.25H4.0625C3.6481 16.25 3.25067 16.0854 2.95765 15.7924C2.66462 15.4993 2.5 15.1019 2.5 14.6875V5.3125ZM7.5 7.50063V12.5C7.50007 12.6079 7.52805 12.7139 7.58123 12.8077C7.6344 12.9015 7.71095 12.98 7.80344 13.0355C7.89593 13.091 8.0012 13.1216 8.10902 13.1244C8.21685 13.1271 8.32355 13.1019 8.41875 13.0513L13.105 10.5519C13.2048 10.4985 13.2883 10.4191 13.3465 10.322C13.4047 10.2249 13.4355 10.1138 13.4355 10.0006C13.4355 9.88743 13.4047 9.77635 13.3465 9.67927C13.2883 9.58218 13.2048 9.50272 13.105 9.44938L8.41937 6.94938C8.32411 6.89851 8.21728 6.87319 8.10932 6.87591C8.00135 6.87861 7.89593 6.90926 7.80333 6.96484C7.71074 7.02042 7.63412 7.09905 7.58096 7.19306C7.5278 7.28707 7.49991 7.39263 7.5 7.50063Z"
+                                        fill="#A6AAB5" />
+                                </svg>
+
+
+                                <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
+                                    <span>عضو منذ</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+
+
+                            <div class="flex items-center gap-2">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18 13.5C15.519 13.5 13.5 15.5182 13.5 18C13.5 20.4818 15.519 22.5 18 22.5C20.481 22.5 22.5 20.4818 22.5 18C22.5 15.5182 20.481 13.5 18 13.5ZM18 21C16.3455 21 15 19.6545 15 18C15 16.3455 16.3455 15 18 15V18H21C21 19.6545 19.6545 21 18 21Z"
+                                        fill="#A6AAB5" />
+                                    <path
+                                        d="M12 21H6.75V6H17.25V11.25H18.75V3C18.75 2.17275 18.0773 1.5 17.25 1.5H6.75C5.92275 1.5 5.25 2.17275 5.25 3V21C5.25 21.8272 5.92275 22.5 6.75 22.5H12V21ZM6.75 3H17.25V4.5H6.75V3Z"
+                                        fill="#A6AAB5" />
+                                </svg>
+
+
+
+                                <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
+                                    <span>عضو منذ</span>
+                                    <span>0</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-2">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M18.5 15C19.0304 15 19.5391 14.7893 19.9142 14.4142C20.2893 14.0391 20.5 13.5304 20.5 13V2C20.5 1.46957 20.2893 0.960859 19.9142 0.585786C19.5391 0.210714 19.0304 0 18.5 0H7.96C8.31 0.61 8.5 1.3 8.5 2H18.5V13H9.5V15M13.5 5V7H7.5V20H5.5V14H3.5V20H1.5V12H0V7C0 6.46957 0.210714 5.96086 0.585786 5.58579C0.960859 5.21071 1.46957 5 2 5H13.5ZM6.5 2C6.5 2.53043 6.28929 3.03914 5.91421 3.41421C5.53914 3.78929 5.03043 4 4.5 4C3.96957 4 3.46086 3.78929 3.08579 3.41421C2.71071 3.03914 2.5 2.53043 2.5 2C2.5 1.46957 2.71071 0.960859 3.08579 0.585786C3.46086 0.210714 3.96957 0 4.5 0C5.03043 0 5.53914 0.210714 5.91421 0.585786C6.28929 0.960859 6.5 1.46957 6.5 2Z"
+                                        fill="#A6AAB5" />
+                                </svg>
+
+
+                                <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
                                     <span>عضو منذ</span>
                                     <span>0</span>
                                 </div>
@@ -41,7 +91,7 @@
                         </div>
 
                         <div>
-                            <a href="">
+                            <a href="" class="btn btn-primary h-13 rounded-4px font-medium text-14px btn-block">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path

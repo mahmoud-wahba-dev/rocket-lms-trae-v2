@@ -109,7 +109,7 @@ class CartController extends Controller
         validateParam($request->all(),
             [
                 'webinar_id' => ['required',
-                    Rule::exists('webinars', 'id')->where('private', false)
+                    Rule::exists('', 'id')->where('private', false)
                         ->where('status', 'active')
                 ],
                 'ticket_id' => 'nullable',
@@ -766,9 +766,9 @@ class CartController extends Controller
         $totalItemAmount = 0;
 
         if ($couponDiscount->source == Discount::$discountSourceCourse) {
-            $discountWebinarsIds = $couponDiscount->discountCourses()->pluck('course_id')->toArray();
+            $discountIds = $couponDiscount->discountCourses()->pluck('course_id')->toArray();
             $webinar = $cart->webinar;
-            if (!empty($webinar) and (in_array($webinar->id, $discountWebinarsIds) or count($discountWebinarsIds) < 1)) {
+            if (!empty($webinar) and (in_array($webinar->id, $discountIds) or count($discountIds) < 1)) {
                 $totalItemAmount += $webinar->price;
                 //$otherDiscounts += $webinar->getDiscount($cart->ticket, $user);
 
@@ -883,26 +883,26 @@ class CartController extends Controller
         $totalDiscount = 0;
 
         if ($discount->source == Discount::$discountSourceCourse) {
-            $totalWebinarsAmount = 0;
+            $totalAmount = 0;
             $webinarOtherDiscounts = 0;
-            $discountWebinarsIds = $discount->discountCourses()->pluck('course_id')->toArray();
+            $discountIds = $discount->discountCourses()->pluck('course_id')->toArray();
 
             foreach ($carts as $cart) {
                 $webinar = $cart->webinar;
-                if (!empty($webinar) and in_array($webinar->id, $discountWebinarsIds)) {
-                    $totalWebinarsAmount += $webinar->price;
+                if (!empty($webinar) and in_array($webinar->id, $discountIds)) {
+                    $totalAmount += $webinar->price;
                     //$webinarOtherDiscounts += $webinar->getDiscount($cart->ticket, $user);
                 }
             }
 
             if ($discount->discount_type == Discount::$discountTypeFixedAmount) {
-                $totalDiscount = ($totalWebinarsAmount > $discount->amount) ? $discount->amount : $totalWebinarsAmount;
+                $totalDiscount = ($totalAmount > $discount->amount) ? $discount->amount : $totalAmount;
 
                 /*if (!empty($webinarOtherDiscounts)) {
                     $totalDiscount = $totalDiscount - (int)$webinarOtherDiscounts;
                 }*/
             } else {
-                $totalDiscount = ($totalWebinarsAmount > 0) ? $totalWebinarsAmount * $percent / 100 : 0;
+                $totalDiscount = ($totalAmount > 0) ? $totalAmount * $percent / 100 : 0;
             }
         } elseif ($discount->source == Discount::$discountSourceBundle) {
             $totalBundlesAmount = 0;

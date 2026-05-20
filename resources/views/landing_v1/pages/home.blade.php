@@ -43,8 +43,139 @@
         </div>
     </header>
 
-    <x-landing_v1::partners-carousel />
-    <x-landing_v1::stats />
+    <section class="section-gap">
+        <div class="container">
+            <h2 class="font-semibold text-32px text-primary mb-8">معتمدون لدى</h2>
+
+            <div id="multi-slide"
+                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "sm": 2, "lg": 3 , "xl": 4 }, "isRTL": true ,"dotsItemClasses": "carousel-dot" ,"isInfiniteLoop": true }'
+                class="relative w-full">
+                <div class="carousel h-80">
+                    <div class="carousel-body  h-full opacity-0">
+                        <!-- Slide 1 -->
+                        <div class="carousel-slide">
+                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                                <img class="object-contain"
+                                    src="{{ asset('assets/landing_v1/img/partners/partner_1.webp') }}" alt="partner 1">
+                            </div>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                                <img class="object-contain"
+                                    src="{{ asset('assets/landing_v1/img/partners/partner_2.webp') }}" alt="partner 2">
+                            </div>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                                <img class="object-contain"
+                                    src="{{ asset('assets/landing_v1/img/partners/partner_3.webp') }}" alt="partner 3">
+                            </div>
+                        </div>
+                        <!-- Slide 4 -->
+                        <div class="carousel-slide">
+                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                                <img class="object-contain"
+                                    src="{{ asset('assets/landing_v1/img/partners/partner_4.webp') }}" alt="partner 4">
+                            </div>
+                        </div>
+                        <!-- Slide 5 -->
+                        <div class="carousel-slide">
+                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                                <img class="object-contain"
+                                    src="{{ asset('assets/landing_v1/img/partners/partner_5.webp') }}" alt="partner 5">
+                            </div>
+                        </div>
+                        <!-- Slide 6 -->
+                        <div class="carousel-slide">
+                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                                <img class="object-contain"
+                                    src="{{ asset('assets/landing_v1/img/partners/partner_6.webp') }}" alt="partner 6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Previous Slide -->
+                <button type="button" class="carousel-prev">
+                    <span
+                        class="size-12 bg-[#F4F4F6] border border-primary flex items-center justify-center rounded-full shadow">
+                        <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
+                    </span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <!-- Next Slide -->
+                <button type="button" class="carousel-next">
+                    <span class="sr-only">Next</span>
+                    <span
+                        class="size-12 bg-[#F4F4F6] border border-primary flex items-center justify-center rounded-full shadow">
+                        <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="section-gap">
+        <div class="container">
+            <h2 class="font-semibold text-32px text-primary mb-8">سمات في ارقام</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+                <div class="center flex-col px-4">
+                    <p class="font-bold text-71px mb-7 text-secondary">
+                        <span>+</span>
+                        <span data-toggle-count='{"target":"#stats-1","min":0,"max":95000,"duration":1200}'>
+                            0
+                        </span>
+                    </p>
+                    <span id="stats-1" class="sr-only">95000</span>
+                    <p class="font-semibold text-28px text-primary">عميل مستفيد </p>
+
+                </div>
+
+
+
+
+                <div class="center flex-col px-8 border-x border-[#B9A68566]">
+                    <p class="font-bold text-71px mb-7 text-secondary">
+                        <span>+</span>
+                        <span data-toggle-count='{"target":"#stats-2","min":0,"max":620,"duration":1200}'>
+                            0
+                        </span>
+                    </p>
+                    <span id="stats-2" class="sr-only">620</span>
+                    <p class="font-semibold text-28px text-primary">برنامج تدريبي </p>
+
+                </div>
+
+                <div class="center flex-col px-8 border-e border-[#B9A68566]">
+                    <p class="font-bold text-71px mb-7 text-secondary">
+                        <span>+</span>
+                        <span data-toggle-count='{"target":"#stats-3","min":0,"max":66,"duration":1200}'>
+                            0
+                        </span>
+                    </p>
+                    <span id="stats-3" class="sr-only"> 66</span>
+                    <p class="font-semibold text-28px text-primary">مستشارين ومدربين </p>
+
+                </div>
+
+                <div class="center flex-col px-4">
+                    <p class="font-bold text-71px mb-7 text-secondary">
+                        <span>+</span>
+                        <span data-toggle-count='{"target":"#stats-4","min":0,"max":1200,"duration":1200}'>
+                            0
+                        </span>
+                    </p>
+                    <span id="stats-4" class="sr-only">+ 1200</span>
+                    <p class="font-semibold text-28px text-primary">خدمة استشارية </p>
+
+                </div>
+            </div>
+        </div>
+    </section>
 
 
 
@@ -181,15 +312,11 @@
                 </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <x-landing_v1::course-card title="استشارات نسخ"
-                    description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                    teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
-                <x-landing_v1::course-card title="استشارات نسخ"
-                    description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                    teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
-                <x-landing_v1::course-card title="استشارات نسخ"
-                    description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                    teacher-name="اسم المعلم" price="1.10ر.س" image="{{ $landingImg }}/home/course.webp" />
+                @foreach($courses as $course)
+                <x-landing_v1::course-card title="{{ $course->title }}" description="{{ $course->description }}"
+                    teacher-name="{{ $course->teacher->full_name ?? '' }}" price="{{ $course->price }}"
+                    image="{{ $course->image_cover }}" />
+                @endforeach
             </div>
         </div>
     </section>
@@ -361,56 +488,25 @@
         <div class="container">
             <h2 class="font-semibold text-36px text-primary mb-14">حلول تعليمية مخصصة لكل احتياج</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                <div class="border border-[#00000029] rounded-8px">
-                    <div class="mb-4 bg-e3">
-                        <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
-                    </div>
-                    <div class="px-5 py-2">
-                        <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
+                @foreach($instructors as $instructor)
+                <div class="border border-[#00000029] rounded-8px overflow-hidden flex flex-col">
+                    <a href="{{ $instructor->getProfileUrl() }}"
+                        class="block mb-4 bg-e3 aspect-[4/3] overflow-hidden h-[242px]">
+                        <img src="{{ $instructor->getAvatar() }}" alt="{{ $instructor->full_name }}"
+                            class="w-full h-full object-contain">
+                    </a>
+                    <div class="px-5 py-2 flex-1">
+                        <a href="{{ $instructor->getProfileUrl() }}">
+                            <h6
+                                class="font-semibold text-24px text-primary mb-1 hover:text-secondary transition-colors">
+                                {{ $instructor->full_name }}</h6>
+                        </a>
                         <p class="font-normal text-base text-primary leading-6">
-                            في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                            الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
+                            {{ $instructor->bio }}
                         </p>
                     </div>
                 </div>
-
-                <div class="border border-[#00000029] rounded-8px">
-                    <div class="mb-4 bg-e3">
-                        <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
-                    </div>
-                    <div class="px-5 py-2">
-                        <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
-                        <p class="font-normal text-base text-primary leading-6">
-                            في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                            الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
-                        </p>
-                    </div>
-                </div>
-
-                <div class="border border-[#00000029] rounded-8px">
-                    <div class="mb-4 bg-e3">
-                        <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
-                    </div>
-                    <div class="px-5 py-2">
-                        <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
-                        <p class="font-normal text-base text-primary leading-6">
-                            في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                            الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
-                        </p>
-                    </div>
-                </div>
-                <div class="border border-[#00000029] rounded-8px">
-                    <div class="mb-4 bg-e3">
-                        <img src="{{ $landingImg }}/home/instructor.webp" alt="م. خالد السديري">
-                    </div>
-                    <div class="px-5 py-2">
-                        <h6 class="font-semibold text-24px text-primary mb-1">م. خالد السديري</h6>
-                        <p class="font-normal text-base text-primary leading-6">
-                            في تطوير الحلول التقنية وإدارة المشاريع الهندسية في تطوير الحلول التقنية وإدارة المشاريع
-                            الهندسيةفي تطوير الحلول التقنية وإدارة المشاريع الهندسية
-                        </p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

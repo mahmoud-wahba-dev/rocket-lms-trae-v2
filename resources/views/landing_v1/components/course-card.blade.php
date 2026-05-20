@@ -13,7 +13,7 @@
     </div>
     <div class="px-4 py-6">
         <h6 class="font-semibold text-24px text-primary mb-1.5 text-card-text">{{ $title }}</h6>
-        <p class="font-normal text-14px mb-5 text-primary text-card-text">{{ $description }}</p>
+        <p class="font-normal text-14px mb-5 text-primary text-card-text">{{ strip_tags(html_entity_decode($description)) }}</p>
         <div class="flex items-center gap-2 mb-5 ">
             <div class="avatar">
                 <div class="size-10 rounded-full">

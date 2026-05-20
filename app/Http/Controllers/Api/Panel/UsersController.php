@@ -109,7 +109,7 @@ class UsersController extends Controller
             'account_id' => 'required_with:account_type',
             // 'identity_scan' => 'required_with:account_type',
 
-            'bio' => 'nullable|string|min:3|max:48',
+            'bio' => 'nullable|string',
             'level_of_training' => 'array|in:beginner,middle,expert',
             'meeting_type' => 'in:in_person,all,online',
 

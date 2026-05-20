@@ -870,7 +870,7 @@ class UserController extends Controller
             'mobile' => (!empty($user->mobile)) ? 'required|numeric|unique:users,mobile,' . $user->id . ',id,deleted_at,NULL' : 'nullable|numeric|unique:users',
             'username' => 'required|max:255|unique:users,username,' . $user->id,
             'password' => 'nullable|string',
-            'bio' => 'nullable|string|min:3|max:48',
+            'bio' => 'nullable|string',
             'about' => 'nullable|string|min:3',
             'certificate_additional' => 'nullable|string|max:255',
             'status' => 'required|' . Rule::in(User::$statuses),
