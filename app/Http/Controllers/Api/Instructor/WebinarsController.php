@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers\Api\Instructor;
 
-use App\Exports\tudents;
+use App\Exports\WebinarStudents;
 use App\Http\Controllers\Api\Controller;
 use App\Models\Category;
 use App\Models\FAQ;
@@ -24,7 +24,7 @@ use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Validator;
 
-class Controller extends Controller
+class WebinarsController extends Controller
 {
     public function index(Request $request)
     {
@@ -43,7 +43,7 @@ class Controller extends Controller
         });
 
         $data = $this->makeMyClassAndInvitationsData($query, $user, $request);
-        $data['pageTitle'] = trans('._list_page_title');
+        $data['pageTitle'] = trans('webinars.webinars_list_page_title');
 
         return view(getTemplate() . '.panel.webinar.index', $data);
     }
@@ -79,14 +79,14 @@ class Controller extends Controller
 
             $query = $this->organizationClassesFilters($query, $request);
 
-            $ = $query
+            $webinars = $query
                 ->orderBy('created_at', 'desc')
                 ->orderBy('updated_at', 'desc')
                 ->paginate(10);
 
             $data = [
                 'pageTitle' => trans('panel.organization_classes'),
-                '' => $,
+                'webinars' => $webinars,
             ];
 
             return view(getTemplate() . '.panel.webinar.organization_classes', $data);
@@ -171,31 +171,31 @@ class Controller extends Controller
             }
         ])->orderBy('updated_at', 'desc');
 
-        $Count = $query->count();
+        $webinarsCount = $query->count();
 
-        $ = $query->paginate(10);
+        $webinars = $query->paginate(10);
 
-        $ales = Sale::where('seller_id', $user->id)
+        $webinarSales = Sale::where('seller_id', $user->id)
             ->where('type', 'webinar')
             ->whereNotNull('webinar_id')
             ->whereNull('refund_at')
             ->with('webinar')
             ->get();
 
-        $alesAmount = 0;
+        $webinarSalesAmount = 0;
         $courseSalesAmount = 0;
-        foreach ($ales as $ale) {
-            if ($ale->webinar->type == 'webinar') {
-                $alesAmount += $ale->amount;
+        foreach ($webinarSales as $webinarSale) {
+            if ($webinarSale->webinar->type == 'webinar') {
+                $webinarSalesAmount += $webinarSale->amount;
             } else {
-                $courseSalesAmount += $ale->amount;
+                $courseSalesAmount += $webinarSale->amount;
             }
         }
 
         return [
-            '' => $,
-            'Count' => $Count,
-            'alesAmount' => $alesAmount,
+            'webinars' => $webinars,
+            'webinarsCount' => $webinarsCount,
+            'webinarSalesAmount' => $webinarSalesAmount,
             'courseSalesAmount' => $courseSalesAmount,
             'webinarHours' => $webinarHours,
         ];
@@ -220,7 +220,7 @@ class Controller extends Controller
         }
 
         $data = [
-            'pageTitle' => trans('.new_page_title'),
+            'pageTitle' => trans('webinars.new_page_title'),
             'teachers' => $teachers,
             'categories' => $categories,
             'isOrganization' => $isOrganization,
@@ -560,7 +560,7 @@ class Controller extends Controller
         }
 
         $data = [
-            'pageTitle' => trans('.new_page_title_step', ['step' => $step]),
+            'pageTitle' => trans('webinars.new_page_title_step', ['step' => $step]),
             'currentStep' => $step,
             'isOrganization' => $isOrganization,
         ];
@@ -900,13 +900,13 @@ class Controller extends Controller
                 ])->get();
 
             if (!empty($sales) and !$sales->isEmpty()) {
-                $export = new tudents($sales);
+                $export = new WebinarStudents($sales);
                 return Excel::download($export, trans('panel.users') . '.xlsx');
             }
 
             $toastData = [
                 'title' => trans('public.request_failed'),
-                'msg' => trans('.export_list_error_not_student'),
+                'msg' => trans('webinars.export_list_error_not_student'),
                 'status' => 'error'
             ];
             return back()->with(['toast' => $toastData]);
@@ -928,7 +928,7 @@ class Controller extends Controller
         $option = $request->get('option', null);
 
         if (!empty($term)) {
-            $ = Webinar::select('id', 'title', 'teacher_id')
+            $webinars = Webinar::select('id', 'title', 'teacher_id')
                 ->where('title', 'like', '%' . $term . '%')
                 ->where('id', '<>', $webinarId)
                 ->with(['teacher' => function ($query) {
@@ -939,7 +939,7 @@ class Controller extends Controller
 
 
             $result = [];
-            foreach ($ as $item) {
+            foreach ($webinars as $item) {
                 $result[] = [
                     'id' => $item->id,
                     'title' => $item->title . ' - ' . $item->teacher->full_name,
@@ -1005,7 +1005,7 @@ class Controller extends Controller
 
             if (!empty($webinar)) {
                 $data = [
-                    'pageTitle' => trans('.invoice_page_title'),
+                    'pageTitle' => trans('webinars.invoice_page_title'),
                     'sale' => $sale,
                     'webinar' => $webinar
                 ];
@@ -1024,14 +1024,14 @@ class Controller extends Controller
 
         $query = Webinar::whereIn('id', $webinarIds);
 
-        $all = deepClone($query)->get();
-        $allCount = $all->count();
-        $hours = $all->sum('duration');
+        $allWebinars = deepClone($query)->get();
+        $allWebinarsCount = $allWebinars->count();
+        $hours = $allWebinars->sum('duration');
 
         $upComing = 0;
         $time = time();
 
-        foreach ($all as $webinar) {
+        foreach ($allWebinars as $webinar) {
             if (!empty($webinar->start_date) and $webinar->start_date > $time) {
                 $upComing += 1;
             }
@@ -1042,7 +1042,7 @@ class Controller extends Controller
             $query->where('start_date', '>', time());
         }
 
-        $ = $query->with([
+        $webinars = $query->with([
             'files',
             'reviews' => function ($query) {
                 $query->where('status', 'active');
@@ -1061,7 +1061,7 @@ class Controller extends Controller
             ->orderBy('updated_at', 'desc')
             ->paginate(10);
 
-        foreach ($ as $webinar) {
+        foreach ($webinars as $webinar) {
             $sale = Sale::where('buyer_id', $user->id)
                 ->whereNotNull('webinar_id')
                 ->where('type', 'webinar')
@@ -1075,9 +1075,9 @@ class Controller extends Controller
         }
 
         $data = [
-            'pageTitle' => trans('._purchases_page_title'),
-            '' => $,
-            'allCount' => $allCount,
+            'pageTitle' => trans('webinars.webinars_purchases_page_title'),
+            'webinars' => $webinars,
+            'allWebinarsCount' => $allWebinarsCount,
             'hours' => $hours,
             'upComing' => $upComing
         ];
@@ -1214,7 +1214,7 @@ class Controller extends Controller
                     }
                     break;
                 case 'prerequisites':
-                    $webinarIds = $user->()->pluck('id')->toArray();
+                    $webinarIds = $user->webinars()->pluck('id')->toArray();
 
                     foreach ($itemIds as $order => $id) {
                         Prerequisite::where('id', $id)

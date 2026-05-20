@@ -359,8 +359,8 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::post('/newsletters', 'UserController@makeNewsletter');
 
     Route::group(['prefix' => 'jobs'], function () {
-        Route::get('/{methodName}', 'JobsController@index');
-        Route::post('/{methodName}', 'JobsController@index');
+        Route::get('/{methodName}', 'CronJobsController@index');
+        Route::post('/{methodName}', 'CronJobsController@index');
     });
 
     Route::group(['prefix' => 'regions'], function () {
@@ -504,7 +504,7 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::view('/landing-v1/contact', 'landing_v1.pages.contact')->name('landing.v1.contact');
     Route::view('/landing-v1/login', 'landing_v1.pages.login')->name('landing.v1.login');
     Route::view('/landing-v1/register', 'landing_v1.pages.register')->name('landing.v1.register');
-    Route::view('/landing-v1/instructors', 'landing_v1.pages.instructors')->name('landing.v1.instructors');
+    Route::get('/landing-v1/instructors', [LandingV1Controller::class, 'instructors'])->name('landing.v1.instructors');
     Route::view('/landing-v1/courses', 'landing_v1.pages.courses')->name('landing.v1.courses');
     Route::view('/landing-v1/course-details', 'landing_v1.pages.course-details')->name('landing.v1.course-details');
 

@@ -109,7 +109,7 @@ class CartController extends Controller
         validateParam($request->all(),
             [
                 'webinar_id' => ['required',
-                    Rule::exists('', 'id')->where('private', false)
+                    Rule::exists('webinars', 'id')->where('private', false)
                         ->where('status', 'active')
                 ],
                 'ticket_id' => 'nullable',

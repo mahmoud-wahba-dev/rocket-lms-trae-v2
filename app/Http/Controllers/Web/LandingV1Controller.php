@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Role;
 use App\Models\Webinar;
 use App\User;
+use App\Models\Sale;
 
 class LandingV1Controller extends Controller
 {
@@ -35,4 +36,37 @@ class LandingV1Controller extends Controller
 
         return view('landing_v1.pages.home', $data);
     }
+
+    public function instructors()
+    {
+        $instructors = User::query()
+            ->select('id', 'full_name', 'username', 'avatar', 'avatar_settings', 'bio', 'headline', 'about', 'created_at')
+            ->where('role_name', Role::$teacher)
+            ->where('status', 'active')
+            ->orderByDesc('id')
+            ->get();
+
+        foreach ($instructors as $instructor) {
+            $instructor->courses_count = Webinar::where('status', 'active')
+                ->where(function ($query) use ($instructor) {
+                    $query->where('creator_id', $instructor->id)
+                        ->orWhere('teacher_id', $instructor->id);
+                })
+                ->count();
+            
+            $instructor->students_count = Sale::where('seller_id', $instructor->id)
+                ->whereNotNull('webinar_id')
+                ->where('type', 'webinar')
+                ->whereNull('refund_at')
+                ->count();
+        }
+
+        $data = [
+            'pageTitle' => trans('home.instructors'),
+            'instructors' => $instructors,
+        ];
+
+        return view('landing_v1.pages.instructors', $data);
+    }
 }
+

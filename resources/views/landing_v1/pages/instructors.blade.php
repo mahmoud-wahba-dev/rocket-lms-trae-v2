@@ -13,18 +13,20 @@
         <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-x-10 lg:gap-y-13 ">
 
-
-                <div class="border border-[#CFCFCF] rounded-9px">
-                    <div class="mb-4 bg-e3">
-                        <img src="/assets/landing_v1/img/home/instructor.webp" alt="م. خالد السديري">
-                    </div>
-                    <div class="p-5 mb-6">
-                        <h6 class="font-semibold text-24px text-primary mb-2">م. أحمد بن صالح آل سعود</h6>
+                @foreach($instructors as $instructor)
+                <div class="border border-[#CFCFCF] rounded-9px overflow-hidden flex flex-col">
+                    <a href="{{ $instructor->getProfileUrl() }}" class="block mb-4 bg-e3 aspect-[4/3] overflow-hidden">
+                        <img src="{{ $instructor->getAvatar() }}" alt="{{ $instructor->full_name }}" class="w-full h-full object-contain">
+                    </a>
+                    <div class="p-5 mb-6 flex-1 flex flex-col">
+                        <a href="{{ $instructor->getProfileUrl() }}">
+                            <h6 class="font-semibold text-24px text-primary mb-2 hover:text-secondary transition-colors">{{ $instructor->full_name }}</h6>
+                        </a>
                         <p class="font-normal text-base text-primary leading-6 mb-6">
-                            خبير استراتيجيات التحول الرقمي ومستشار تطوير الأعمال.
+                            {{ $instructor->bio }}
                         </p>
 
-                        <div class="flex justify-between items-center lg:gap-4 xl:gap-9 flex-wrap mb-7">
+                        <div class="flex justify-between items-center lg:gap-4 xl:gap-9 flex-wrap mb-7 mt-auto">
                             <div class="flex items-center gap-2">
                                 <svg width="18" height="18" viewBox="0 0 18 18" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -35,7 +37,7 @@
 
                                 <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
                                     <span>عضو منذ</span>
-                                    <span>0</span>
+                                    <span>{{ $instructor->created_at ? dateTimeFormat($instructor->created_at, 'Y') : '0' }}</span>
                                 </div>
                             </div>
 
@@ -49,8 +51,8 @@
 
 
                                 <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
-                                    <span>عضو منذ</span>
-                                    <span>0</span>
+                                    <span>دورات</span>
+                                    <span>{{ $instructor->courses_count ?? '0' }}</span>
                                 </div>
                             </div>
 
@@ -69,7 +71,7 @@
 
 
                                 <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
-                                    <span>عضو منذ</span>
+                                    <span>استشارات</span>
                                     <span>0</span>
                                 </div>
                             </div>
@@ -84,14 +86,14 @@
 
 
                                 <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
-                                    <span>عضو منذ</span>
-                                    <span>0</span>
+                                    <span>طلاب</span>
+                                    <span>{{ $instructor->students_count ?? '0' }}</span>
                                 </div>
                             </div>
                         </div>
 
                         <div>
-                            <a href="" class="btn btn-primary h-13 rounded-4px font-medium text-14px btn-block">
+                            <a href="{{ $instructor->getProfileUrl() }}" class="btn btn-primary h-13 rounded-4px font-medium text-14px btn-block">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -111,6 +113,7 @@
                     </div>
 
                 </div>
+                @endforeach
 
             </div>
     </section>
