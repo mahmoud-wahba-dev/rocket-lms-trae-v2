@@ -5,8 +5,8 @@
 <main>
     <x-landing_v1::page-hero image="{{ asset('assets/landing_v1/img/contact/hero.webp') }}"
         title="نخبة الخبراء.. شركاء نجاحك" :breadcrumbs="[
-            ['label' => 'الرئيسية', 'href' => '#'],
-            ['label' => 'المدربين', 'href' => '#'],
+            ['label' => 'الرئيسية', 'href' => route('landing.v1.index')],
+            ['label' => 'المدربين', 'href' => route('landing.v1.instructors')],
         ]" />
 
     <section class="section-gap">

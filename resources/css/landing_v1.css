@@ -101,3 +101,9 @@
 main {
     min-height: 100vh;
 }
+
+.course_details_page
+    [data-tab].active.active-tab\:tab-active.tab:not([disabled]) {
+    color: var(--color-primary) !important;
+    border-bottom: 3px solid var(--color-primary) !important;
+}

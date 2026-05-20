@@ -70,10 +70,10 @@
             </div>
             <nav class="">
                 <h6 class="footer-title font-semibold text-24px text-white mb-4">روابط سريعة</h6>
-                <a href="#" class="link link-hover font-normal text-19px text-white">الرئيسية</a>
-                <a href="#" class="link link-hover font-normal text-19px text-white">من نحن</a>
-                <a href="#" class="link link-hover font-normal text-19px text-white">الدورات</a>
-                <a href="#" class="link link-hover font-normal text-19px text-white">المدربين</a>
+                <a href="{{ route('landing.v1.index') }}" class="link link-hover font-normal text-19px text-white">الرئيسية</a>
+                <a href="{{ route('landing.v1.about') }}" class="link link-hover font-normal text-19px text-white">من نحن</a>
+                <a href="{{ route('landing.v1.courses') }}" class="link link-hover font-normal text-19px text-white">الدورات</a>
+                <a href="{{ route('landing.v1.instructors') }}" class="link link-hover font-normal text-19px text-white">المدربين</a>
                 <a href="#" class="link link-hover font-normal text-19px text-white">المقالات</a>
 
 
@@ -101,7 +101,7 @@
         <div class="footer text-white border-[#FFFFFF5E] border-t px-6 py-5 mt-9">
             <div class="center w-full ">
                 <aside class="grid-flow-col items-center">
-                    <p class="font-normal text-white text-17px text-center">© كل الحقوق محفوطة لدي @ <a class="link link-hover font-medium" href="#">SIEMATPLUS</a></p>
+                    <p class="font-normal text-white text-17px text-center">© كل الحقوق محفوطة لدي @ <a class="link link-hover font-medium" href="{{ route('landing.v1.index') }}">SIEMATPLUS</a></p>
                 </aside>
 
             </div>

@@ -1,17 +1,17 @@
 <nav class="navbar rounded-box flex w-full items-center justify-between gap-2 shadow-[0px_4px_34.5px_-3px_#0000000D]">
     <div class="navbar-start max-md:w-1/4">
-        <a class="link link-neutral text-xl font-semibold no-underline" href="#">
+        <a class="link link-neutral text-xl font-semibold no-underline" href="{{ route('landing.v1.index') }}">
             <img src="{{ asset('assets/landing_v1/logo_nav.png') }}" alt="Logo" class="h-16">
         </a>
     </div>
     <div class="navbar-center max-md:hidden">
         <ul class="menu menu-horizontal p-0 font-medium">
-            <li><a class="font-medium text-20px text-[#3D455D]" href="#">الرئيسية</a></li>
-            <li><a class="font-medium text-20px text-[#3D455D]" href="#">من نحن</a></li>
-            <li><a class="font-medium text-20px text-[#3D455D]" href="#">الدورات</a></li>
-            <li><a class="font-medium text-20px text-[#3D455D]" href="#">المدربين</a></li>
+            <li><a class="font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.index') }}">الرئيسية</a></li>
+            <li><a class="font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.about') }}">من نحن</a></li>
+            <li><a class="font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.courses') }}">الدورات</a></li>
+            <li><a class="font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.instructors') }}">المدربين</a></li>
             <li><a class="font-medium text-20px text-[#3D455D]" href="#">المقالات</a></li>
-            <li><a class="font-medium text-20px text-[#3D455D]" href="#">تواصل معنا</a></li>
+            <li><a class="font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.contact') }}">تواصل معنا</a></li>
         </ul>
     </div>
     <div class="navbar-end items-center gap-4">
@@ -24,12 +24,12 @@
             </button>
             <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical"
                 aria-labelledby="dropdown-default">
-                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">الرئيسية</a></li>
-                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">من نحن</a></li>
-                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">الدورات</a></li>
-                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">المدربين</a></li>
+                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.index') }}">الرئيسية</a></li>
+                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.about') }}">من نحن</a></li>
+                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.courses') }}">الدورات</a></li>
+                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.instructors') }}">المدربين</a></li>
                 <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">المقالات</a></li>
-                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">تواصل معنا</a></li>
+                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.contact') }}">تواصل معنا</a></li>
             </ul>
         </div>
         <div class="flex items-center gap-4">
@@ -62,7 +62,7 @@
                 </a>
             </div>
 
-            <a class="btn max-md:btn-square btn-secondary font-medium text-17px h-12" href="#">
+            <a class="btn max-md:btn-square btn-secondary font-medium text-17px h-12" href="{{ route('landing.v1.login') }}">
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M7.73802 15.476V13.7565H13.7565V1.71956H7.73802V0H13.7565C14.2294 0 14.6343 0.168517 14.9714 0.505551C15.3084 0.842585 15.4766 1.24725 15.476 1.71956V13.7565C15.476 14.2294 15.3078 14.6343 14.9714 14.9714C14.6349 15.3084 14.2299 15.4766 13.7565 15.476H7.73802ZM6.01846 12.0369L4.83626 10.7902L7.0287 8.5978H0V6.87824H7.0287L4.83626 4.6858L6.01846 3.43912L10.3174 7.73802L6.01846 12.0369Z"

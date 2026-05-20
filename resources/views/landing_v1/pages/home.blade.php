@@ -4,17 +4,17 @@
 @php($landingImg = asset('assets/landing_v1/img'))
 <main class="mt-20">
 
-    <header class="mt-16">
+    <header class="mt-16 bg-primary">
         <div class="container">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 ">
 
                 <div class="md:w-[80%]">
-                    <h1 class="font-bold text-57px  text-primary mb-6">التميز المهني عبر حلول تعليمية متكاملة </h1>
-                    <p class="font-medium text-18px text-primary mb-7">تلتزم منصة "سمات بلس" بتقديم مسارات تدريبية نوعية
+                    <h1 class="font-bold text-57px  text-white mb-6">التميز المهني عبر حلول تعليمية متكاملة </h1>
+                    <p class="font-medium text-18px text-white mb-7">تلتزم منصة "سمات بلس" بتقديم مسارات تدريبية نوعية
                         مصممة وفق أعلى المعايير المهنية، لتمكين الكوادر
                         الوطنية وتطوير كفاءاتهم.</p>
                     <div class="flex items-center flex-wrap gap-6 h-14 font-medium text-20px">
-                        <a href="" class="btn btn-primary h-14 font-medium text-20px ">
+                        <a href="{{ route('landing.v1.register') }}" class="btn btn-whtext-white h-14 font-medium text-20px ">
 
                             <svg width="21" height="14" viewBox="0 0 21 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -26,7 +26,7 @@
                             سجل لدينا الان
                         </a>
 
-                        <a href="" class="btn btn-text h-14 font-medium text-20px">
+                        <a href="{{ route('landing.v1.about') }}" class="btn btn-text h-14 font-medium text-20px">
 
 
 
@@ -272,7 +272,7 @@
                         <p class="mb-4">صُمم هذا المسار للافراد الطموحين الذين يسعون لاكتساب مهارات تنافسية في سوق العمل
                             السعودي. </p>
                         <div>
-                            <a href="" class="btn btn-gold h-10 font-medium text-14px">
+                            <a href="{{ route('landing.v1.login') }}" class="btn btn-gold h-10 font-medium text-14px">
                                 تسجيل الدخول
                                 <span class="icon-[tabler--arrow-left]"></span> </a>
                         </div>
@@ -285,7 +285,7 @@
                         <p class="mb-4">نقدم حلولاً تدريبية متكاملة للشركات والجهات الحكومية التي تسعى لرفع كفاءة فرق
                             عملها بما يتوافق مع رؤية المملكة 2030 </p>
                         <div>
-                            <a href="" class="btn btn-primary h-10 font-medium text-14px">
+                            <a href="{{ route('landing.v1.contact') }}" class="btn btn-primary h-10 font-medium text-14px">
                                 تواصل معنا الان
                                 <span class="icon-[tabler--arrow-left]"></span> </a>
                         </div>
@@ -305,7 +305,7 @@
                         في القطاعات الحيوية</p>
                 </div>
                 <div>
-                    <a href="" class="btn btn-text font-semibold text-20px text-primary">
+                    <a href="{{ route('landing.v1.courses') }}" class="btn btn-text font-semibold text-20px text-primary">
                         عرض كل الكورسات
                         <span class="icon-[tabler--arrow-left]"></span>
                     </a>
@@ -349,7 +349,7 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>
@@ -382,7 +382,7 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>
@@ -415,7 +415,7 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>
@@ -448,7 +448,7 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>

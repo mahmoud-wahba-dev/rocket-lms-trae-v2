@@ -10,12 +10,12 @@
                 <div class="breadcrumbs mb-1.5">
                     <ul>
                         <li>
-                            <a href="#" class="font-medium text-24px text-white">الرئيسية</a>
+                            <a href="{{ route('landing.v1.index') }}" class="font-medium text-24px text-white">الرئيسية</a>
                         </li>
                         <li class="breadcrumbs-separator rtl:rotate-180"><span
                                 class="icon-[tabler--chevron-right] text-white"></span></li>
                         <li>
-                            <a href="#" class="font-medium text-24px text-white">من نحن</a>
+                            <a href="{{ route('landing.v1.about') }}" class="font-medium text-24px text-white">من نحن</a>
                         </li>
                     </ul>
                 </div>
