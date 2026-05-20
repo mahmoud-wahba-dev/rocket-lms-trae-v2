@@ -1,0 +1,9 @@
+Backup of original SVG fills for login.blade.php
+
+First SVG (original fills):
+<path ... fill="#3D455D" />
+<path ... fill="#3D455D" />
+
+Second SVG (original fills):
+<path ... fill="#3D455D" />
+<path ... fill="#3D455D" />
