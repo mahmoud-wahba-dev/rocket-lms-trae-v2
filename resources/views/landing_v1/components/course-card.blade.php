@@ -2,6 +2,7 @@
     'title',
     'description',
     'teacherName',
+    'teacherAvatar' => null,
     'price',
     'image',
     'buttonText' => 'اشترك الان',
@@ -17,7 +18,7 @@
         <div class="flex items-center gap-2 mb-5 ">
             <div class="avatar">
                 <div class="size-10 rounded-full">
-                    <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png" alt="avatar" />
+                    <img src="{{ !empty($teacherAvatar) ? $teacherAvatar : 'https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png' }}" alt="avatar" />
                 </div>
             </div>
             <p class="font-medium text-77 text-base">{{ $teacherName }}</p>
