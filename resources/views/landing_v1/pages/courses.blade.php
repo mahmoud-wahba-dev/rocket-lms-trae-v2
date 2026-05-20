@@ -43,7 +43,7 @@
                             تصفية
                         </button>
                         <div class="dropdown-menu dropdown-open:opacity-100 hidden w-[340px] p-6 rounded-8px border border-[#E5E5E5] shadow-lg bg-white"
-                            role="menu" aria-orientation="vertical" aria-labelledby="dropdown-default">
+                            role="menu" aria-orientation="vertical" aria-labelledby="dropdown-false">
                             <div class="space-y-6">
                                 <!-- Sort By -->
                                 <div>

@@ -6,6 +6,7 @@
     'price',
     'image',
     'buttonText' => 'اشترك الان',
+    'slug' => null,
 ])
 
 <div class="rounded-8px border border-[#0000002B] overflow-hidden bg-white text-card-text">
@@ -25,7 +26,7 @@
         </div>
         <div class="flex items-center justify-between">
             <span class="font-bold text-22px text-card-text">{{ $price }}</span>
-            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-primary h-10 font-medium text-14px px-7">
+            <a href="{{ !empty($slug) ? route('landing.v1.course-details', $slug) : route('landing.v1.course-details') }}" class="btn btn-primary h-10 font-medium text-14px px-7">
                 {{ $buttonText }}
             </a>
         </div>

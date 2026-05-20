@@ -145,5 +145,120 @@ class LandingV1Controller extends Controller
 
         return view('landing_v1.pages.courses', $data);
     }
+
+    public function courseDetails($slug = null)
+    {
+        // Try to fetch webinar by slug or fallback to the first active webinar if slug is missing or not found
+        $course = null;
+        if (!empty($slug)) {
+            $course = Webinar::where('slug', $slug)
+                ->where('status', 'active')
+                ->where('private', false)
+                ->with([
+                    'teacher:id,full_name,avatar,avatar_settings,created_at,bio,headline',
+                    'chapters' => function ($query) {
+                        $query->where('status', 'active')
+                            ->orderBy('order', 'asc');
+                    },
+                    'chapters.sessions' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.files' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.textLessons' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.assignments' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.quizzes' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                ])
+                ->first();
+        }
+
+        if (empty($course)) {
+            $course = Webinar::where('status', 'active')
+                ->where('private', false)
+                ->with([
+                    'teacher:id,full_name,avatar,avatar_settings,created_at,bio,headline',
+                    'chapters' => function ($query) {
+                        $query->where('status', 'active')
+                            ->orderBy('order', 'asc');
+                    },
+                    'chapters.sessions' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.files' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.textLessons' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.assignments' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                    'chapters.quizzes' => function ($query) {
+                        $query->where('status', 'active');
+                    },
+                ])
+                ->orderBy('id', 'asc')
+                ->first();
+        }
+
+        if (empty($course)) {
+            abort(404);
+        }
+
+        // Calculate dynamic instructor stats
+        $teacher = $course->teacher;
+        $teacher_courses_count = 0;
+        $teacher_students_count = 0;
+        if (!empty($teacher)) {
+            $teacher_courses_count = Webinar::where('status', 'active')
+                ->where(function ($query) use ($teacher) {
+                    $query->where('creator_id', $teacher->id)
+                        ->orWhere('teacher_id', $teacher->id);
+                })
+                ->count();
+
+            $teacher_students_count = Sale::where('seller_id', $teacher->id)
+                ->whereNotNull('webinar_id')
+                ->where('type', 'webinar')
+                ->whereNull('refund_at')
+                ->count();
+        }
+
+        // Query target outcomes ("What you will learn")
+        $learningMaterials = $course->webinarExtraDescription()
+            ->where('type', \App\Models\WebinarExtraDescription::$LEARNING_MATERIALS)
+            ->get();
+
+        // Calculate dynamic reviews distribution
+        $activeReviews = $course->reviews()->where('status', 'active')->get();
+        $totalReviewsCount = $activeReviews->count();
+        $ratesDistribution = [];
+        for ($i = 5; $i >= 1; $i--) {
+            $count = $activeReviews->where('rates', $i)->count();
+            $percent = $totalReviewsCount > 0 ? ($count / $totalReviewsCount) * 100 : 0;
+            $ratesDistribution[$i] = [
+                'count' => $count,
+                'percent' => $percent
+            ];
+        }
+
+        $data = [
+            'pageTitle' => $course->title,
+            'course' => $course,
+            'teacher_courses_count' => $teacher_courses_count,
+            'teacher_students_count' => $teacher_students_count,
+            'learningMaterials' => $learningMaterials,
+            'ratesDistribution' => $ratesDistribution,
+        ];
+
+        return view('landing_v1.pages.course-details', $data);
+    }
 }
 

@@ -7,6 +7,7 @@
             teacherAvatar="{{ !empty($course->teacher) ? $course->teacher->getAvatar() : '' }}" 
             price="{{ ($course->price > 0) ? $course->price . ' ر.س' : 'مجاناً' }}" 
             image="{{ $course->image_cover ?? asset('assets/landing_v1/img/contact/hero.webp') }}" 
+            slug="{{ $course->slug }}"
         />
     @empty
         <div class="col-span-full text-center py-20 bg-gray-50 rounded-8px border border-dashed border-gray-300 flex flex-col items-center justify-center">

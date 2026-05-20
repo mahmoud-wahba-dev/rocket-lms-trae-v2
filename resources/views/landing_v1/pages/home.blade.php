@@ -314,8 +314,11 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($courses as $course)
                 <x-landing_v1::course-card title="{{ $course->title }}" description="{{ $course->description }}"
-                    teacher-name="{{ $course->teacher->full_name ?? '' }}" price="{{ $course->price }}"
-                    image="{{ $course->image_cover }}" />
+                    teacher-name="{{ $course->teacher->full_name ?? '' }}" 
+                    teacher-avatar="{{ !empty($course->teacher) ? $course->teacher->getAvatar() : '' }}"
+                    price="{{ ($course->price > 0) ? $course->price . ' ر.س' : 'مجاناً' }}"
+                    image="{{ $course->image_cover ?? asset('assets/landing_v1/img/contact/hero.webp') }}" 
+                    slug="{{ $course->slug }}" />
                 @endforeach
             </div>
         </div>
