@@ -4,15 +4,16 @@
 @php($landingImg = asset('assets/landing_v1/img'))
 <main class="mt-20">
 
-    <header class="relative mt-16 bg-white text-primary overflow-hidden">
+    <header class="relative mt-16 bg-white text-primary overflow-hidden pt-8">
         <!-- Soft premium radial glow in the center of the hero -->
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
-            <img src="{{ $landingImg }}/home/shpe-circle-blur.svg" alt="blur shape" class="w-[750px] max-w-none opacity-90">
+            <img src="{{ $landingImg }}/home/shpe-circle-blur.svg" alt="blur shape"
+                class="w-[750px] max-w-none opacity-90">
         </div>
         <div class="container relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 ">
 
-                <div class="md:w-[90%]">
+                <div class="md:w-[93%]">
                     <h1 class="font-bold text-57px  text-primary mb-6">التميز المهني عبر حلول تعليمية متكاملة </h1>
                     <p class="font-medium text-18px text-primary mb-7">تلتزم منصة "سمات بلس" بتقديم مسارات تدريبية نوعية
                         مصممة وفق أعلى المعايير المهنية، لتمكين الكوادر
@@ -54,48 +55,54 @@
             <h2 class="font-semibold text-32px text-primary mb-8">معتمدون لدى</h2>
 
             <div id="multi-slide"
-                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "sm": 2, "lg": 3 , "xl": 4 }, "isRTL": true ,"dotsItemClasses": "carousel-dot" ,"isInfiniteLoop": true }'
+                data-carousel='{ "loadingClasses": "opacity-0", "slidesQty": { "xs": 1, "sm": 2, "lg": 4 , "xl": 4 }, "isRTL": true ,"dotsItemClasses": "carousel-dot" ,"isInfiniteLoop": true }'
                 class="relative w-full">
                 <div class="carousel h-80">
-                    <div class="carousel-body  h-full opacity-0">
+                    <div class="carousel-body  h-full opacity-0 overflow-visible">
                         <!-- Slide 1 -->
-                        <div class="carousel-slide">
-                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                        <div class="carousel-slide flex center">
+                            <div
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_1.webp') }}" alt="partner 1">
                             </div>
                         </div>
                         <!-- Slide 2 -->
-                        <div class="carousel-slide">
-                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                        <div class="carousel-slide flex center">
+                            <div
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_2.webp') }}" alt="partner 2">
                             </div>
                         </div>
                         <!-- Slide 3 -->
-                        <div class="carousel-slide">
-                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                        <div class="carousel-slide flex center">
+                            <div
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_3.webp') }}" alt="partner 3">
                             </div>
                         </div>
                         <!-- Slide 4 -->
-                        <div class="carousel-slide">
-                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                        <div class="carousel-slide flex center">
+                            <div
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_4.webp') }}" alt="partner 4">
                             </div>
                         </div>
                         <!-- Slide 5 -->
-                        <div class="carousel-slide">
-                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                        <div class="carousel-slide flex center">
+                            <div
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_5.webp') }}" alt="partner 5">
                             </div>
                         </div>
                         <!-- Slide 6 -->
-                        <div class="carousel-slide">
-                            <div class="shadow-[0px_3px_29.3px_0px_#3D455D1A] flex h-full justify-center p-5">
+                        <div class="carousel-slide flex center">
+                            <div
+                                class="h-[188px] shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_6.webp') }}" alt="partner 6">
                             </div>
@@ -104,7 +111,7 @@
                 </div>
 
                 <!-- Previous Slide -->
-                <button type="button" class="carousel-prev">
+                <button type="button" class="carousel-prev start-0 -translate-x-[-40%]">
                     <span
                         class="size-12 bg-[#F4F4F6] border border-primary flex items-center justify-center rounded-full shadow">
                         <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
@@ -112,7 +119,7 @@
                     <span class="sr-only">Previous</span>
                 </button>
                 <!-- Next Slide -->
-                <button type="button" class="carousel-next">
+                <button type="button" class="carousel-next end-0 translate-x-[-40%]">
                     <span class="sr-only">Next</span>
                     <span
                         class="size-12 bg-[#F4F4F6] border border-primary flex items-center justify-center rounded-full shadow">
@@ -130,14 +137,14 @@
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
                 <div class="center flex-col px-4">
-                    <p class="font-bold text-71px mb-7 text-secondary">
+                    <p class="font-bold flex items-center flex-nowrap text-71px max-xl:text-60px max-md:text-48px mb-7 text-secondary">
                         <span>+</span>
                         <span data-toggle-count='{"target":"#stats-1","min":0,"max":95000,"duration":1200}'>
                             0
                         </span>
                     </p>
                     <span id="stats-1" class="sr-only">95000</span>
-                    <p class="font-semibold text-28px text-primary">عميل مستفيد </p>
+                    <p class="font-semibold text-28px max-xl:text-24px text-primary">عميل مستفيد </p>
 
                 </div>
 
@@ -145,38 +152,38 @@
 
 
                 <div class="center flex-col px-8 border-x border-[#B9A68566]">
-                    <p class="font-bold text-71px mb-7 text-secondary">
+                    <p class="font-bold flex items-center flex-nowrap text-71px max-xl:text-60px max-md:text-48px mb-7 text-secondary">
                         <span>+</span>
                         <span data-toggle-count='{"target":"#stats-2","min":0,"max":620,"duration":1200}'>
                             0
                         </span>
                     </p>
                     <span id="stats-2" class="sr-only">620</span>
-                    <p class="font-semibold text-28px text-primary">برنامج تدريبي </p>
+                    <p class="font-semibold text-28px max-xl:text-24px text-primary">برنامج تدريبي </p>
 
                 </div>
 
                 <div class="center flex-col px-8 border-e border-[#B9A68566]">
-                    <p class="font-bold text-71px mb-7 text-secondary">
+                    <p class="font-bold flex items-center flex-nowrap text-71px max-xl:text-60px max-md:text-48px mb-7 text-secondary">
                         <span>+</span>
                         <span data-toggle-count='{"target":"#stats-3","min":0,"max":66,"duration":1200}'>
                             0
                         </span>
                     </p>
                     <span id="stats-3" class="sr-only"> 66</span>
-                    <p class="font-semibold text-28px text-primary">مستشارين ومدربين </p>
+                    <p class="font-semibold text-28px max-xl:text-24px text-primary">مستشارين ومدربين </p>
 
                 </div>
 
                 <div class="center flex-col px-4">
-                    <p class="font-bold text-71px mb-7 text-secondary">
+                    <p class="font-bold flex items-center flex-nowrap text-71px max-xl:text-60px max-md:text-48px mb-7 text-secondary">
                         <span>+</span>
                         <span data-toggle-count='{"target":"#stats-4","min":0,"max":1200,"duration":1200}'>
                             0
                         </span>
                     </p>
                     <span id="stats-4" class="sr-only">+ 1200</span>
-                    <p class="font-semibold text-28px text-primary">خدمة استشارية </p>
+                    <p class="font-semibold text-28px max-xl:text-24px text-primary">خدمة استشارية </p>
 
                 </div>
             </div>
