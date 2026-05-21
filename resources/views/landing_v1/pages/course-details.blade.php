@@ -80,12 +80,12 @@
                             <p class="font-bold text-36px text-primary mb-7">
                                 {{ ($course->price > 0) ? handlePrice($course->price) : 'مجانية' }}
                             </p>
-                            
+
                             <a href="{{ url('/course/' . $course->slug) }}"
                                 class="btn btn-primary btn-block h-15 rounded-5px font-semibold text-20px mb-3 shadow-md hover:shadow-lg transition-all duration-300">
-                                اشترك الان 
+                                اشترك الان
                             </a>
-                            
+
                             <form action="/cart/store" method="post" class="w-full">
                                 @csrf
                                 <input type="hidden" name="webinar_id" value="{{ $course->id }}">
@@ -104,7 +104,7 @@
         <div class="container">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
                 <div class="lg:col-span-8">
-                    <nav data-scrollspy="#course-content-scrollspy" class="sticky top-4 bg-white z-40 flex gap-6 border-b border-[#B4B4B4] mb-12 overflow-x-auto whitespace-nowrap scrollbar-none">
+                    <nav data-scrollspy="#course-content-scrollspy" class="sticky top-[88px] bg-white z-40 flex gap-6 border-b border-[#B4B4B4] mb-12 overflow-x-auto whitespace-nowrap scrollbar-none">
                         <a href="#about-course"
                             class="font-medium text-20px lg:text-24px text-[#B4B4B4] pb-5 border-b-2 border-transparent hover:border-primary hover:text-primary transition scrollspy-active:border-primary scrollspy-active:text-primary active">
                             عن الدورة
@@ -135,7 +135,7 @@
                                 <div class="font-normal text-18px lg:text-22px text-primary mb-9 leading-relaxed">
                                     {!! $course->description !!}
                                 </div>
-                                
+
                                 @if($learningMaterials->count() > 0)
                                 <h4 class="font-bold text-24px lg:text-28px text-primary mb-4 border-t border-gray-100 pt-6">ماذا ستتعلم؟</h4>
                                 <ul class="text-[#7C7F88] space-y-3 list-disc list-inside">
@@ -206,7 +206,7 @@
                                                         <span class="text-12px bg-rose-500/10 text-rose-600 px-2.5 py-0.5 rounded-full">{{ trans('public.quiz') }}</span>
                                                     </li>
                                                     @endforeach
-                                                    
+
                                                     @if($chapter->sessions->isEmpty() && $chapter->files->isEmpty() && $chapter->textLessons->isEmpty() && $chapter->assignments->isEmpty() && $chapter->quizzes->isEmpty())
                                                     <li class="text-gray-400 text-center py-4 font-medium">لا توجد دروس أو ملفات متوفرة في هذا القسم حالياً.</li>
                                                     @endif
@@ -356,7 +356,7 @@
                         <div id="course-rating" class="mb-16 scroll-mt-10">
                             <h3 class="font-medium text-32px lg:text-36px text-primary mb-6">التقييم</h3>
                             <div class="border border-[#CFCFCF] px-6 lg:px-8 py-8 lg:py-11 rounded-8px bg-white shadow-sm flex flex-col md:flex-row justify-center items-center gap-8 lg:gap-12">
-                                
+
                                 <!-- Big box (Right in RTL) -->
                                 <div class="w-[140px] h-[140px] bg-primary/5 rounded-8px shrink-0 flex flex-col items-center justify-center text-primary border border-primary/10">
                                     <span class="font-bold text-48px leading-none mb-1 text-primary">{{ $course->getRate() }}</span>

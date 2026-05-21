@@ -10,7 +10,7 @@
             <li><a class="font-medium text-20px text-[#3D455D] " href="{{ route('landing.v1.about') }}">من نحن</a></li>
             <li><a class="font-medium text-20px text-[#3D455D] " href="{{ route('landing.v1.courses') }}">الدورات</a></li>
             <li><a class="font-medium text-20px text-[#3D455D] " href="{{ route('landing.v1.instructors') }}">المدربين</a></li>
-            <li><a class="font-medium text-20px text-[#3D455D] " href="#">المقالات</a></li>
+            <!-- <li><a class="font-medium text-20px text-[#3D455D] " href="#">المقالات</a></li> -->
             <li><a class="font-medium text-20px text-[#3D455D] " href="{{ route('landing.v1.contact') }}">تواصل معنا</a></li>
         </ul>
     </div>
@@ -28,7 +28,7 @@
                 <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.about') }}">من نحن</a></li>
                 <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.courses') }}">الدورات</a></li>
                 <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.instructors') }}">المدربين</a></li>
-                <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">المقالات</a></li>
+                <!-- <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="#">المقالات</a></li> -->
                 <li><a class="dropdown-item font-medium text-20px text-[#3D455D]" href="{{ route('landing.v1.contact') }}">تواصل معنا</a></li>
             </ul>
         </div>

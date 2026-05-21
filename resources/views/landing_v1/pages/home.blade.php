@@ -62,7 +62,7 @@
                         <!-- Slide 1 -->
                         <div class="carousel-slide flex center">
                             <div
-                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_1.webp') }}" alt="partner 1">
                             </div>
@@ -70,7 +70,7 @@
                         <!-- Slide 2 -->
                         <div class="carousel-slide flex center">
                             <div
-                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_2.webp') }}" alt="partner 2">
                             </div>
@@ -78,7 +78,7 @@
                         <!-- Slide 3 -->
                         <div class="carousel-slide flex center">
                             <div
-                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_3.webp') }}" alt="partner 3">
                             </div>
@@ -86,7 +86,7 @@
                         <!-- Slide 4 -->
                         <div class="carousel-slide flex center">
                             <div
-                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_4.webp') }}" alt="partner 4">
                             </div>
@@ -94,7 +94,7 @@
                         <!-- Slide 5 -->
                         <div class="carousel-slide flex center">
                             <div
-                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex h-full justify-center p-6 mx-3">
+                                class="h-[188px] w-full shadow-[0px_22px_50px_-8px_rgba(61,69,93,0.18)] rounded-xl bg-white flex justify-center p-6 mx-3">
                                 <img class="object-contain"
                                     src="{{ asset('assets/landing_v1/img/partners/partner_5.webp') }}" alt="partner 5">
                             </div>
@@ -111,7 +111,7 @@
                 </div>
 
                 <!-- Previous Slide -->
-                <button type="button" class="carousel-prev start-0 -translate-x-[-40%]">
+                <button type="button" class="carousel-prev start-0 -translate-x-[-49%]">
                     <span
                         class="size-12 bg-[#F4F4F6] border border-primary flex items-center justify-center rounded-full shadow">
                         <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
@@ -119,7 +119,7 @@
                     <span class="sr-only">Previous</span>
                 </button>
                 <!-- Next Slide -->
-                <button type="button" class="carousel-next end-0 translate-x-[-40%]">
+                <button type="button" class="carousel-next end-0 translate-x-[-49%]">
                     <span class="sr-only">Next</span>
                     <span
                         class="size-12 bg-[#F4F4F6] border border-primary flex items-center justify-center rounded-full shadow">
@@ -348,154 +348,86 @@
                 class="relative w-full">
                 <div class="carousel">
                     <div class="carousel-body opacity-0">
-                        <div class="carousel-slide">
-                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-                                <div class="lg:col-span-8 text-white">
-                                    <div class="lg:w-[80%]">
-                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
-                                        </p>
-                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
-                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
-                                        </h3>
-                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
-                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني
-                                            في كبرى الشركات،
-                                            حيث
-                                            نأخذك في رحلة تطبيقية شاملة
-                                        </p>
-                                        <div>
-                                            <a href="{{ route('landing.v1.course-details') }}"
-                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
-                                            </a>
+                        @forelse ($courses as $course)
+                            <div class="carousel-slide">
+                                <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                                    <div class="lg:col-span-8 text-white">
+                                        <div class="lg:w-[80%]">
+                                            <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
+                                                <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                                <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                                ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
+                                            </p>
+                                            <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
+                                                {{ $course->title }}
+                                            </h3>
+                                            <p class="font-normal text-20px mb-8 lg:w-[70%]">
+                                                {{ $course->summary ?? strip_tags(html_entity_decode($course->description)) }}
+                                            </p>
+                                            <div>
+                                                <a href="{{ route('landing.v1.course-details', $course->slug) }}"
+                                                    class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="lg:col-span-4">
-                                    <x-landing_v1::course-card title="استشارات نسخ"
-                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                                        teacher-name="اسم المعلم" price="1.10ر.س"
-                                        image="{{ $landingImg }}/home/course.webp" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-slide">
-                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-                                <div class="lg:col-span-8 text-white">
-                                    <div class="lg:w-[80%]">
-                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
-                                        </p>
-                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
-                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
-                                        </h3>
-                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
-                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني
-                                            في كبرى الشركات،
-                                            حيث
-                                            نأخذك في رحلة تطبيقية شاملة
-                                        </p>
-                                        <div>
-                                            <a href="{{ route('landing.v1.course-details') }}"
-                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
-                                            </a>
-                                        </div>
+                                    <div class="lg:col-span-4">
+                                        <x-landing_v1::course-card
+                                            title="{{ $course->title }}"
+                                            description="{{ $course->description }}"
+                                            teacherName="{{ $course->teacher->full_name ?? '' }}"
+                                            teacherAvatar="{{ !empty($course->teacher) ? $course->teacher->getAvatar() : '' }}"
+                                            price="{{ ($course->price > 0) ? $course->price . ' ر.س' : 'مجاناً' }}"
+                                            image="{{ $course->image_cover ?? asset('assets/landing_v1/img/contact/hero.webp') }}"
+                                            slug="{{ $course->slug }}"
+                                        />
                                     </div>
                                 </div>
-                                <div class="lg:col-span-4">
-                                    <x-landing_v1::course-card title="استشارات نسخ"
-                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                                        teacher-name="اسم المعلم" price="1.10ر.س"
-                                        image="{{ $landingImg }}/home/course.webp" />
-                                </div>
                             </div>
-                        </div>
-
-                        <div class="carousel-slide">
-                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-                                <div class="lg:col-span-8 text-white">
-                                    <div class="lg:w-[80%]">
-                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
-                                        </p>
-                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
-                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
-                                        </h3>
-                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
-                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني
-                                            في كبرى الشركات،
-                                            حيث
-                                            نأخذك في رحلة تطبيقية شاملة
-                                        </p>
-                                        <div>
-                                            <a href="{{ route('landing.v1.course-details') }}"
-                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
-                                            </a>
+                        @empty
+                            <div class="carousel-slide">
+                                <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
+                                    <div class="lg:col-span-8 text-white">
+                                        <div class="lg:w-[80%]">
+                                            <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
+                                                <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                                <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
+                                                ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
+                                            </p>
+                                            <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
+                                                الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
+                                            </h3>
+                                            <p class="font-normal text-20px mb-8 lg:w-[70%]">
+                                                دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني في كبرى الشركات.
+                                            </p>
+                                            <div>
+                                                <a href="{{ route('landing.v1.course-details') }}"
+                                                    class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="lg:col-span-4">
-                                    <x-landing_v1::course-card title="استشارات نسخ"
-                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                                        teacher-name="اسم المعلم" price="1.10ر.س"
-                                        image="{{ $landingImg }}/home/course.webp" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="carousel-slide">
-                            <div class="grid grid-cols-1 lg:grid-cols-12 items-center">
-                                <div class="lg:col-span-8 text-white">
-                                    <div class="lg:w-[80%]">
-                                        <p class="font-semibold text-white text-36px md:w-[60%] mb-5">
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            <span class="icon-[tabler--star-filled] text-[#F9AA00]"></span>
-                                            ابدأ رحلة التميز مع دوراتنا الأكثر طلباً
-                                        </p>
-                                        <h3 class="font-bold text-50px text-white mb-8 lg:w-[75%]">
-                                            الاستراتيجيات الحديثة في إدارة المشاريع الهندسية
-                                        </h3>
-                                        <p class="font-normal text-20px mb-8 lg:w-[70%]">
-                                            دورة مكثفة صُممت خصيصاً لسد الفجوة بين المعرفة الأكاديمية التطبيق الميداني
-                                            في كبرى الشركات،
-                                            حيث
-                                            نأخذك في رحلة تطبيقية شاملة
-                                        </p>
-                                        <div>
-                                            <a href="{{ route('landing.v1.course-details') }}"
-                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
-                                            </a>
-                                        </div>
+                                    <div class="lg:col-span-4">
+                                        <x-landing_v1::course-card title="استشارات هندسية"
+                                            description="دورة مكثفة في إدارة المشاريع الهندسية والإنشائية."
+                                            teacher-name="المهندس الاستشاري" price="150 ر.س"
+                                            image="{{ $landingImg }}/home/course.webp" />
                                     </div>
                                 </div>
-                                <div class="lg:col-span-4">
-                                    <x-landing_v1::course-card title="استشارات نسخ"
-                                        description="اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا وصف الكورس اكتب هنا"
-                                        teacher-name="اسم المعلم" price="1.10ر.س"
-                                        image="{{ $landingImg }}/home/course.webp" />
-                                </div>
                             </div>
-                        </div>
-                        <!-- Duplicate .carousel-slide blocks for additional slides. -->
+                        @endforelse
                     </div>
                 </div>
                 <div class="mt-6 flex flex-col items-center gap-3">
                     <div class="carousel-pagination flex justify-center gap-3"></div>
                     <div class="flex items-center gap-3">
-                        <button type="button" class="carousel-prev">
+                        <button type="button" class="carousel-prev start-0 -translate-x-[-40%]">
                             <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
                                 <span class="icon-[tabler--chevron-left] size-5 cursor-pointer rtl:rotate-180"></span>
                             </span>
                             <span class="sr-only">Previous</span>
                         </button>
-                        <button type="button" class="carousel-next">
+                        <button type="button" class="carousel-next end-0 translate-x-[-40%]">
                             <span class="sr-only">Next</span>
                             <span class="size-9.5 bg-base-100 flex items-center justify-center rounded-full shadow">
                                 <span class="icon-[tabler--chevron-right] size-5 cursor-pointer rtl:rotate-180"></span>

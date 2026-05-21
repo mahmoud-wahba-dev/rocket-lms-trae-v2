@@ -1,11 +1,11 @@
 <footer class="bg-primary text-white pt-13 pb-4">
     <div class="container">
-        <div class="footer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        <div class=" grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-6 lg:gap-28">
             <div class="sm:col-span-2 md:col-span-1">
                 <div class="flex items-center gap-2 text-xl font-bold mb-4">
                     <img src="{{ $landingImg }}/home/logo-footer.svg" alt="logo" class="">
                 </div>
-                <p class="font-normal text-20px mb-4 text-white lg:w-[70%]">شريكك المهني الأول في المملكة نقدم
+                <p class="font-normal text-20px mb-4 text-white lg:w-[90%]">شريكك المهني الأول في المملكة نقدم
                     حلولاً تعليمية
                     مبتكرة لصناعة مستقبل
                     واعد.</p>
@@ -64,27 +64,34 @@
                     </a>
                 </div>
             </div>
-            <nav class="">
-                <h6 class="footer-title font-semibold text-24px text-white mb-4">روابط سريعة</h6>
-                <a href="{{ route('landing.v1.index') }}"
-                    class="link link-hover font-normal text-19px text-white">الرئيسية</a>
-                <a href="{{ route('landing.v1.about') }}" class="link link-hover font-normal text-19px text-white">من
-                    نحن</a>
-                <a href="{{ route('landing.v1.courses') }}"
-                    class="link link-hover font-normal text-19px text-white">الدورات</a>
-                <a href="{{ route('landing.v1.instructors') }}"
-                    class="link link-hover font-normal text-19px text-white">المدربين</a>
-                <a href="#" class="link link-hover font-normal text-19px text-white">المقالات</a>
+            <nav class="flex justify-center">
+                <div>
+                    <h6 class="footer-title font-semibold text-24px text-white mb-4">روابط سريعة</h6>
+                    <div class=" flex flex-col gap-2">
+                        <a href="{{ route('landing.v1.index') }}"
+                            class="link link-hover font-normal text-19px text-white">الرئيسية</a>
+                        <a href="{{ route('landing.v1.about') }}"
+                            class="link link-hover font-normal text-19px text-white">من
+                            نحن</a>
+                        <a href="{{ route('landing.v1.courses') }}"
+                            class="link link-hover font-normal text-19px text-white">الدورات</a>
+                        <a href="{{ route('landing.v1.instructors') }}"
+                            class="link link-hover font-normal text-19px text-white">المدربين</a>
+                        <a href="#" class="link link-hover font-normal text-19px text-white">المقالات</a>
 
 
+                    </div>
+                </div>
             </nav>
             <nav class="">
                 <h6 class="footer-title font-semibold text-24px text-white mb-4">الاقسام</h6>
-                <a href="#" class="link link-hover font-normal text-19px text-white">تسويق</a>
-                <a href="#" class="link link-hover font-normal text-19px text-white">استراتيجية العمل</a>
-                <a href="#" class="link link-hover font-normal text-19px text-white">الصحة واللياقة البدنية</a>
-                <a href="#" class="link link-hover font-normal text-19px text-white">تطوير الشبكة</a>
+                <div class=" flex flex-col gap-2">
+                    <a href="#" class="link link-hover font-normal text-19px text-white">تسويق</a>
+                    <a href="#" class="link link-hover font-normal text-19px text-white">استراتيجية العمل</a>
+                    <a href="#" class="link link-hover font-normal text-19px text-white">الصحة واللياقة البدنية</a>
+                    <a href="#" class="link link-hover font-normal text-19px text-white">تطوير الشبكة</a>
 
+                </div>
 
             </nav>
 
