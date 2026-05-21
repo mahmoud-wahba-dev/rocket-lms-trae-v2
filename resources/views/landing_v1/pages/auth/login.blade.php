@@ -1,13 +1,13 @@
 @extends('landing_v1.layouts.app')
 
 @section('content')
-@php($landingImg = asset('assets/landing_v1/img/about'))
-<main class="bg-[#F5F8F9]">
+@php($landingImg = asset('assets/landing_v1/img/auth'))
+<main class="bg-[#F5F8F9] overflow-hidden">
 
-    <header class="p-16 rounded-20px bg-white px-9 py-15">
-        <div class="container">
+    <header class="m-16 rounded-20px bg-white px-9 py-15 shadow">
+        <div class="">
             <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-20 gap-4">
-                <div class="l">
+                <div class="">
                     <div>
                         <h1 class="font-semibold text-36px text-primary mb-2">مرحباً بعودتك!</h1>
                         <p class="font-medium text-base text-primary mb-9">سعداء برؤيتك مرة أخرى، تابع رحلة تعلمك من حيث
@@ -60,10 +60,10 @@
 
                             <div class="mt-3">
                                 <div id="tabs-pill-icon-1" role="tabpanel" aria-labelledby="tabs-pill-icon-item-1">
-                                    <form class="needs-validation peer grid gap-y-5" novalidate>
+                                    <form class="needs-validation peer " novalidate>
 
                                         <!-- Email and password -->
-                                        <div>
+                                        <div class="mb-8">
                                             <label class="label label-text font-medium text-24px text-primary mb-4"
                                                 for="contactEmail">البريد الالكتروني</label>
                                             <input id="contactEmail" name="email" type="email"
@@ -99,13 +99,7 @@
                                         </div>
                                     </form>
 
-                                    <div class="mt-7">
-                                        <p class="font-medium text-20px text-[#979797] center">
-                                            ليس لديك حساب ؟
-                                            <a class="link link-animated font-semibold text-22px text-primary px-2"
-                                                href="/landing-v1/register">انشاء حساب</a>
-                                        </p>
-                                    </div>
+
                                 </div>
                                 <div id="tabs-pill-icon-2" class="hidden" role="tabpanel"
                                     aria-labelledby="tabs-pill-icon-item-2">
@@ -113,7 +107,7 @@
 
 
 
-                                    <div>
+                                    <div class="mb-8">
                                         <label class="label label-text font-medium text-24px text-primary mb-4"
                                             for="contactPhone">الجوال</label>
                                         <input id="contactPhone" name="phone" type="tel" placeholder="05xxxxxxxx"
@@ -122,6 +116,17 @@
                                             required />
                                         <span class="error-message text-14px text-secondary">يرجى إدخال رقم
                                             الجوال.</span>
+                                        <span class="success-message text-14px text-primary/70">تم بنجاح.</span>
+                                    </div>
+
+                                    <div class="mb-8">
+                                        <label class="label label-text font-medium text-24px text-primary mb-4"
+                                            for="contactName">كلمة المرور</label>
+                                        <input id="contactName" name="name" type="text" placeholder="كلمة المرور"
+                                            class="input bg-f7 h-16 rounded-7px w-full text-primary text-start"
+                                            autocomplete="name" required />
+                                        <span class="error-message text-14px text-secondary">يرجى إدخال
+                                            كلمة المرور.</span>
                                         <span class="success-message text-14px text-primary/70">تم بنجاح.</span>
                                     </div>
                                     <!-- Submit button -->
@@ -134,32 +139,57 @@
 
                             </div>
 
+                            <div class="mt-7">
+                                <p class="font-medium text-20px text-[#979797] center">
+                                    ليس لديك حساب ؟
+                                    <a class="link link-animated font-semibold text-22px text-primary px-2"
+                                        href="/landing-v1/register">انشاء حساب</a>
+                                </p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
                 <div class="">
-                    <div id="indicators"
-                        data-carousel='{ "loadingClasses": "opacity-0", "dotsItemClasses": "carousel-dot" }'
-                        class="relative w-full">
-                        <div class="carousel h-80">
+                    <div id="indicators "
+                        data-carousel='{ "loadingClasses": "opacity-0", "dotsItemClasses": "carousel-dot", "isRTL": true ,"isInfiniteLoop": true, "isAutoPlay": true, "isDraggable": true }'
+                        class="relative w-full h-full">
+                        <div class="carousel h-full">
                             <div class="carousel-body h-full opacity-0">
                                 <!-- Slide 1 -->
                                 <div class="carousel-slide">
-                                    <div class="bg-base-300/60 flex h-full justify-center p-6">
-                                        <span class="self-center text-2xl sm:text-4xl">First slide</span>
+                                    <div class="bg-primary rounded-20px py-11 px-7 h-full">
+                                        <div class="mb-20 h-[60%] center">
+                                            <img class="h-full" src="{{ $landingImg }}/login-slide.webp" alt="Slide 1">
+                                        </div>
+                                        <p class="font-bold text-32px text-white text-center">
+                                            شهاداتك المعتمدة.. بانتظارك دائمًا
+                                        </p>
                                     </div>
+
                                 </div>
                                 <!-- Slide 2 -->
                                 <div class="carousel-slide">
-                                    <div class="bg-base-300/80 flex h-full justify-center p-6">
-                                        <span class="self-center text-2xl sm:text-4xl">Second slide</span>
+                                    <div class="bg-primary rounded-20px py-11 px-7 h-full">
+                                        <div class="mb-20 h-[60%] center">
+                                            <img class="h-full" src="{{ $landingImg }}/login-slide.webp" alt="Slide 1">
+                                        </div>
+                                        <p class="font-bold text-32px text-white text-center">
+                                            شهاداتك المعتمدة.. بانتظارك دائمًا
+                                        </p>
                                     </div>
+
                                 </div>
-                                <!-- Slide 3 -->
                                 <div class="carousel-slide">
-                                    <div class="bg-base-300 flex h-full justify-center p-6">
-                                        <span class="self-center text-2xl sm:text-4xl">Third slide</span>
+                                    <div class="bg-primary rounded-20px py-11 px-7 h-full">
+                                        <div class="mb-20 h-[60%] center">
+                                            <img class="h-full" src="{{ $landingImg }}/login-slide.webp" alt="Slide 1">
+                                        </div>
+                                        <p class="font-bold text-32px text-white text-center">
+                                            شهاداتك المعتمدة.. بانتظارك دائمًا
+                                        </p>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
@@ -174,3 +204,5 @@
 
 </main>
 @endsection
+@push('scripts')
+@endpush
