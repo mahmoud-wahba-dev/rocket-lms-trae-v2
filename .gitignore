@@ -23,3 +23,5 @@ storage/debugbar/.gitignore
 *.pem
 *.sql
 app/logs/*.log
+/deploy.ps1
+/deploy.bat
