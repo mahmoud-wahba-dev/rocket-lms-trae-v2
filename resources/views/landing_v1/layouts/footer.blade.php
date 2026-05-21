@@ -1,7 +1,7 @@
 <footer class="bg-primary text-white pt-13 pb-4">
     <div class="container">
-        <footer class="footer">
-            <div class="">
+        <div class="footer grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+            <div class="sm:col-span-2 md:col-span-1">
                 <div class="flex items-center gap-2 text-xl font-bold mb-4">
                     <img src="{{ $landingImg }}/home/logo-footer.svg" alt="logo" class="">
                 </div>
@@ -11,8 +11,7 @@
                     واعد.</p>
                 <div class="flex items-center gap-4 flex-wrap">
                     <a href="#" class="bg-[#7C849A] size-9 center rounded-full">
-                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="22" height="19" viewBox="0 0 22 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M0.574711 8.25221C0.624947 8.22709 0.675206 8.20322 0.724187 8.18061C1.57569 7.78626 2.43849 7.41704 3.30004 7.0478C3.34651 7.0478 3.42436 6.99379 3.46831 6.97621C3.53487 6.94732 3.60145 6.9197 3.66801 6.89081C3.79611 6.83555 3.92422 6.78154 4.05107 6.72628C4.30727 6.61702 4.5622 6.50776 4.81841 6.39849L6.35186 5.74166C7.37416 5.30461 8.39774 4.86629 9.42004 4.42923C10.4423 3.99218 11.4659 3.55388 12.4882 3.11682C13.5105 2.67977 14.5341 2.24147 15.5564 1.80441C16.5787 1.36736 17.6022 0.929041 18.6245 0.491987C18.8519 0.394027 19.098 0.248339 19.3417 0.205638C19.5464 0.169217 19.746 0.0988974 19.952 0.0599645C20.3426 -0.0141337 20.7734 -0.0442802 21.1476 0.117731C21.277 0.174247 21.3963 0.253368 21.4955 0.352584C21.9703 0.822291 21.9037 1.59342 21.8032 2.25402C21.1037 6.85815 20.4041 11.4635 19.7033 16.0677C19.6079 16.6994 19.4773 17.3926 18.9787 17.792C18.5567 18.1299 17.9564 18.1675 17.4352 18.0244C16.914 17.8799 16.4543 17.5773 16.0035 17.2796C14.1334 16.0413 12.2621 14.803 10.3921 13.5647C9.94752 13.2708 9.45271 12.8865 9.45773 12.3527C9.46024 12.0312 9.65238 11.7449 9.8483 11.4899C11.4734 9.36996 13.8182 7.91311 15.5626 5.89111C15.8088 5.60602 16.0022 5.0911 15.6644 4.92658C15.4634 4.82862 15.2323 4.96174 15.049 5.08858C12.7431 6.68986 10.4386 8.29239 8.13275 9.89366C7.38046 10.4161 6.59176 10.9537 5.685 11.0818C4.87368 11.1973 4.05735 10.9712 3.27241 10.7401C2.61432 10.5467 1.95746 10.3483 1.30314 10.1436C0.955255 10.0356 0.596065 9.91878 0.327302 9.67388C0.0585393 9.42898 -0.0959157 9.01705 0.0660955 8.69051C0.167824 8.4858 0.365004 8.35644 0.572227 8.25095L0.574711 8.25221Z"
                                 fill="#FEFFFC" />
@@ -21,8 +20,7 @@
                     </a>
 
                     <a href="" class="bg-[#7C849A] size-9 center rounded-full">
-                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="24" height="23" viewBox="0 0 24 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M15.3321 16.7058C10.6957 16.7058 6.92363 12.9324 6.92236 8.29603C6.92363 7.12075 7.88062 6.16504 9.05336 6.16504C9.17393 6.16504 9.29323 6.17519 9.40745 6.1955C9.65876 6.23738 9.89738 6.32242 10.1169 6.45061C10.1487 6.46965 10.1702 6.50011 10.1753 6.53565L10.6652 9.62361C10.6716 9.65915 10.6602 9.69596 10.636 9.72261C10.3657 10.0221 10.0205 10.2379 9.63592 10.3458L9.45062 10.3978L9.52041 10.5768C10.1525 12.1861 11.4395 13.4718 13.0501 14.1064L13.229 14.1775L13.2811 13.9922C13.3889 13.6076 13.6047 13.2624 13.9042 12.9921C13.9258 12.9718 13.955 12.9616 13.9842 12.9616C13.9905 12.9616 13.9969 12.9616 14.0045 12.9629L17.0925 13.4528C17.1293 13.4591 17.1597 13.4794 17.1788 13.5112C17.3057 13.7307 17.3907 13.9706 17.4339 14.2219C17.4542 14.3336 17.4631 14.4517 17.4631 14.5748C17.4631 15.7488 16.5074 16.7045 15.3321 16.7058Z"
                                 fill="#FDFDFD" />
@@ -36,8 +34,7 @@
 
 
                     <a href="" class="bg-[#7C849A] size-9 center rounded-full">
-                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M16.8258 0.000244141H5.61622C2.51936 0.000244141 0 2.51961 0 5.61646V15.8716C0 18.9685 2.51936 21.4878 5.61622 21.4878H16.8258C19.9227 21.4878 22.442 18.9685 22.442 15.8716V5.61646C22.442 2.51961 19.9227 0.000244141 16.8258 0.000244141ZM1.98123 5.61646C1.98123 3.61239 3.61215 1.98147 5.61622 1.98147H16.8258C18.8299 1.98147 20.4608 3.61239 20.4608 5.61646V15.8716C20.4608 17.8757 18.8299 19.5066 16.8258 19.5066H5.61622C3.61215 19.5066 1.98123 17.8757 1.98123 15.8716V5.61646Z"
                                 fill="white" />
@@ -53,8 +50,7 @@
                     </a>
 
                     <a href="" class="bg-[#7C849A] size-9 center rounded-full">
-                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
+                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3.83833 5.59033H0.286133V16.9181H3.83833V5.59033Z" fill="white" />
                             <path
                                 d="M13.4479 5.3449C13.317 5.32853 13.1778 5.32035 13.0387 5.31216C11.0498 5.23031 9.92846 6.40892 9.5356 6.91638C9.42919 7.05552 9.38008 7.13737 9.38008 7.13737V5.62318H5.9834V16.9509H9.38008H9.5356C9.5356 15.7969 9.5356 14.651 9.5356 13.4969C9.5356 12.8749 9.5356 12.2529 9.5356 11.6308C9.5356 10.8614 9.4783 10.043 9.86299 9.33907C10.1904 8.74977 10.7797 8.45512 11.4426 8.45512C13.407 8.45512 13.4479 10.2312 13.4479 10.3949C13.4479 10.4031 13.4479 10.4113 13.4479 10.4113V17H17.0001V9.60917C17.0001 7.08007 15.7151 5.59044 13.4479 5.3449Z"
@@ -70,10 +66,14 @@
             </div>
             <nav class="">
                 <h6 class="footer-title font-semibold text-24px text-white mb-4">روابط سريعة</h6>
-                <a href="{{ route('landing.v1.index') }}" class="link link-hover font-normal text-19px text-white">الرئيسية</a>
-                <a href="{{ route('landing.v1.about') }}" class="link link-hover font-normal text-19px text-white">من نحن</a>
-                <a href="{{ route('landing.v1.courses') }}" class="link link-hover font-normal text-19px text-white">الدورات</a>
-                <a href="{{ route('landing.v1.instructors') }}" class="link link-hover font-normal text-19px text-white">المدربين</a>
+                <a href="{{ route('landing.v1.index') }}"
+                    class="link link-hover font-normal text-19px text-white">الرئيسية</a>
+                <a href="{{ route('landing.v1.about') }}" class="link link-hover font-normal text-19px text-white">من
+                    نحن</a>
+                <a href="{{ route('landing.v1.courses') }}"
+                    class="link link-hover font-normal text-19px text-white">الدورات</a>
+                <a href="{{ route('landing.v1.instructors') }}"
+                    class="link link-hover font-normal text-19px text-white">المدربين</a>
                 <a href="#" class="link link-hover font-normal text-19px text-white">المقالات</a>
 
 
@@ -90,18 +90,22 @@
 
             <nav class="">
                 <h6 class="footer-title font-semibold text-24px text-white mb-4">شركة سمات للتطوير و الاستشارات</h6>
-                <p href="#" class="link link-hover font-normal text-19px text-white">المملكة العربية السعودية - المنطقة الشرقية الدمام</p>
-                <a href="mailto:info@siematplus.com" class="link link-hover font-normal text-19px text-white">info@siematplus.com</a>
+                <p href="#" class="link link-hover font-normal text-19px text-white">المملكة العربية السعودية - المنطقة
+                    الشرقية الدمام</p>
+                <a href="mailto:info@siematplus.com"
+                    class="link link-hover font-normal text-19px text-white">info@siematplus.com</a>
 
 
 
             </nav>
 
-        </footer>
+        </div>
         <div class="footer text-white border-[#FFFFFF5E] border-t px-6 py-5 mt-9">
             <div class="center w-full ">
                 <aside class="grid-flow-col items-center">
-                    <p class="font-normal text-white text-17px text-center">© كل الحقوق محفوطة لدي @ <a class="link link-hover font-medium" href="{{ route('landing.v1.index') }}">SIEMATPLUS</a></p>
+                    <p class="font-normal text-white text-17px text-center">© كل الحقوق محفوطة لدي @ <a
+                            class="link link-hover font-medium" href="{{ route('landing.v1.index') }}">SIEMATPLUS</a>
+                    </p>
                 </aside>
 
             </div>
