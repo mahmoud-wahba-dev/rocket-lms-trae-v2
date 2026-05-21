@@ -4,17 +4,22 @@
 @php($landingImg = asset('assets/landing_v1/img'))
 <main class="mt-20">
 
-    <header class="mt-16 bg-primary">
-        <div class="container">
+    <header class="relative mt-16 bg-white text-primary overflow-hidden">
+        <!-- Soft premium radial glow in the center of the hero -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0">
+            <img src="{{ $landingImg }}/home/shpe-circle-blur.svg" alt="blur shape" class="w-[750px] max-w-none opacity-90">
+        </div>
+        <div class="container relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 ">
 
-                <div class="md:w-[80%]">
-                    <h1 class="font-bold text-57px  text-white mb-6">التميز المهني عبر حلول تعليمية متكاملة </h1>
-                    <p class="font-medium text-18px text-white mb-7">تلتزم منصة "سمات بلس" بتقديم مسارات تدريبية نوعية
+                <div class="md:w-[90%]">
+                    <h1 class="font-bold text-57px  text-primary mb-6">التميز المهني عبر حلول تعليمية متكاملة </h1>
+                    <p class="font-medium text-18px text-primary mb-7">تلتزم منصة "سمات بلس" بتقديم مسارات تدريبية نوعية
                         مصممة وفق أعلى المعايير المهنية، لتمكين الكوادر
                         الوطنية وتطوير كفاءاتهم.</p>
                     <div class="flex items-center flex-wrap gap-6 h-14 font-medium text-20px">
-                        <a href="{{ route('landing.v1.register') }}" class="btn btn-whtext-white h-14 font-medium text-20px ">
+                        <a href="{{ route('landing.v1.register') }}"
+                            class="btn btn-primary h-14 font-medium text-20px ">
 
                             <svg width="21" height="14" viewBox="0 0 21 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -22,6 +27,7 @@
                                     d="M16.25 5.115H13.75C13.608 5.115 13.489 5.06733 13.393 4.972C13.297 4.87667 13.2493 4.75767 13.25 4.615C13.2507 4.47233 13.2983 4.35333 13.393 4.258C13.4877 4.16267 13.6067 4.115 13.75 4.115H16.25V1.615C16.25 1.473 16.2977 1.354 16.393 1.258C16.4883 1.162 16.6073 1.11433 16.75 1.115C16.8927 1.11567 17.0117 1.16333 17.107 1.258C17.2023 1.35267 17.25 1.47167 17.25 1.615V4.115H19.75C19.8927 4.115 20.0117 4.16267 20.107 4.258C20.2023 4.35333 20.25 4.47233 20.25 4.615C20.25 4.75767 20.2023 4.87667 20.107 4.972C20.0117 5.06733 19.8927 5.115 19.75 5.115H17.25V7.615C17.25 7.75767 17.2023 7.87667 17.107 7.972C17.0117 8.06733 16.8927 8.115 16.75 8.115C16.6073 8.115 16.4883 8.06733 16.393 7.972C16.2977 7.87667 16.25 7.75767 16.25 7.615V5.115ZM4.877 5.123C4.29233 4.53767 4 3.83 4 3C4 2.17 4.29233 1.46233 4.877 0.877001C5.46167 0.291668 6.16933 -0.000665529 7 1.13766e-06C7.83067 0.000667804 8.53833 0.293001 9.123 0.877001C9.70767 1.461 10 2.16867 10 3C10 3.83133 9.70767 4.539 9.123 5.123C8.53833 5.707 7.83067 5.99933 7 6C6.16933 6.00067 5.46167 5.70833 4.877 5.123ZM0 12.192V11.584C0 11.1713 0.12 10.7853 0.36 10.426C0.600667 10.066 0.924 9.78667 1.33 9.588C2.274 9.13533 3.21867 8.796 4.164 8.57C5.10867 8.34333 6.054 8.23 7 8.23C7.946 8.23 8.89167 8.34333 9.837 8.57C10.7823 8.79667 11.7263 9.136 12.669 9.588C13.0757 9.78667 13.399 10.066 13.639 10.426C13.8797 10.7853 14 11.1713 14 11.584V12.192C14 12.4853 13.9003 12.732 13.701 12.932C13.5017 13.1307 13.255 13.23 12.961 13.23H1.04C0.746 13.23 0.499333 13.1303 0.3 12.931C0.100667 12.7317 0.000666667 12.4853 0 12.192Z"
                                     fill="white" />
                             </svg>
+
 
                             سجل لدينا الان
                         </a>
@@ -285,7 +291,8 @@
                         <p class="mb-4">نقدم حلولاً تدريبية متكاملة للشركات والجهات الحكومية التي تسعى لرفع كفاءة فرق
                             عملها بما يتوافق مع رؤية المملكة 2030 </p>
                         <div>
-                            <a href="{{ route('landing.v1.contact') }}" class="btn btn-primary h-10 font-medium text-14px">
+                            <a href="{{ route('landing.v1.contact') }}"
+                                class="btn btn-primary h-10 font-medium text-14px">
                                 تواصل معنا الان
                                 <span class="icon-[tabler--arrow-left]"></span> </a>
                         </div>
@@ -305,7 +312,8 @@
                         في القطاعات الحيوية</p>
                 </div>
                 <div>
-                    <a href="{{ route('landing.v1.courses') }}" class="btn btn-text font-semibold text-20px text-primary">
+                    <a href="{{ route('landing.v1.courses') }}"
+                        class="btn btn-text font-semibold text-20px text-primary">
                         عرض كل الكورسات
                         <span class="icon-[tabler--arrow-left]"></span>
                     </a>
@@ -314,10 +322,10 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 @foreach($courses as $course)
                 <x-landing_v1::course-card title="{{ $course->title }}" description="{{ $course->description }}"
-                    teacher-name="{{ $course->teacher->full_name ?? '' }}" 
+                    teacher-name="{{ $course->teacher->full_name ?? '' }}"
                     teacher-avatar="{{ !empty($course->teacher) ? $course->teacher->getAvatar() : '' }}"
                     price="{{ ($course->price > 0) ? $course->price . ' ر.س' : 'مجاناً' }}"
-                    image="{{ $course->image_cover ?? asset('assets/landing_v1/img/contact/hero.webp') }}" 
+                    image="{{ $course->image_cover ?? asset('assets/landing_v1/img/contact/hero.webp') }}"
                     slug="{{ $course->slug }}" />
                 @endforeach
             </div>
@@ -352,7 +360,8 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}"
+                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>
@@ -385,7 +394,8 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}"
+                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>
@@ -418,7 +428,8 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}"
+                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>
@@ -451,7 +462,8 @@
                                             نأخذك في رحلة تطبيقية شاملة
                                         </p>
                                         <div>
-                                            <a href="{{ route('landing.v1.course-details') }}" class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
+                                            <a href="{{ route('landing.v1.course-details') }}"
+                                                class="btn btn-gold h-12 px-20 font-medium text-24px"> اشترك الان
                                             </a>
                                         </div>
                                     </div>

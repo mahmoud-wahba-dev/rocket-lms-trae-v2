@@ -11,7 +11,7 @@
 
 <div class="rounded-8px border border-[#0000002B] overflow-hidden bg-white text-card-text">
     <div class="mb-5">
-        <img src="{{ $image }}" alt="{{ $title }}" class="max-w-full max-h-full rounde-tl-[8px] rounded-tr-[8px]">
+        <img src="{{ $image }}" alt="{{ $title }}" class="w-full h-full object-cover rounde-tl-[8px] rounded-tr-[8px]">
     </div>
     <div class="px-4 py-6">
         <h6 class="font-semibold text-24px text-primary mb-1.5 text-card-text">{{ $title }}</h6>

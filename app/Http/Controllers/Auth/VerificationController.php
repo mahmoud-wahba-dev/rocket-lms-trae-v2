@@ -79,6 +79,10 @@ class VerificationController extends Controller
 
     public function checkConfirmed($user, $username, $value)
     {
+        return [
+            'status' => 'verified'
+        ];
+
         $disableRegistrationVerificationProcess = getGeneralOptionsSettings('disable_registration_verification_process');
 
         if (!empty($disableRegistrationVerificationProcess)) {

@@ -60,81 +60,97 @@
 
                             <div class="mt-3">
                                 <div id="tabs-pill-icon-1" role="tabpanel" aria-labelledby="tabs-pill-icon-item-1">
-                                    <form class="needs-validation peer " novalidate>
+                                    <form method="POST" action="/login" class="needs-validation peer" novalidate>
+                                        @csrf
+                                        <input type="hidden" name="type" value="email">
 
                                         <!-- Email and password -->
                                         <div class="mb-8">
                                             <label class="label label-text font-medium text-24px text-primary mb-4"
                                                 for="contactEmail">البريد الالكتروني</label>
                                             <input id="contactEmail" name="email" type="email"
+                                                value="{{ old('email') }}"
                                                 placeholder="name@example.com"
-                                                class="input bg-f7 h-16 rounded-7px w-full text-primary text-start"
+                                                class="input bg-f7 h-16 rounded-7px w-full text-primary text-start @error('email') border-red-500 @enderror"
                                                 autocomplete="email" required />
-                                            <span class="error-message text-14px text-secondary">يرجى إدخال بريد
-                                                صحيح.</span>
+                                            @error('email')
+                                                <span class="text-14px text-secondary block mt-1">{{ $message }}</span>
+                                            @else
+                                                <span class="error-message text-14px text-secondary">يرجى إدخال بريد صحيح.</span>
+                                            @enderror
                                             <span class="success-message text-14px text-primary/70">تم بنجاح.</span>
                                         </div>
 
                                         <div class="mb-8">
                                             <label class="label label-text font-medium text-24px text-primary mb-4"
-                                                for="contactName">كلمة المرور</label>
-                                            <input id="contactName" name="name" type="text" placeholder="كلمة المرور"
-                                                class="input bg-f7 h-16 rounded-7px w-full text-primary text-start"
-                                                autocomplete="name" required />
-                                            <span class="error-message text-14px text-secondary">يرجى إدخال
-                                                كلمة المرور.</span>
+                                                for="loginPasswordEmail">كلمة المرور</label>
+                                            <input id="loginPasswordEmail" name="password" type="password" placeholder="كلمة المرور"
+                                                class="input bg-f7 h-16 rounded-7px w-full text-primary text-start @error('password') border-red-500 @enderror"
+                                                required />
+                                            @error('password')
+                                                <span class="text-14px text-secondary block mt-1">{{ $message }}</span>
+                                            @else
+                                                <span class="error-message text-14px text-secondary">يرجى إدخال كلمة المرور.</span>
+                                            @enderror
                                             <span class="success-message text-14px text-primary/70">تم بنجاح.</span>
                                         </div>
-
-
-
-
-
 
                                         <!-- Submit button -->
                                         <div class="mt-4">
                                             <button type="submit" name="submitButton"
-                                                class="btn btn-gold btn-block h-16 rounded-8px font-semibold  text-24px">تسجيل
-                                                الدخول</button>
+                                                class="btn btn-gold btn-block h-16 rounded-8px font-semibold text-24px">تسجيل الدخول</button>
                                         </div>
                                     </form>
-
-
                                 </div>
                                 <div id="tabs-pill-icon-2" class="hidden" role="tabpanel"
                                     aria-labelledby="tabs-pill-icon-item-2">
+                                    <form method="POST" action="/login" class="needs-validation peer" novalidate>
+                                        @csrf
+                                        <input type="hidden" name="type" value="mobile">
 
+                                        <div class="mb-8">
+                                            <label class="label label-text font-medium text-24px text-primary mb-4">الجوال</label>
+                                            <div class="grid grid-cols-3 gap-2" dir="ltr">
+                                                <div class="col-span-1">
+                                                    <select name="country_code" class="select bg-f7 h-16 rounded-7px w-full text-primary text-center font-medium" required>
+                                                        @foreach(getCountriesMobileCode() as $country => $code)
+                                                            <option value="{{ $code }}" @if($code == old('country_code')) selected @endif>{{ $code }} ({{ $country }})</option>
+                                                        @endforeach
+                                                    </select>
+                                                </div>
+                                                <div class="col-span-2">
+                                                    <input id="contactPhone" name="mobile" type="tel" value="{{ old('mobile') }}" placeholder="05xxxxxxxx"
+                                                        class="input bg-f7 h-16 rounded-7px w-full text-primary text-start @error('mobile') border-red-500 @enderror"
+                                                        autocomplete="tel" required />
+                                                </div>
+                                            </div>
+                                            @error('mobile')
+                                                <span class="text-14px text-secondary block mt-1" dir="rtl">{{ $message }}</span>
+                                            @else
+                                                <span class="error-message text-14px text-secondary text-right block mt-1" dir="rtl">يرجى إدخال رقم الجوال.</span>
+                                            @enderror
+                                            <span class="success-message text-14px text-primary/70 text-right block mt-1" dir="rtl">تم بنجاح.</span>
+                                        </div>
 
-
-
-                                    <div class="mb-8">
-                                        <label class="label label-text font-medium text-24px text-primary mb-4"
-                                            for="contactPhone">الجوال</label>
-                                        <input id="contactPhone" name="phone" type="tel" placeholder="05xxxxxxxx"
-                                            class="input bg-f7 h-16 rounded-7px w-full text-primary text-start"
-                                            dir="{{ app()->getLocale() === 'ar' ? 'rtl' : 'ltr' }}" autocomplete="tel"
-                                            required />
-                                        <span class="error-message text-14px text-secondary">يرجى إدخال رقم
-                                            الجوال.</span>
-                                        <span class="success-message text-14px text-primary/70">تم بنجاح.</span>
-                                    </div>
-
-                                    <div class="mb-8">
-                                        <label class="label label-text font-medium text-24px text-primary mb-4"
-                                            for="contactName">كلمة المرور</label>
-                                        <input id="contactName" name="name" type="text" placeholder="كلمة المرور"
-                                            class="input bg-f7 h-16 rounded-7px w-full text-primary text-start"
-                                            autocomplete="name" required />
-                                        <span class="error-message text-14px text-secondary">يرجى إدخال
-                                            كلمة المرور.</span>
-                                        <span class="success-message text-14px text-primary/70">تم بنجاح.</span>
-                                    </div>
-                                    <!-- Submit button -->
-                                    <div class="mt-4">
-                                        <button type="submit" name="submitButton"
-                                            class="btn btn-gold btn-block h-16 rounded-8px font-semibold  text-24px">تسجيل
-                                            الدخول</button>
-                                    </div>
+                                        <div class="mb-8">
+                                            <label class="label label-text font-medium text-24px text-primary mb-4"
+                                                for="loginPasswordPhone">كلمة المرور</label>
+                                            <input id="loginPasswordPhone" name="password" type="password" placeholder="كلمة المرور"
+                                                class="input bg-f7 h-16 rounded-7px w-full text-primary text-start @error('password') border-red-500 @enderror"
+                                                required />
+                                            @error('password')
+                                                <span class="text-14px text-secondary block mt-1">{{ $message }}</span>
+                                            @else
+                                                <span class="error-message text-14px text-secondary">يرجى إدخال كلمة المرور.</span>
+                                            @enderror
+                                            <span class="success-message text-14px text-primary/70">تم بنجاح.</span>
+                                        </div>
+                                        <!-- Submit button -->
+                                        <div class="mt-4">
+                                            <button type="submit" name="submitButton"
+                                                class="btn btn-gold btn-block h-16 rounded-8px font-semibold text-24px">تسجيل الدخول</button>
+                                        </div>
+                                    </form>
                                 </div>
 
                             </div>
@@ -205,4 +221,60 @@
 </main>
 @endsection
 @push('scripts')
+<style>
+    .error-message, .success-message {
+        display: none !important;
+    }
+    .validate .input:invalid ~ .error-message,
+    .validate .select:invalid ~ .error-message {
+        display: block !important;
+    }
+    .validate .input:valid ~ .success-message,
+    .validate .select:valid ~ .success-message {
+        display: block !important;
+    }
+    .validate .input:invalid, .validate .select:invalid {
+        border: 2px solid #E25C5C !important;
+    }
+    .validate .input:valid, .validate .select:valid {
+        border: 2px solid #5CE284 !important;
+    }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const forms = document.querySelectorAll('.needs-validation');
+
+    Array.from(forms).forEach(form => {
+        form.addEventListener(
+            'submit',
+            event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    const firstInvalidElement = form.querySelector(':invalid');
+                    if (firstInvalidElement) {
+                        firstInvalidElement.focus();
+                    }
+                    form.classList.add('validate');
+                } else {
+                    // Form is valid! Show loading state on the active submit button
+                    const submitBtn = form.querySelector('button[type="submit"]');
+                    if (submitBtn) {
+                        submitBtn.disabled = true;
+                        submitBtn.innerHTML = `
+                            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline-block ltr:mr-3 rtl:ml-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                            </svg>
+                            جاري التحميل...
+                        `;
+                    }
+                }
+            },
+            false
+        );
+    });
+});
+</script>
 @endpush
