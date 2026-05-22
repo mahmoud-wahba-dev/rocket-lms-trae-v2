@@ -14,7 +14,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-6 ">
 
                 <div class="md:w-[93%]">
-                    <h1 class="font-bold text-57px  text-primary mb-6 bg-gold">التميز المهني عبر حلول تعليمية متكاملة </h1>
+                    <h1 class="font-bold text-57px  text-primary mb-6 ">التميز المهني عبر حلول تعليمية متكاملة </h1>
                     <p class="font-medium text-18px text-primary mb-7">تلتزم منصة "سمات بلس" بتقديم مسارات تدريبية نوعية
                         مصممة وفق أعلى المعايير المهنية، لتمكين الكوادر
                         الوطنية وتطوير كفاءاتهم.</p>
