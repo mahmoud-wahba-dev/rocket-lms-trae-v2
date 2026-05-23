@@ -81,10 +81,15 @@
                                 {{ ($course->price > 0) ? handlePrice($course->price) : 'مجانية' }}
                             </p>
 
-                            <a href="{{ url('/course/' . $course->slug) }}"
+                            {{-- اشترك الان: adds to cart then redirects to checkout --}}
+                            <button type="button"
+                                id="subscribe-now-btn"
+                                data-course-id="{{ $course->id }}"
+                                data-checkout-url="{{ route('landing.v1.checkout') }}"
                                 class="btn btn-primary btn-block h-15 rounded-5px font-semibold text-20px mb-3 shadow-md hover:shadow-lg transition-all duration-300">
+                                <span class="icon-[tabler--lock] size-5 me-1"></span>
                                 اشترك الان
-                            </a>
+                            </button>
 
                             <form action="/cart/store" method="post" class="w-full add-to-cart-form">
                                 @csrf
@@ -397,4 +402,63 @@
 @endsection
 
 @push('scripts')
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const btn = document.getElementById('subscribe-now-btn');
+    if (!btn) return;
+
+    btn.addEventListener('click', async function () {
+        const courseId    = btn.dataset.courseId;
+        const checkoutUrl = btn.dataset.checkoutUrl;
+
+        // Loading state
+        btn.disabled = true;
+        btn.innerHTML = '<span class="icon-[tabler--loader-2] size-5 me-1 animate-spin inline-block"></span> جاري التحميل...';
+
+        try {
+            const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content') || '';
+            const formData  = new FormData();
+            formData.append('_token',    csrfToken);
+            formData.append('item_name', 'webinar_id');
+            formData.append('item_id',   courseId);
+
+            const response = await fetch('/cart/store', {
+                method:  'POST',
+                headers: { 'X-Requested-With': 'XMLHttpRequest' },
+                body:    formData,
+            });
+
+            const data = await response.json();
+
+            if (response.ok && (data.status === 'success' || data.code === 200)) {
+                // Successfully added — go straight to checkout
+                window.location.href = checkoutUrl;
+            } else {
+                const errMsg      = data?.toast_alert?.msg || data?.msg || '';
+                const alreadyInCart = errMsg.toLowerCase().includes('already')
+                    || errMsg.includes('موجود')
+                    || errMsg.includes('مضاف');
+
+                if (alreadyInCart) {
+                    // Already in cart — still go to checkout
+                    window.location.href = checkoutUrl;
+                } else {
+                    // Real error — show toast and reset button
+                    window.showCartToast && showCartToast(
+                        data?.toast_alert?.title || 'خطأ',
+                        errMsg || 'حدث خطأ، يرجى المحاولة مجدداً',
+                        'error'
+                    );
+                    btn.disabled = false;
+                    btn.innerHTML = '<span class="icon-[tabler--lock] size-5 me-1"></span> اشترك الان';
+                }
+            }
+        } catch (_) {
+            window.showCartToast && showCartToast('خطأ', 'فشل الاتصال بالخادم', 'error');
+            btn.disabled = false;
+            btn.innerHTML = '<span class="icon-[tabler--lock] size-5 me-1"></span> اشترك الان';
+        }
+    });
+});
+</script>
 @endpush
