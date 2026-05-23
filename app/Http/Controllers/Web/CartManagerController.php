@@ -570,26 +570,27 @@ class CartManagerController extends Controller
         ], 200);
     }
 
-    public function getDrawerInfo()
+    public function getDrawerInfo(Request $request)
     {
         $user = auth()->user();
         $cartItems = $this->getCarts();
 
         $subtotal = 0;
         $notIsEmpty = (!empty($cartItems) and $cartItems->isNotEmpty());
-        $extraData = [];
+        $skin = $request->query('skin', 'design_1'); // 'landing_v1' | 'design_1'
 
         if ($notIsEmpty) {
-            $cartController = new CartController();
-            //$calculate = $cartController->calculatePrice($cartItems, $user);
-
             $subtotal = Cart::getCartsTotalPrice($cartItems);
 
             $data = [
                 'cartItems' => $cartItems,
             ];
 
-            $html = (string)view()->make("design_1.web.cart.drawer.body", $data);
+            $view = $skin === 'landing_v1'
+                ? 'landing_v1.components.cart-drawer-body'
+                : 'design_1.web.cart.drawer.body';
+
+            $html = (string)view()->make($view, $data);
         } else {
             $cartDiscount = CartDiscount::query()
                 ->where('show_only_on_empty_cart', true)
@@ -600,14 +601,18 @@ class CartManagerController extends Controller
                 'cartDiscount' => $cartDiscount,
             ];
 
-            $html = (string)view()->make("design_1.web.cart.drawer.empty", $data);
+            $view = $skin === 'landing_v1'
+                ? 'landing_v1.components.cart-drawer-empty'
+                : 'design_1.web.cart.drawer.empty';
+
+            $html = (string)view()->make($view, $data);
         }
 
         return response()->json([
-            'code' => 200,
+            'code'     => 200,
             'is_empty' => !$notIsEmpty,
             'subtotal' => $subtotal > 0 ? handlePrice($subtotal) : 0,
-            'html' => $html,
+            'html'     => $html,
         ]);
     }
 }

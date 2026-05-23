@@ -86,11 +86,12 @@
                                 اشترك الان
                             </a>
 
-                            <form action="/cart/store" method="post" class="w-full">
+                            <form action="/cart/store" method="post" class="w-full add-to-cart-form">
                                 @csrf
-                                <input type="hidden" name="webinar_id" value="{{ $course->id }}">
+                                <input type="hidden" name="item_name" value="webinar_id">
+                                <input type="hidden" name="item_id" value="{{ $course->id }}">
                                 <button type="submit" class="btn btn-outline-primary btn-block h-15 rounded-5px font-semibold text-20px hover:bg-primary/5 transition-all duration-300">
-                                    اضف للسلة
+                                    <span class="btn-label">اضف للسلة</span>
                                 </button>
                             </form>
                         </div>

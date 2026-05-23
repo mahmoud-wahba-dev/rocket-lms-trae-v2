@@ -16,11 +16,14 @@
                 @foreach($instructors as $instructor)
                 <div class="border border-[#CFCFCF] rounded-9px overflow-hidden flex flex-col">
                     <a href="{{ $instructor->getProfileUrl() }}" class="block mb-4 bg-e3 aspect-[4/3] overflow-hidden">
-                        <img src="{{ $instructor->getAvatar() }}" alt="{{ $instructor->full_name }}" class="w-full h-full object-contain">
+                        <img src="{{ $instructor->getAvatar() }}" alt="{{ $instructor->full_name }}"
+                            class="w-full h-full object-contain">
                     </a>
                     <div class="p-5 mb-6 flex-1 flex flex-col">
                         <a href="{{ $instructor->getProfileUrl() }}">
-                            <h6 class="font-semibold text-24px text-primary mb-2 hover:text-secondary transition-colors">{{ $instructor->full_name }}</h6>
+                            <h6
+                                class="font-semibold text-24px text-primary mb-2 hover:text-secondary transition-colors">
+                                {{ $instructor->full_name }}</h6>
                         </a>
                         <p class="font-normal text-base text-primary leading-6 mb-6">
                             {{ $instructor->bio }}
@@ -37,7 +40,8 @@
 
                                 <div class="font-medium text-10px flex flex-col   text-[#A6AAB5]">
                                     <span>عضو منذ</span>
-                                    <span>{{ $instructor->created_at ? dateTimeFormat($instructor->created_at, 'Y') : '0' }}</span>
+                                    <span>{{ $instructor->created_at ? dateTimeFormat($instructor->created_at, 'Y') :
+                                        '0' }}</span>
                                 </div>
                             </div>
 
@@ -93,7 +97,8 @@
                         </div>
 
                         <div>
-                            <a href="{{ $instructor->getProfileUrl() }}" class="btn btn-primary h-13 rounded-4px font-medium text-14px btn-block">
+                            <a href="{{ $instructor->getProfileUrl() }}"
+                                class="btn btn-primary h-13 rounded-4px font-medium text-14px btn-block">
                                 <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -119,15 +124,9 @@
     </section>
 
 
-    <section class="section-gap">
-        <div class="h-96 h-[600px]">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3295.2184483958963!2d50.1176448439897!3d26.37586181777448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e49fddf50e3fa65%3A0xe09df008fd3d655b!2z2LTYsdmD2Kkg2LPZhdin2Kog2YTZhNin2LPYqti02KfYsdin2Kog2YjYp9mE2KrYt9mI2YrYsQ!5e1!3m2!1sen!2seg!4v1779222418795!5m2!1sen!2seg"
-                width="100%" height="600" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+    <!-- <section class="section-gap">
 
-    </section>
+    </section> -->
 
 </main>
 @endsection
