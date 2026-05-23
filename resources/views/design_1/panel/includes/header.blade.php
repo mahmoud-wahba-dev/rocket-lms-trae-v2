@@ -22,7 +22,8 @@
                 <x-iconsax-lin-sun-1 class="light-icon icons text-gray-500" width="20px" height="20px"/>
             </div>
 
-            @if(!empty($panelNavbarLinks))
+            {{-- OLD navbar links (kept as reference) --}}
+            {{-- @if(!empty($panelNavbarLinks))
                 @php
                     $panelNavbarLinksItems = handleNavbarLinks($panelNavbarLinks)
                 @endphp
@@ -34,7 +35,16 @@
                         @endforeach
                     </div>
                 @endif
-            @endif
+            @endif --}}
+
+            {{-- Landing V1 nav links --}}
+            <div class="d-none d-lg-flex align-items-center">
+                <a href="{{ route('landing.v1.index') }}"       class="navbar-item navbar-item-h-70 d-flex align-items-center mr-16 mr-lg-32 text-gray-500">الرئيسية</a>
+                <a href="{{ route('landing.v1.about') }}"       class="navbar-item navbar-item-h-70 d-flex align-items-center mr-16 mr-lg-32 text-gray-500">من نحن</a>
+                <a href="{{ route('landing.v1.courses') }}"     class="navbar-item navbar-item-h-70 d-flex align-items-center mr-16 mr-lg-32 text-gray-500">الدورات</a>
+                <a href="{{ route('landing.v1.instructors') }}" class="navbar-item navbar-item-h-70 d-flex align-items-center mr-16 mr-lg-32 text-gray-500">المدربين</a>
+                <a href="{{ route('landing.v1.contact') }}"     class="navbar-item navbar-item-h-70 d-flex align-items-center mr-16 mr-lg-32 text-gray-500">تواصل معنا</a>
+            </div>
         </div>
 
         <div class="d-flex align-items-center">
