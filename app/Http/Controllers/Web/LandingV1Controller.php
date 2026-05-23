@@ -3,11 +3,18 @@
 namespace App\Http\Controllers\Web;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\Web\CartController;
+use App\Http\Controllers\Web\CartManagerController;
 use App\Models\Role;
 use App\Models\Webinar;
 use App\User;
 use App\Models\Sale;
 use App\Models\Category;
+use App\Models\Cart;
+use App\Models\Discount;
+use App\Models\Order;
+use App\Models\OfflineBank;
+use App\Models\PaymentChannel;
 use Illuminate\Http\Request;
 
 class LandingV1Controller extends Controller
@@ -260,5 +267,130 @@ class LandingV1Controller extends Controller
 
         return view('landing_v1.pages.course-details', $data);
     }
-}
 
+    public function checkout(\Illuminate\Http\Request $request)
+    {
+        $user = auth()->user();
+
+        if (empty($user)) {
+            return redirect()->route('landing.v1.login');
+        }
+
+        $carts = Cart::where('creator_id', $user->id)
+            ->with([
+                'webinar',
+                'bundle',
+                'ticket',
+                'installmentPayment',
+                'productOrder' => function ($q) { $q->with(['product']); },
+            ])
+            ->get();
+
+        if (empty($carts) || $carts->isEmpty()) {
+            return redirect()->route('landing.v1.cart');
+        }
+
+        $discountId     = $request->input('discount_id');
+        $discountCoupon = Discount::where('id', $discountId)->first();
+        if (empty($discountCoupon) || $discountCoupon->checkValidDiscount() !== 'ok') {
+            $discountCoupon = null;
+        }
+
+        $cartController  = new CartController();
+        $calculate       = $cartController->calculatePrice($carts, $user, $discountCoupon);
+        $order           = $cartController->createOrderAndOrderItems($carts, $calculate, $user, $discountCoupon);
+
+        if (empty($order)) {
+            return redirect()->route('landing.v1.cart');
+        }
+
+        // Free order — handle immediately
+        if ($order->total_amount <= 0) {
+            $paymentController = new \App\Http\Controllers\Web\PaymentController();
+            $paymentController->setPaymentAccounting($order);
+            $order->update(['status' => Order::$paid]);
+            return redirect('/payments/status?t=' . $order->id);
+        }
+
+        $isMultiCurrency = !empty(getFinancialCurrencySettings('multi_currency'));
+        $userCurrency    = currency();
+
+        $paymentChannels = PaymentChannel::where('status', 'active')
+            ->get()
+            ->filter(function ($ch) use ($isMultiCurrency, $userCurrency) {
+                return !$isMultiCurrency
+                    || (! empty($ch->currencies) && in_array($userCurrency, $ch->currencies));
+            })
+            ->values();
+
+        $invalidChannels = PaymentChannel::where('status', 'active')
+            ->get()
+            ->filter(function ($ch) use ($isMultiCurrency, $userCurrency) {
+                return $isMultiCurrency
+                    && (empty($ch->currencies) || ! in_array($userCurrency, $ch->currencies));
+            })
+            ->values();
+
+        $razorpay = $paymentChannels->contains('class_name', 'Razorpay');
+
+        return view('landing_v1.pages.checkout', [
+            'pageTitle'       => 'إتمام الدفع',
+            'paymentChannels' => $paymentChannels,
+            'invalidChannels' => $invalidChannels,
+            'carts'           => $carts,
+            'calculatePrices' => $calculate,
+            'order'           => $order,
+            'count'           => $carts->count(),
+            'userCharge'      => $user->getAccountingCharge(),
+            'razorpay'        => $razorpay,
+            'discountCoupon'  => $discountCoupon,
+            'offlineBanks'    => OfflineBank::orderBy('created_at', 'desc')->with('specifications')->get(),
+        ]);
+    }
+
+    public function cart()
+    {
+        $user = auth()->user();
+
+        // Use CartManagerController which handles both auth (DB) and guest (cookie) carts
+        $cartManager = new CartManagerController();
+        $carts = $cartManager->getCarts();
+
+        $calculatePrices = [
+            'sub_total'            => 0,
+            'total_discount'       => 0,
+            'tax'                  => 0,
+            'tax_price'            => 0,
+            'total'                => 0,
+            'product_delivery_fee' => 0,
+        ];
+
+        if (!empty($carts) && $carts->isNotEmpty()) {
+            if (!empty($user)) {
+                // Authenticated user: use the full price calculator (handles tax, discounts, commissions)
+                $cartController = new CartController();
+                $calculatePrices = $cartController->calculatePrice($carts, $user);
+            } else {
+                // Guest user: calculate subtotal directly from cart items (no tax/discount logic without a user)
+                $subTotal = 0;
+                foreach ($carts as $cart) {
+                    if (!empty($cart->webinar)) {
+                        $subTotal += (float) $cart->webinar->price;
+                    } elseif (!empty($cart->bundle)) {
+                        $subTotal += (float) $cart->bundle->price;
+                    } elseif (!empty($cart->productOrder) && !empty($cart->productOrder->product)) {
+                        $subTotal += (float) $cart->productOrder->product->price * ($cart->productOrder->quantity ?? 1);
+                    }
+                }
+                $calculatePrices['sub_total'] = round($subTotal, 2);
+                $calculatePrices['total']     = round($subTotal, 2);
+            }
+        }
+
+        return view('landing_v1.pages.cart', [
+            'pageTitle'       => 'سلة التسوق',
+            'carts'           => $carts,
+            'calculatePrices' => $calculatePrices,
+        ]);
+    }
+}

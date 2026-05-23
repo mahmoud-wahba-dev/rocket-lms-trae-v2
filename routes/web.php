@@ -506,6 +506,8 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     Route::view('/landing-v1/register', 'landing_v1.pages.auth.register')->name('landing.v1.register');
     Route::get('/landing-v1/instructors', [LandingV1Controller::class, 'instructors'])->name('landing.v1.instructors');
     Route::get('/landing-v1/courses', [LandingV1Controller::class, 'courses'])->name('landing.v1.courses');
+    Route::get('/landing-v1/cart', [LandingV1Controller::class, 'cart'])->name('landing.v1.cart');
+    Route::match(['get', 'post'], '/landing-v1/checkout', [LandingV1Controller::class, 'checkout'])->name('landing.v1.checkout');
     Route::get('/landing-v1/course-details/{slug?}', [LandingV1Controller::class, 'courseDetails'])->name('landing.v1.course-details');
 
 
