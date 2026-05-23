@@ -46,6 +46,20 @@ class LandingV1Controller extends Controller
         return view('landing_v1.pages.home', $data);
     }
 
+    public function about()
+    {
+        return view('landing_v1.pages.about', [
+            'pageTitle' => 'من نحن',
+        ]);
+    }
+
+    public function contact()
+    {
+        return view('landing_v1.pages.contact', [
+            'pageTitle' => 'تواصل معنا',
+        ]);
+    }
+
     public function instructors()
     {
         $instructors = User::query()

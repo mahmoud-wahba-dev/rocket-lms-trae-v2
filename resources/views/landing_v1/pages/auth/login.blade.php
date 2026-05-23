@@ -159,7 +159,7 @@
                                 <p class="font-medium text-20px text-[#979797] center">
                                     ليس لديك حساب ؟
                                     <a class="link link-animated font-semibold text-22px text-primary px-2"
-                                        href="/landing-v1/register">انشاء حساب</a>
+                                        href="{{ route('landing.v1.register') }}">انشاء حساب</a>
                                 </p>
                             </div>
 

@@ -84,10 +84,16 @@ Route::get('/emergencyDatabaseUpdate', function () {
 });
 
 Route::group(['namespace' => 'Auth', 'middleware' => ['check_mobile_app', 'share', 'check_maintenance', 'check_restriction']], function () {
-    Route::get('/login', 'LoginController@showLoginForm');
+    // OLD login/register views — kept as reference
+    // Route::get('/login', 'LoginController@showLoginForm');
+    // Route::get('/register', 'RegisterController@showRegistrationForm');
+
+    // Landing V1 login/register pages
+    Route::get('/login',    function () { return view('landing_v1.pages.auth.login'); });
+    Route::get('/register', function () { return view('landing_v1.pages.auth.register'); });
+
     Route::post('/login', 'LoginController@login');
     Route::get('/logout', 'LoginController@logout');
-    Route::get('/register', 'RegisterController@showRegistrationForm');
     Route::post('/register', 'RegisterController@register');
     Route::post('/register/form-fields', 'RegisterController@getFormFieldsByUserType');
     Route::get('/verification', 'VerificationController@index');
@@ -118,7 +124,8 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
     // set Theme Color Mode
     Route::post('/set-theme-color-mode', 'SetThemeColorModeController@setColorMode');
 
-    Route::get('/', 'HomeController@index');
+    // OLD home route — kept as reference
+    // Route::get('/', 'HomeController@index');
 
     Route::get('/getDefaultAvatar', 'DefaultAvatarController@make');
 
@@ -250,7 +257,8 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
         });
 
         Route::group(['prefix' => 'cart'], function () {
-            Route::get('/', 'CartController@index');
+            // OLD cart page — kept as reference (landing_v1 cart now serves /cart)
+            // Route::get('/', 'CartController@index');
 
             Route::post('/coupon/validate', 'CartController@couponValidate');
             Route::match(['get', 'post'], '/checkout', 'CartController@checkout')->name('checkout');
@@ -328,7 +336,8 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
         Route::get('/{categoryTitle}/{subCategoryTitle?}', 'CategoriesController@index');
     });
 
-    Route::get('/classes', 'ClassesController@index');
+    // OLD courses route — kept as reference
+    // Route::get('/classes', 'ClassesController@index');
 
     Route::get('/reward-courses', 'RewardCoursesController@index');
 
@@ -339,19 +348,27 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
         Route::get('/{slug}/share-modal', 'BlogController@getShareModal');
     });
 
-    Route::group(['prefix' => 'contact'], function () {
-        Route::get('/', 'ContactController@index');
-        Route::post('/store', 'ContactController@store');
-    });
+    // OLD contact routes — kept as reference
+    // Route::group(['prefix' => 'contact'], function () {
+    //     Route::get('/', 'ContactController@index');
+    //     Route::post('/store', 'ContactController@store');
+    // });
 
-    Route::group(['prefix' => 'instructors'], function () {
-        Route::get('/', 'InstructorsController@instructors');
-    });
+    // OLD instructors route — kept as reference
+    // Route::group(['prefix' => 'instructors'], function () {
+    //     Route::get('/', 'InstructorsController@instructors');
+    // });
 
     Route::group(['prefix' => 'organizations'], function () {
         Route::get('/', 'InstructorsController@organizations');
     });
 
+    // OLD pages (CMS) route — kept as reference
+    // Route::group(['prefix' => 'pages'], function () {
+    //     Route::get('/{link}', 'PagesController@index');
+    // });
+
+    // Pages CMS route kept active — used for /pages/terms etc.
     Route::group(['prefix' => 'pages'], function () {
         Route::get('/{link}', 'PagesController@index');
     });
@@ -499,16 +516,36 @@ Route::group(['namespace' => 'Web', 'middleware' => ['check_mobile_app', 'impers
         Route::get('/{landing_url}', 'LandingController@index');
     });
 
-    Route::get('/landing-v1', [LandingV1Controller::class, 'index'])->name('landing.v1.index');
-    Route::view('/landing-v1/about', 'landing_v1.pages.about')->name('landing.v1.about');
-    Route::view('/landing-v1/contact', 'landing_v1.pages.contact')->name('landing.v1.contact');
-    Route::view('/landing-v1/login', 'landing_v1.pages.auth.login')->name('landing.v1.login');
-    Route::view('/landing-v1/register', 'landing_v1.pages.auth.register')->name('landing.v1.register');
-    Route::get('/landing-v1/instructors', [LandingV1Controller::class, 'instructors'])->name('landing.v1.instructors');
-    Route::get('/landing-v1/courses', [LandingV1Controller::class, 'courses'])->name('landing.v1.courses');
-    Route::get('/landing-v1/cart', [LandingV1Controller::class, 'cart'])->name('landing.v1.cart');
-    Route::match(['get', 'post'], '/landing-v1/checkout', [LandingV1Controller::class, 'checkout'])->name('landing.v1.checkout');
-    Route::get('/landing-v1/course-details/{slug?}', [LandingV1Controller::class, 'courseDetails'])->name('landing.v1.course-details');
+    // ── Landing V1 — primary public routes ──────────────────────────────────
+    // Safe clean URLs (no conflicts with existing routes)
+    Route::get('/',            [LandingV1Controller::class, 'index'])->name('landing.v1.index');
+    Route::get('/about',       [LandingV1Controller::class, 'about'])->name('landing.v1.about');
+    Route::get('/contact',     [LandingV1Controller::class, 'contact'])->name('landing.v1.contact');
+    Route::get('/courses',     [LandingV1Controller::class, 'courses'])->name('landing.v1.courses');
+    Route::get('/instructors', [LandingV1Controller::class, 'instructors'])->name('landing.v1.instructors');
+
+    // /cart, /checkout, /course/{slug}, /login, /register already have existing routes above.
+    // We keep them on their own prefixed URLs and just alias the named routes:
+    Route::get('/cart',     [LandingV1Controller::class, 'cart'])->name('landing.v1.cart');
+    Route::match(['get', 'post'], '/checkout', [LandingV1Controller::class, 'checkout'])->name('landing.v1.checkout');
+    Route::get('/webinar/{slug}', [LandingV1Controller::class, 'courseDetails'])->name('landing.v1.course-details');
+
+    // Auth pages — /login and /register are handled by the Auth group above (serving landing_v1 views)
+    // Named routes so all route('landing.v1.login') calls resolve correctly
+    Route::get('/landing-v1/login',    fn() => redirect('/login'))->name('landing.v1.login');
+    Route::get('/landing-v1/register', fn() => redirect('/register'))->name('landing.v1.register');
+
+    // ── OLD landing-v1/* test routes — kept as reference ────────────────────
+    // Route::get('/landing-v1', [LandingV1Controller::class, 'index'])->name('landing.v1.index');
+    // Route::view('/landing-v1/about', 'landing_v1.pages.about')->name('landing.v1.about');
+    // Route::view('/landing-v1/contact', 'landing_v1.pages.contact')->name('landing.v1.contact');
+    // Route::view('/landing-v1/login', 'landing_v1.pages.auth.login')->name('landing.v1.login');
+    // Route::view('/landing-v1/register', 'landing_v1.pages.auth.register')->name('landing.v1.register');
+    // Route::get('/landing-v1/instructors', [LandingV1Controller::class, 'instructors'])->name('landing.v1.instructors');
+    // Route::get('/landing-v1/courses', [LandingV1Controller::class, 'courses'])->name('landing.v1.courses');
+    // Route::get('/landing-v1/cart', [LandingV1Controller::class, 'cart'])->name('landing.v1.cart');
+    // Route::match(['get', 'post'], '/landing-v1/checkout', [LandingV1Controller::class, 'checkout'])->name('landing.v1.checkout');
+    // Route::get('/landing-v1/course-details/{slug?}', [LandingV1Controller::class, 'courseDetails'])->name('landing.v1.course-details');
 
 
 

@@ -124,9 +124,22 @@
     </section>
 
 
-    <!-- <section class="section-gap">
+         <section class="section-gap ">
+            <div class="container  ">
+                <div class="bg-gold rounded-8px py-16 center flex-col text-center space-y-5">
+                    <h2 class="font-bold text-56px text-white">كفاءات وطنية تقود التغيير المؤسسي</h2>
+                    <p class="font-medium text-22px text-white">
+                        نخبة من المستشارين والممارسين المعتمدين جاهزون لتطوير مهارات فريقك وبناء استراتيجيات نجاح منشأتك.
+                    </p>
+                    <a href="{{ route('landing.v1.register') }}"
+                        class="btn btn-primary h-13 rounded-2px px-11 text-white font-medium text-14px">
+                        سجل الآن
+                        <span class="icon icon-[tabler--arrow-left]"></span>
+                    </a>
+                </div>
+            </div>
 
-    </section> -->
+        </section>
 
 </main>
 @endsection

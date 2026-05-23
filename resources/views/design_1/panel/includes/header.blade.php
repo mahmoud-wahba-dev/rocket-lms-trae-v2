@@ -22,8 +22,8 @@
                 <x-iconsax-lin-sun-1 class="light-icon icons text-gray-500" width="20px" height="20px"/>
             </div>
 
-            {{-- OLD navbar links (kept as reference) --}}
-            {{-- @if(!empty($panelNavbarLinks))
+            {{-- Dashboard-managed navbar links (admin panel → settings → navbar links) --}}
+            @if(!empty($panelNavbarLinks))
                 @php
                     $panelNavbarLinksItems = handleNavbarLinks($panelNavbarLinks)
                 @endphp
@@ -35,7 +35,7 @@
                         @endforeach
                     </div>
                 @endif
-            @endif --}}
+            @endif
 
             {{-- Landing V1 nav links --}}
             <div class="d-none d-lg-flex align-items-center">
