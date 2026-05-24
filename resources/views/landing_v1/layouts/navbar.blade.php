@@ -1,5 +1,5 @@
 <nav
-    class="fixed top-0 z-50 navbar rounded-box flex w-full items-center justify-between gap-2 shadow-[0px_4px_34.5px_-3px_#0000000D]">
+    class="fixed top-0 z-50 navbar rounded-box flex w-full items-center justify-between gap-2 shadow-[0px_4px_34.5px_-3px_#0000000D] xl:container">
     <div class="navbar-start max-xl:w-1/4">
         <a class="link link-neutral text-xl font-semibold no-underline" href="{{ route('landing.v1.index') }}">
             <img src="{{ asset('assets/landing_v1/logo_nav.png') }}" alt="Logo" class="h-16">

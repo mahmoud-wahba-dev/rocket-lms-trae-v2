@@ -44,6 +44,7 @@
     /* Shared layout helpers for landing screens. */
     .container {
         @apply w-full mx-auto max-w-full sm:px-15 px-3.5;
+        @apply xl:max-w-7xl;
     }
 
     .section-gap {
