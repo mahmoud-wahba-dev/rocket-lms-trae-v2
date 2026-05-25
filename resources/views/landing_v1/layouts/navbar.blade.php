@@ -1,5 +1,6 @@
-<nav
-    class="fixed top-0 z-50 navbar rounded-box flex w-full items-center justify-between gap-2 shadow-[0px_4px_34.5px_-3px_#0000000D] xl:container">
+<nav class="fixed inset-x-0 top-0 z-50 w-full">
+    <div
+        class="navbar rounded-box flex w-full items-center justify-between gap-2 shadow-[0px_4px_34.5px_-3px_#0000000D] mx-auto [@media(min-width:1600px)]:container">
     <div class="navbar-start max-xl:w-1/4">
         <a class="link link-neutral text-xl font-semibold no-underline" href="{{ route('landing.v1.index') }}">
             <img src="{{ asset('assets/landing_v1/logo_nav.png') }}" alt="Logo" class="h-16">
@@ -61,15 +62,105 @@
             </div>
 
             @auth
-                <a class="btn max-md:btn-square btn-secondary font-medium text-17px h-12"
-                    href="/panel">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M7.73802 15.476V13.7565H13.7565V1.71956H7.73802V0H13.7565C14.2294 0 14.6343 0.168517 14.9714 0.505551C15.3084 0.842585 15.4766 1.24725 15.476 1.71956V13.7565C15.476 14.2294 15.3078 14.6343 14.9714 14.9714C14.6349 15.3084 14.2299 15.4766 13.7565 15.476H7.73802ZM6.01846 12.0369L4.83626 10.7902L7.0287 8.5978H0V6.87824H7.0287L4.83626 4.6858L6.01846 3.43912L10.3174 7.73802L6.01846 12.0369Z"
-                            fill="white" />
-                    </svg>
-                    <span class="max-xl:hidden font-medium text-15px">لوحة التحكم</span>
-                </a>
+                {{-- ── User dropdown ── --}}
+                <div class="dropdown relative inline-flex rtl:[--placement:bottom-end]">
+                    <button id="user-dropdown-toggle" type="button"
+                        class="dropdown-toggle flex items-center gap-2 btn btn-text h-12 px-2 hover:bg-primary/5 rounded-10px transition"
+                        aria-haspopup="menu" aria-expanded="false" aria-label="User menu">
+
+                        {{-- Avatar --}}
+                        <div class="size-9 rounded-full overflow-hidden bg-gold flex items-center justify-center shrink-0 border-2 border-gold/30">
+                            <img src="{{ auth()->user()->getAvatar() }}"
+                                 alt="{{ auth()->user()->full_name }}"
+                                 class="w-full h-full object-cover"
+                                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                            <span class="hidden w-full h-full items-center justify-center font-bold text-14px text-white bg-gold">
+                                {{ strtoupper(substr(auth()->user()->full_name, 0, 2)) }}
+                            </span>
+                        </div>
+
+                        {{-- Name --}}
+                        <span class="max-md:hidden font-semibold text-14px text-primary">{{ auth()->user()->full_name }}</span>
+                        <span class="icon-[tabler--chevron-down] size-4 text-primary/60 max-md:hidden dropdown-open:rotate-180 transition-transform duration-200"></span>
+                    </button>
+
+                    {{-- Dropdown menu --}}
+                    <div class="dropdown-menu dropdown-open:opacity-100 hidden w-64 p-0 rounded-12px border border-gray-100 shadow-xl bg-white overflow-hidden"
+                        role="menu" aria-orientation="vertical" aria-labelledby="user-dropdown-toggle">
+
+                        {{-- Header --}}
+                        <div class="flex items-center gap-3 px-4 py-4 bg-primary/5 border-b border-gray-100">
+                            <div class="size-11 rounded-full overflow-hidden bg-gold flex items-center justify-center shrink-0">
+                                <img src="{{ auth()->user()->getAvatar() }}"
+                                     alt="{{ auth()->user()->full_name }}"
+                                     class="w-full h-full object-cover"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                                <span class="hidden w-full h-full items-center justify-center font-bold text-16px text-white bg-gold">
+                                    {{ strtoupper(substr(auth()->user()->full_name, 0, 2)) }}
+                                </span>
+                            </div>
+                            <div>
+                                <p class="font-bold text-15px text-primary">{{ auth()->user()->full_name }}</p>
+                                <p class="font-medium text-12px text-primary/50">{{ auth()->user()->role->caption ?? '' }}</p>
+                            </div>
+                        </div>
+
+                        {{-- Menu items --}}
+                        <ul class="py-2">
+                            <li>
+                                <a href="{{ auth()->user()->isAdmin() ? getAdminPanelUrl('/') : '/panel' }}"
+                                    class="dropdown-item flex items-center gap-3 px-4 py-2.5 font-medium text-14px text-primary hover:bg-primary/5 transition">
+                                    <span class="icon-[tabler--layout-dashboard] size-5 text-primary/50 shrink-0"></span>
+                                    لوحة التحكم
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/panel/notifications"
+                                    class="dropdown-item flex items-center gap-3 px-4 py-2.5 font-medium text-14px text-primary hover:bg-primary/5 transition">
+                                    <span class="icon-[tabler--bell] size-5 text-primary/50 shrink-0"></span>
+                                    الاشعارات
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/panel/courses"
+                                    class="dropdown-item flex items-center gap-3 px-4 py-2.5 font-medium text-14px text-primary hover:bg-primary/5 transition">
+                                    <span class="icon-[tabler--books] size-5 text-primary/50 shrink-0"></span>
+                                    فصولي
+                                </a>
+                            </li>
+
+                            <li class="border-t border-gray-100 mt-1 pt-1">
+                                <a href="/panel/supports"
+                                    class="dropdown-item flex items-center gap-3 px-4 py-2.5 font-medium text-14px text-primary hover:bg-primary/5 transition">
+                                    <span class="icon-[tabler--help-circle] size-5 text-primary/50 shrink-0"></span>
+                                    الدعم
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ auth()->user()->getProfileUrl() }}"
+                                    class="dropdown-item flex items-center gap-3 px-4 py-2.5 font-medium text-14px text-primary hover:bg-primary/5 transition">
+                                    <span class="icon-[tabler--user] size-5 text-primary/50 shrink-0"></span>
+                                    الملف الشخصي
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/panel/setting"
+                                    class="dropdown-item flex items-center gap-3 px-4 py-2.5 font-medium text-14px text-primary hover:bg-primary/5 transition">
+                                    <span class="icon-[tabler--settings] size-5 text-primary/50 shrink-0"></span>
+                                    الاعدادات
+                                </a>
+                            </li>
+
+                            <li class="border-t border-gray-100 mt-1 pt-1">
+                                <a href="/logout"
+                                    class="dropdown-item flex items-center gap-3 px-4 py-2.5 font-medium text-14px text-red-500 hover:bg-red-50 transition">
+                                    <span class="icon-[tabler--logout] size-5 text-red-400 shrink-0"></span>
+                                    تسجيل الخروج
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             @else
                 <a class="btn max-md:btn-square btn-secondary font-medium text-17px h-12"
                     href="{{ route('landing.v1.login') }}">

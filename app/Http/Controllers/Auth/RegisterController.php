@@ -67,23 +67,24 @@ class RegisterController extends Controller
         $pageRobot = getPageRobot('register');
 
         $referralSettings = getReferralSettings();
-
         $referralCode = Cookie::get('referral_code');
-
         $accountType = !empty($request->old('account_type')) ? $request->old('account_type') : "user";
         $formFields = $this->getFormFieldsByUserType($request, $accountType, true);
 
         $data = [
-            'pageTitle' => $pageTitle,
-            'pageDescription' => $pageDescription,
-            'pageRobot' => $pageRobot,
-            'referralCode' => $referralCode,
+            'pageTitle'        => $pageTitle,
+            'pageDescription'  => $pageDescription,
+            'pageRobot'        => $pageRobot,
+            'referralCode'     => $referralCode,
             'referralSettings' => $referralSettings,
-            'formFields' => $formFields
+            'formFields'       => $formFields,
         ];
 
-        $authTemplate = getThemeAuthenticationPagesStyleName();
-        return view("design_1.web.auth.{$authTemplate}.register.index", $data);
+        // OLD design_1 view — kept as reference
+        // $authTemplate = getThemeAuthenticationPagesStyleName();
+        // return view("design_1.web.auth.{$authTemplate}.register.index", $data);
+
+        return view('landing_v1.pages.auth.register', $data);
     }
 
     /**

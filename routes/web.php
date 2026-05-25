@@ -84,16 +84,12 @@ Route::get('/emergencyDatabaseUpdate', function () {
 });
 
 Route::group(['namespace' => 'Auth', 'middleware' => ['check_mobile_app', 'share', 'check_maintenance', 'check_restriction']], function () {
-    // OLD login/register views — kept as reference
-    // Route::get('/login', 'LoginController@showLoginForm');
-    // Route::get('/register', 'RegisterController@showRegistrationForm');
+    // Restored to use controllers so the 'guest' middleware fires correctly.
+    // Logged-in users hitting /login or /register are redirected to / automatically.
+    Route::get('/login',    'LoginController@showLoginForm');
+    Route::get('/register', 'RegisterController@showRegistrationForm');
 
-    // Landing V1 login/register pages
-    Route::get('/login',    function () { return view('landing_v1.pages.auth.login'); });
-    Route::get('/register', function () { return view('landing_v1.pages.auth.register'); });
-
-    Route::post('/login', 'LoginController@login');
-    Route::get('/logout', 'LoginController@logout');
+    Route::post('/login', 'LoginController@login');    Route::get('/logout', 'LoginController@logout');
     Route::post('/register', 'RegisterController@register');
     Route::post('/register/form-fields', 'RegisterController@getFormFieldsByUserType');
     Route::get('/verification', 'VerificationController@index');
