@@ -540,13 +540,32 @@
     .error-message, .success-message {
         display: none !important;
     }
+    .needs-validation .error-message,
+    .needs-validation .text-secondary.block.mt-1 {
+        color: #E25C5C !important;
+    }
     .validate .input:invalid ~ .error-message,
     .validate .select:invalid ~ .error-message,
     .validate .checkbox:invalid ~ .error-message {
         display: block !important;
     }
+    .validate > div:has(.input:invalid) > .error-message,
+    .validate > div:has(.select:invalid) > .error-message,
+    .validate > div:has(.checkbox:invalid) > .error-message {
+        display: block !important;
+    }
+    .validate .validation-has-error > .error-message {
+        display: block !important;
+    }
     .validate .input:valid ~ .success-message,
     .validate .select:valid ~ .success-message {
+        display: block !important;
+    }
+    .validate > div:has(.input:valid):not(:has(.input:invalid, .select:invalid, .checkbox:invalid)) > .success-message,
+    .validate > div:has(.select:valid):not(:has(.input:invalid, .select:invalid, .checkbox:invalid)) > .success-message {
+        display: block !important;
+    }
+    .validate .validation-is-valid > .success-message {
         display: block !important;
     }
     .validate .input:invalid, .validate .select:invalid {
@@ -561,30 +580,72 @@
 document.addEventListener('DOMContentLoaded', function () {
     const forms = document.querySelectorAll('.needs-validation');
 
+    function getValidationFields(form) {
+        return Array.from(form.querySelectorAll('.error-message, .success-message'))
+            .map(message => message.parentElement)
+            .filter((field, index, fields) => field && fields.indexOf(field) === index);
+    }
+
+    function syncValidationState(form) {
+        getValidationFields(form).forEach(field => {
+            const controls = Array.from(field.querySelectorAll('input, select'));
+            const hasInvalidControl = controls.some(control => !control.validity.valid);
+            const hasControls = controls.length > 0;
+
+            field.classList.toggle('validation-has-error', hasInvalidControl);
+            field.classList.toggle('validation-is-valid', hasControls && !hasInvalidControl);
+        });
+    }
+
     Array.from(forms).forEach(form => {
         const passwordInput = form.querySelector('input[name="password"]');
         const confirmInput = form.querySelector('input[name="password_confirmation"]');
+        const confirmErrorMessage = confirmInput
+            ? confirmInput.closest('div').parentElement.querySelector('.error-message')
+            : null;
+        const confirmDefaultMessage = confirmErrorMessage ? confirmErrorMessage.textContent : '';
 
         function validatePasswordMatch() {
             if (passwordInput && confirmInput) {
                 if (passwordInput.value !== confirmInput.value) {
-                    confirmInput.setCustomValidity("كلمتا المرور غير متطابقتين.");
+                    const message = "كلمتا المرور غير متطابقتين.";
+                    confirmInput.setCustomValidity(message);
+
+                    if (confirmErrorMessage) {
+                        confirmErrorMessage.textContent = message;
+                    }
                 } else {
                     confirmInput.setCustomValidity("");
+
+                    if (confirmErrorMessage) {
+                        confirmErrorMessage.textContent = confirmDefaultMessage;
+                    }
                 }
             }
         }
 
         if (passwordInput && confirmInput) {
-            passwordInput.addEventListener('input', validatePasswordMatch);
-            confirmInput.addEventListener('input', validatePasswordMatch);
+            passwordInput.addEventListener('input', () => {
+                validatePasswordMatch();
+                syncValidationState(form);
+            });
+            confirmInput.addEventListener('input', () => {
+                validatePasswordMatch();
+                syncValidationState(form);
+            });
         }
+
+        form.querySelectorAll('input, select').forEach(control => {
+            control.addEventListener('input', () => syncValidationState(form));
+            control.addEventListener('change', () => syncValidationState(form));
+        });
 
         form.addEventListener(
             'submit',
             event => {
                 // Re-validate password matching before submission
                 validatePasswordMatch();
+                syncValidationState(form);
 
                 if (!form.checkValidity()) {
                     event.preventDefault();
@@ -615,4 +676,3 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 @endpush
-
