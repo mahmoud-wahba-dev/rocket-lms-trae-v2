@@ -84,9 +84,16 @@
                                         <div class="mb-8">
                                             <label class="label label-text font-medium text-24px text-primary mb-4"
                                                 for="loginPasswordEmail">كلمة المرور</label>
-                                            <input id="loginPasswordEmail" name="password" type="password" placeholder="كلمة المرور"
-                                                class="input bg-f7 h-16 rounded-7px w-full text-primary text-start @error('password') border-red-500 @enderror"
-                                                required />
+                                            <div class="relative">
+                                                <input id="loginPasswordEmail" name="password" type="password" placeholder="كلمة المرور"
+                                                    class="input bg-f7 h-16 rounded-7px w-full text-primary text-start pe-12 @error('password') border-red-500 @enderror"
+                                                    required />
+                                                <button type="button" class="password-toggle size-5 absolute end-3 top-1/2 -translate-y-1/2 text-primary/60 hover:text-primary"
+                                                    data-target="#loginPasswordEmail" aria-label="إظهار كلمة المرور" aria-pressed="false">
+                                                    <span class="icon-[tabler--eye] size-5 password-toggle-show"></span>
+                                                    <span class="icon-[tabler--eye-off] size-5 hidden password-toggle-hide"></span>
+                                                </button>
+                                            </div>
                                             @error('password')
                                                 <span class="text-14px text-secondary block mt-1">{{ $message }}</span>
                                             @else
@@ -135,9 +142,16 @@
                                         <div class="mb-8">
                                             <label class="label label-text font-medium text-24px text-primary mb-4"
                                                 for="loginPasswordPhone">كلمة المرور</label>
-                                            <input id="loginPasswordPhone" name="password" type="password" placeholder="كلمة المرور"
-                                                class="input bg-f7 h-16 rounded-7px w-full text-primary text-start @error('password') border-red-500 @enderror"
-                                                required />
+                                            <div class="relative">
+                                                <input id="loginPasswordPhone" name="password" type="password" placeholder="كلمة المرور"
+                                                    class="input bg-f7 h-16 rounded-7px w-full text-primary text-start pe-12 @error('password') border-red-500 @enderror"
+                                                    required />
+                                                <button type="button" class="password-toggle absolute end-3 top-1/2 -translate-y-1/2 text-primary/60 hover:text-primary"
+                                                    data-target="#loginPasswordPhone" aria-label="إظهار كلمة المرور" aria-pressed="false">
+                                                    <span class="icon-[tabler--eye] size-5 password-toggle-show"></span>
+                                                    <span class="icon-[tabler--eye-off] size-5 hidden password-toggle-hide"></span>
+                                                </button>
+                                            </div>
                                             @error('password')
                                                 <span class="text-14px text-secondary block mt-1">{{ $message }}</span>
                                             @else
@@ -244,6 +258,29 @@
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     const forms = document.querySelectorAll('.needs-validation');
+
+    document.querySelectorAll('.password-toggle').forEach(button => {
+        button.addEventListener('click', () => {
+            const target = document.querySelector(button.dataset.target);
+
+            if (!target) {
+                return;
+            }
+
+            const isPassword = target.type === 'password';
+            target.type = isPassword ? 'text' : 'password';
+            button.setAttribute('aria-pressed', String(isPassword));
+            button.setAttribute('aria-label', isPassword ? 'إخفاء كلمة المرور' : 'إظهار كلمة المرور');
+
+            const showIcon = button.querySelector('.password-toggle-show');
+            const hideIcon = button.querySelector('.password-toggle-hide');
+
+            if (showIcon && hideIcon) {
+                showIcon.classList.toggle('hidden', isPassword);
+                hideIcon.classList.toggle('hidden', !isPassword);
+            }
+        });
+    });
 
     Array.from(forms).forEach(form => {
         form.addEventListener(
